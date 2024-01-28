@@ -14,7 +14,7 @@ const Navbar = () => {
                 <span className="icon-bar icon-bar-2"></span>
                 <span className="icon-bar icon-bar-3"></span>
             </button>
-            <NavLink to="/dashboard" className="uniskart-agent">
+            <NavLink to="/" className="uniskart-agent">
                 <h3>Uniskart Agent</h3>
             </NavLink>
         </div>
@@ -80,7 +80,7 @@ const Navbar = () => {
             </div>
 
             <ul className="nav navbar-nav navbar-center margin-right-0 ipad-nav-right ulteam">
-                <li><NavLink className={pathname==="/dashboard" && "active-menu"} to="/dashboard">Dashboard</NavLink></li>
+                <li><NavLink className={pathname==="/" && "active-menu"} to="/">Dashboard</NavLink></li>
                 <li><a className="" href="">Manage Applications</a></li>
                 <li><a className="" href="">Manage Students</a></li>
                 <li><NavLink className={pathname==="/search-program" && "active-menu"}  to="/search-program">Search Program</NavLink></li>
