@@ -1,7 +1,7 @@
 [
         {
             "Name": "B.A. in Art History",
-            "intake":"january",
+            "intake":"January",
             "ProgramLevel": 1,
             "year":2024,
             "Studylvl": "Undergraduate",
@@ -291,7 +291,7 @@
         },
         {
             "Name": "MSc (CS) Master of Science in Computer Science - Computer Security",
-            "intake":"january",
+            "intake":"January",
             "ProgramLevel": 1,
             "year":2024,
             "Studylvl": "Postgraduate",
@@ -465,7 +465,7 @@
         },
         {
             "Name": "MSc in Project Management - 2 Years",
-            "intake":"january",
+            "intake":"January",
             "ProgramLevel": 6,
             "year":2024,
             "Studylvl": "Undergraduate",
@@ -523,7 +523,7 @@
         },
         {
             "Name": "B.A. in Art History",
-            "intake":"january",
+            "intake":"January",
             "ProgramLevel": 1,
             "year":2024,
             "Studylvl": "Undergraduate",

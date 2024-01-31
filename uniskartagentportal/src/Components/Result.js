@@ -1,6 +1,8 @@
 import React from "react";
 
-const Result = () => {
+const Result = ({searchRes}) => {
+  let searchArr = searchRes[0]?.paginatedResults
+
   return (
     <div
       className="container-fluid bg-white margin-top-6rem m-t-83 SearchProgramFontFamily"
@@ -3410,325 +3412,171 @@ const Result = () => {
                       className="switch_input"
                     />
                   </label>
+                  <input type="checkbox" id="ShortlistAll" class="switch_input"></input>
+                  <span class="lever"></span>
                 </div>
               </div>
             </div>
           </div>
-          <article className="crbox">
-            <div className="row">
-              <article className="crbox program_results_127952">
-                <div className="row d-flex">
-                  <div className="col-lg-8 col-md-8 col-sm-8 courseDetails">
-                    <div style={{ float: "left", width: "80%" }}>
-                      <h3
-                        className="h4 margin-bottom-10 student-eligibility-h3"
-                        style={{ width: "100%" }}
-                      >
+          {searchArr && searchArr.map((item)=>{
+            return(
+              <article className="crbox">
+              <div className="row">
+                <article className="crbox program_results_127952">
+                  <div className="row d-flex">
+                    <div className="col-lg-8 col-md-8 col-sm-8 courseDetails">
+                      <div >
+                        <h3
+                          className="h4 margin-bottom-10 student-eligibility-h3"
+                          style={{ width: "100%" }}
+                        >
+                          <a
+                            className="u-link-v5 text-black font-size16 font-bold"
+                            style={{ textDecoration: "none!important" }}
+                            href=""
+                          >
+                            {item?.Name}
+                          </a>
+                        </h3>
+                      </div>
+                      <div className="font-size13 clearfix">
+                        <div
+                          className="universityProgram 127952"
+                          data-unicount="953_false"
+                        >
+                          <i class="fa fa-university text-blue"></i>
+                          <b>University:</b> {item.University}
+                        </div>
+                        <div className="search_result_items countrydiv">
+                        <i class="fa fa-globe text-blue"></i>
+                          <b>Country:</b> {item.Country}
+                        </div>
+                        <div className="search_result_items durationdiv">
+                          <b>Duration:</b> {item.Duration} Month(s)
+                        </div>
+                        <div className="divintake">
+                          <div className="intakeIconDiv">
+                          <i class="fa fa-user-plus text-blue"></i>
+                            <span>
+                              <b>Intakes:</b>
+                            </span>
+                          </div>
+                          <div className="openCloseIntakeWrapper">
+                            <div className="openIntakeDiv">
+                              <div className="open-width-span">
+                                <span className="label label-success custom-label label-success-bg">
+                                  Open
+                                </span>
+                              </div>
+                              <span className="intakeCard 127952">{item.intake[0].toUpperCase() + item.intake.slice(1,3)}</span>
+                            </div>
+                            <div className="closedIntakeDiv">
+                              <div className="closed-width-span">
+                                <span className="label label-danger custom-label label-danger-bg">
+                                  Closed
+                                </span>
+                              </div>
+                              <span className="intakeCard 127952 closed-intake">
+                                Jan
+                              </span>
+                              <div
+                                style={{ verticalAlign: "inherit" }}
+                                className="tooltip"
+                                id="intake_tooltip_127952"
+                                data-id="127952"
+                                data-intake="Jan"
+                              >
+                                <div className="right closedIntakeRight">
+                                  <div className="text-content"></div>
+                                  <div
+                                    className="loader"
+                                    style={{ display: "none" }}
+                                  ></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tutiondiv">
+                        <i class="fa fa-money text-blue"></i>
+                          <b>Yearly Tuition Fee:</b> {item.TutionFee}
+                        </div>
+                        <div className="applicationdiv">
+                          <b>Application Fee:</b> No application fee
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
+                      <div className="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
                         <a
-                          className="u-link-v5 text-black font-size16 font-bold"
-                          style={{ textDecoration: "none!important" }}
+                          className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
                           target="_blank"
                           href="/SearchProgram/CourseDetail?uid=MTI3OTUy"
                         >
-                          BSc (Hons) Actuarial Mathematics (International
-                          Foundation Year)
-                        </a>
-                      </h3>
-                    </div>
-                    <div className="font-size13 clearfix">
-                      <div
-                        className="universityProgram 127952"
-                        data-unicount="953_false"
-                      >
-                        <b>University:</b> (STUDY GROUP) University of Leeds,
-                        Leeds
-                      </div>
-                      <div className="search_result_items countrydiv">
-                        <b>Country:</b> United Kingdom
-                      </div>
-                      <div className="search_result_items durationdiv">
-                        <b>Duration:</b> 12 Month(s)
-                      </div>
-                      <div className="divintake">
-                        <div className="intakeIconDiv">
-                          <span>
-                            <b>Intakes:</b>
-                          </span>
-                        </div>
-                        <div className="openCloseIntakeWrapper">
-                          <div className="openIntakeDiv">
-                            <div className="open-width-span">
-                              <span className="label label-success custom-label label-success-bg">
-                                Open
-                              </span>
-                            </div>
-                            <span className="intakeCard 127952">Sep</span>
-                          </div>
-                          <div className="closedIntakeDiv">
-                            <div className="closed-width-span">
-                              <span className="label label-danger custom-label label-danger-bg">
-                                Closed
-                              </span>
-                            </div>
-                            <span className="intakeCard 127952 closed-intake">
-                              Jan
-                            </span>
-                            <div
-                              style={{ verticalAlign: "inherit" }}
-                              className="tooltip"
-                              id="intake_tooltip_127952"
-                              data-id="127952"
-                              data-intake="Jan"
-                            >
-                              <div className="right closedIntakeRight">
-                                <div className="text-content"></div>
-                                <div
-                                  className="loader"
-                                  style={{ display: "none" }}
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="tutiondiv">
-                        <b>Yearly Tuition Fee:</b> £ 19800
-                      </div>
-                      <div className="applicationdiv">
-                        <b>Application Fee:</b> No application fee
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
-                    <div className="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
-                      <a
-                        className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
-                        target="_blank"
-                        href="/SearchProgram/CourseDetail?uid=MTI3OTUy"
-                      >
-                        <i className="fa fa-list g-pos-rel margin-right-5">
-                          &nbsp;
-                        </i>
-                        View Details
-                      </a>
-                    </div>
-                    <div className="switch search_result_second_box_shortlist ipad-lever">
-                    
-                      <label>
-                        Shortlist
-                        <input
-                          id="shortlist_uni_953"
-                          type="checkbox"
-                          className="shortlist"
-                          data-cid="127952"
-                          data-unid="953"
-                          onclick="SearchProgram.AddToExportList('127952',$(this), true)"
-                        />
-                      </label>{" "}
-                      <label style={{ clear: "right" }}>
-                        Compare
-                        <input
-                          type="checkbox"
-                          className="compare"
-                          data-cid="127952"
-                          onclick="SearchProgram.AddToCompareList('127952',$(this))"
-                        />
-                      </label>
-                      <span id="127952"></span>
-                    </div>
-                    <div className="modalCourseCorrectionsRequestLink">
-                      <div style={{ float: "right" }}>
-                        <a
-                          style={{ cursor: "pointer" }}
-                          className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
-                          target="_blank"
-                          onclick="CourseCorrectionRequest(127952)"
-                        >
-                          Something doesn't look right?
+                          <i className="fa fa-list g-pos-rel margin-right-5">
+                            &nbsp;
+                          </i>
+                          View Details
                         </a>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="row margindiv">
-                  <div className="col-sm-12">
-                    <div className="rankingdiv">
-                      <div className="rankborder">
-                        <span>2</span> in Webometrics United Kingdom National
-                        Ranking
+                      <div className="switch search_result_second_box_shortlist ipad-lever">
+                      
+                        <label>
+                          Shortlist
+                          <input
+                            id="shortlist_uni_953"
+                            type="checkbox"
+                            className="shortlist Search_checkbox"
+                            data-cid="127952"
+                            data-unid="953"
+                            onclick="SearchProgram.AddToExportList('127952',$(this), true)"
+                          />
+                        </label>{" "}
+                        <label style={{ clear: "right" }}>
+                          Compare
+                          <input
+                            type="checkbox"
+                            className="compare Search_checkbox"
+                            data-cid="127952"
+                            onclick="SearchProgram.AddToCompareList('127952',$(this))"
+                          />
+                        </label>
+                        <span id="127952"></span>
                       </div>
-                      <div className="rankborder">
-                        <span>46</span> in Webometrics World Ranking
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article className="crbox">
-                <div className="row">
-                  <article className="crbox program_results_127953">
-                    <div className="row d-flex">
-                      <div className="col-lg-8 col-md-8 col-sm-8 courseDetails">
-                        <div style={{ float: "left", width: "80%" }}>
-                          <h3
-                            className="h4 margin-bottom-10 student-eligibility-h3"
-                            style={{ width: "100%" }}
-                          >
-                            <a
-                              className="u-link-v5 text-black font-size16 font-bold"
-                              style={{ textDecoration: "none !important" }}
-                              target="_blank"
-                              href="/SearchProgram/CourseDetail?uid=MTI3OTUz"
-                            >
-                              BSc (Hons) Business Economics (International
-                              Foundation Year)
-                            </a>
-                          </h3>
-                        </div>
-                        <div className="font-size13 clearfix">
-                          <div
-                            className="universityProgram 127953"
-                            data-unicount="953_false"
-                          >
-                            <b>University:</b> (STUDY GROUP) University of
-                            Leeds, Leeds
-                          </div>
-                          <div className="search_result_items countrydiv">
-                            <b>Country:</b> United Kingdom
-                          </div>
-                          <div className="search_result_items durationdiv">
-                            <b>Duration:</b> 12 Month(s)
-                          </div>
-                          <div className="divintake">
-                            <div className="intakeIconDiv">
-                              <span>
-                                <b>Intakes:</b>
-                              </span>
-                            </div>
-                            <div className="openCloseIntakeWrapper">
-                              <div className="openIntakeDiv">
-                                <div className="open-width-span">
-                                  <span className="label label-success custom-label label-success-bg">
-                                    Open
-                                  </span>
-                                </div>
-                                <span className="intakeCard 127953">Sep</span>
-                              </div>
-                              <div className="closedIntakeDiv">
-                                <div className="closed-width-span">
-                                  <span className="label label-danger custom-label label-danger-bg">
-                                    Closed
-                                  </span>
-                                </div>
-                                <span className="intakeCard 127953 closed-intake">
-                                  Jan
-                                </span>
-                                <div
-                                  style={{ verticalAlign: "inherit" }}
-                                  className="tooltip"
-                                  id="intake_tooltip_127953"
-                                  data-id="127953"
-                                  data-intake="Jan"
-                                >
-                                  <div className="right closedIntakeRight">
-                                    <div className="text-content"></div>
-                                    <div
-                                      className="loader"
-                                      style={{ display: "none" }}
-                                    ></div>
-                                  </div>
-                                  <span className="intakeCard 127953 closed-intake">
-                                    <img
-                                      src="/images/Icon/infoicon.svg"
-                                      className="infoiconimg"
-                                      onmouseover="javascript:fetchTooltipContent(this,true,0)"
-                                      ontouchstart="javascript:fetchTooltipContent(this,true,0)"
-                                      onmouseout="javascript:fetchTooltipContent(this,false,0)"
-                                      ontouchend="javascript:fetchTooltipContent(this,false,0)"
-                                      alt="infoicon"
-                                    />
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="tutiondiv">
-                            <b>Yearly Tuition Fee:</b> £ 19800
-                          </div>
-                          <div className="applicationdiv">
-                            <b>Application Fee:</b> No application fee
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
-                        <div className="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
+                      <div className="modalCourseCorrectionsRequestLink">
+                        <div style={{ float: "right" }}>
                           <a
-                            className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
+                            style={{ cursor: "pointer" }}
+                            className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
                             target="_blank"
-                            href="/SearchProgram/CourseDetail?uid=MTI3OTUz"
+                            onclick="CourseCorrectionRequest(127952)"
                           >
-                            <i className="fa fa-list g-pos-rel margin-right-5">
-                              &nbsp;
-                            </i>
-                            View Details
+                            Something doesn't look right?
                           </a>
                         </div>
-                        <div className="switch search_result_second_box_shortlist ipad-lever">
-                          <i class="fa fa-check-square-o g-pos-rel margin-right-5"></i>
-                          <label>
-                            Shortlist
-                            <input
-                              id="shortlist_uni_953"
-                              type="checkbox"
-                              className="shortlist"
-                              data-cid="127953"
-                              data-unid="953"
-                              onclick="SearchProgram.AddToExportList('127953',$(this), true)"
-                            />
-                          </label>{" "}
-                          <label style={{ clear: "right" }}>
-                            Compare
-                            <input
-                              type="checkbox"
-                              className="compare"
-                              data-cid="127953"
-                              onclick="SearchProgram.AddToCompareList('127953',$(this))"
-                            />
-                          </label>
-                          <span id="127953"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row margindiv">
+                    <div className="col-sm-12">
+                      <div className="rankingdiv">
+                        <div className="rankborder">
+                          <span>2</span> in Webometrics United Kingdom National
+                          Ranking
                         </div>
-                        <div className="modalCourseCorrectionsRequestLink">
-                          <div style={{ float: "right" }}>
-                            <a
-                              style={{ cursor: "pointer" }}
-                              className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
-                              target="_blank"
-                              onclick="CourseCorrectionRequest(127953)"
-                            >
-                              Something doesn't look right?
-                            </a>
-                          </div>
+                        <div className="rankborder">
+                          <span>46</span> in Webometrics World Ranking
                         </div>
                       </div>
                     </div>
-                    <div className="row margindiv">
-                      <div className="col-sm-12">
-                        <div className="rankingdiv">
-                          <div className="rankborder">
-                            <span>2</span> in Webometrics United Kingdom
-                            National Ranking
-                          </div>
-                          <div className="rankborder">
-                            <span>46</span> in Webometrics World Ranking
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-              </article>
-            </div>
-          </article>
+                  </div>
+                </article>
+              
+              </div>
+            </article>
+            )
+          })}
+        
         </div>
         <div className="courses-compaire">
           <div className="">

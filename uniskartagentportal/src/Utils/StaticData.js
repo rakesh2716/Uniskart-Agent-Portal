@@ -65,7 +65,7 @@ export const yearsOption = [
   ];
 
   export const IntakeYearsoptions = [
-    { value: "0", label: "All" },
+    { value: "*", label: "All" },
     { value: "1", label: "January" },
     { value: "2", label: "February" },
     { value: "3", label: "March" },
