@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 // import ReactSelect, { customStylesTest } from '../../Components/Testing'
@@ -7,21 +7,27 @@ import { IntakeYearsoptions, ProgramLevelData, RequirementsData, countriesData, 
 import SingleSelect, { customStylesTest } from "../../Components/ReactSelect";
 import Result from "../../Components/Result";
 import { customStyles2 } from "../../Utils/Themes";
+import { useDispatch, useSelector } from "react-redux"
+import { searchProgramApi } from "../../Components/redux/SearProgram/SearchProgram";
+import Swal from 'sweetalert2'
 
 const SearchProgram = () => {
-  const [isAdvanceSearchOpen,setIsAdvanceSearchOpen] = useState(false)
+  const dispatch = useDispatch()
+  const searchRes = useSelector(state => state.reducers.searchData.searchData?.data)
+  const [isAdvanceSearchOpen, setIsAdvanceSearchOpen] = useState(false)
+  const [selectAllIntake,setSelectAllIntake] = useState([])
   const [getSearchData, setGetSearchData] = useState({
-    SearchCourses: "",
-    Intake: [],
-    Year: {},
+    courses: "",
+    intakeMonth: [],
+    intakeYear: '2024',
     SearchState: "",
-    ProgramLevel: [],
-    countries: [],
-    StudyAreas: [],
+    program_level: [],
+    country: [],
+    study_area: [],
     DisciplineAreas: [],
-    Duration: [],
+    duration: {},
     ESLOrELPAvailable: [],
-    Requirements: [],
+    requirements: [],
   });
   const getInputValues = (name, value) => {
     setGetSearchData((prev) => {
@@ -31,8 +37,7 @@ const SearchProgram = () => {
       };
     });
   };
-  const handleSearch = (e,inputType, react_select_val) => {
-    console.log(inputType, "inputTypeinputType");
+  const handleSearch = (e, inputType, react_select_val, is_intake) => {
     if (inputType === "checkBox") {
       const { value, name, checked } = e.target;
       setGetSearchData((prev) => {
@@ -49,30 +54,89 @@ const SearchProgram = () => {
         }
       });
     }
-      if (inputType === "isSelectBox") {
-        const name = react_select_val.name;
-        getInputValues(name, e);
-      } else if (inputType === "search_text_input") {
-        const { value, name } = e.target;
-        getInputValues(name, value);
+    if (inputType === "isSelectBox") {
+      const name = react_select_val.name;
+      if (is_intake == "intakeVal") {
+        if (react_select_val.action === "select-option" && react_select_val.option.value === "*") {
+          const selectedOptions = Array.isArray(e) ? IntakeYearsoptions.map((option) => option.label) : e.value;
+          setSelectAllIntake(IntakeYearsoptions)
+          getInputValues(name, selectedOptions);
+        } else if (react_select_val.action === "deselect-option" && react_select_val.option.value === "*") {
+          setSelectAllIntake([])
+          setGetSearchData({...getSearchData,intakeMonth:[] })
+        } else if (react_select_val.action === "deselect-option") {
+          setSelectAllIntake(e)
+          const selectedOptions = e.map((option) => option.label)
+          getInputValues(name, selectedOptions);
+        }
+        else if (e.length === IntakeYearsoptions.length - 1) {
+          setSelectAllIntake(IntakeYearsoptions);
+          const selectedOptions = e.map((option) => option.label);
+          getInputValues(name, selectedOptions);
+        } else {
+          const selectedOptions = e.map((option) => option.label);
+          getInputValues(name, selectedOptions);
+          setSelectAllIntake(e);
+        }
+      } else if(is_intake==="study_area"){
+        const selectedOptions =  e.map((option) => option.value);
+        getInputValues(name, selectedOptions);
+      }else {
+        const selectedOptions = Array.isArray(e) ? e.map((option) => option.label) : e.value;
+        getInputValues(name, selectedOptions);
       }
+    } else if (inputType === "search_text_input") {
+      const { value, name } = e.target;
+      getInputValues(name, value);
+    }
   };
-  const clearAll = () =>{
-    setGetSearchData({
-      SearchCourses: "",
-      Intake: [],
-      Year: {},
-      SearchState: "",
-      ProgramLevel: [],
-      countries: [],
-      StudyAreas: [],
-      DisciplineAreas: [],
-      Duration: [],
-      ESLOrELPAvailable: [],
-      Requirements: [],
-    });
+  const clearAll = () => {
+    // setGetSearchData({
+    //   SearchCourses: "",
+    //   Intake: [],
+    //   Year: {},
+    //   SearchState: "",
+    //   ProgramLevel: [],
+    //   countries: [],
+    //   StudyAreas: [],
+    //   DisciplineAreas: [],
+    //   Duration: [],
+    //   ESLOrELPAvailable: [],
+    //   Requirements: [],
+    // });
   }
-  console.log(isAdvanceSearchOpen, "getSearchData");
+  const handleSearchSubmit = () => {
+    if (!!getSearchData?.courses?.length && getSearchData?.intakeYear?.length && !!getSearchData?.intakeMonth?.length) {
+      let queryString = "page_no=1&number_of_rows=10&";
+
+      for (let elem in getSearchData) {
+        if (getSearchData[elem]?.value) {
+          queryString += `${elem}=${getSearchData[elem].value}&`;
+        }
+        if (Array.isArray(getSearchData[elem])) {
+          if (getSearchData[elem].length) {
+            const arrayString = encodeURIComponent(JSON.stringify(getSearchData[elem]));
+            queryString += `${elem}=${arrayString}&`;
+          }
+        } else if (typeof getSearchData[elem] === "string" && getSearchData[elem].length) {
+          queryString += `${elem}=${getSearchData[elem]}&`;
+        }
+      }
+
+      if (queryString.length > 0) {
+        queryString = queryString.slice(0, -1);
+      }
+
+      dispatch(searchProgramApi(queryString));
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: !getSearchData.courses.length ? "Please enter course" : !getSearchData.intakeMonth.length ? "Please enter any Intake" : !getSearchData?.intakeYear?.length && "Please enter any Year" ,
+        // footer: '<a href="#">Why do I have this issue?</a>'
+      });
+    }
+  };
 
   return (
     <>
@@ -110,15 +174,6 @@ const SearchProgram = () => {
                         </h4>
                       </div>
                       <form
-                        action="/SearchProgram/_Search?Length=13"
-                        data-ajax="true"
-                        data-ajax-begin=" return SearchProgram.onBegin()"
-                        data-ajax-failure="SearchProgram.onfailure"
-                        data-ajax-method="POST"
-                        data-ajax-success="SearchProgram.onResult"
-                        enctype="multipart/form-data"
-                        id="searchfrm"
-                        method="post"
                       >
                         {" "}
                         <div className="col-lg-12 col-md-12 col-sm-12 padding-0">
@@ -143,7 +198,7 @@ const SearchProgram = () => {
                                           type="text"
                                           className="form-control Searchbykeyword"
                                           id="txtsearch"
-                                          name="SearchCourses"
+                                          name="courses"
                                           autocomplete="off"
                                           onChange={(e) =>
                                             handleSearch(e, "search_text_input")
@@ -160,10 +215,11 @@ const SearchProgram = () => {
                                         truckVal={3}
                                         customStyles2={customStyles2}
                                         onChange={(data, e) =>
-                                          handleSearch(data, "isSelectBox", e)
+                                          handleSearch(data, "isSelectBox", e, "intakeVal")
                                         }
-                                        name={"Intake"}
+                                        name={"intakeMonth"}
                                         options={IntakeYearsoptions}
+                                        value={selectAllIntake}
                                       />
 
                                       <input
@@ -177,7 +233,7 @@ const SearchProgram = () => {
                                       <label>Year</label>
                                       <Select
                                         id="Intaketxt"
-                                        name="Year"
+                                        name="intakeYear"
                                         className="browser-default selectpicker"
                                         options={yearsOption}
                                         onChange={(data, e) =>
@@ -189,7 +245,7 @@ const SearchProgram = () => {
                                         )}
                                         styles={customStyles2}
                                       />
-                                     
+
                                     </div>
 
                                     <div className="float_div searchMargin serchInputTxt search-state-width">
@@ -219,6 +275,7 @@ const SearchProgram = () => {
                                       >
                                         Search
                                       </label>
+
                                       <button
                                         type="button"
                                         className="search-btn-program btn"
@@ -226,8 +283,7 @@ const SearchProgram = () => {
                                           position: "inherit",
                                           margin: 0,
                                         }}
-                                        id="keyWordSearch"
-                                        onclick="return SearchProgram.SearchByKeyWord()"
+                                        onClick={handleSearchSubmit}
                                       >
                                         <i className="fa fa-search">
                                           &nbsp;&nbsp;
@@ -242,8 +298,7 @@ const SearchProgram = () => {
                                         }}
                                         type="button"
                                         className="search-btn-program btn"
-                                        id="Searchbtn"
-                                        onclick="SearchProgram.AdvanceSearch()"
+                                      // id="Searchbtn"
                                       >
                                         <i className="fa fa-search">
                                           &nbsp;&nbsp;
@@ -306,7 +361,7 @@ const SearchProgram = () => {
                                 href="#demo"
                                 data-toggle="collapse"
                                 id="divAdvanceSearch"
-                                
+
                               >
                                 <a
                                   id="aadvsrc"
@@ -354,7 +409,7 @@ const SearchProgram = () => {
                                                         <input
                                                           className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0"
                                                           type="checkbox"
-                                                          name="ProgramLevel"
+                                                          name="program_level"
                                                           value={item.label}
                                                           onChange={(e) =>
                                                             handleSearch(
@@ -398,7 +453,7 @@ const SearchProgram = () => {
                                                   e
                                                 )
                                               }
-                                              name={"Country"}
+                                              name={"country"}
                                               options={countriesData}
                                             />
                                           </div>
@@ -412,10 +467,10 @@ const SearchProgram = () => {
                                                 handleSearch(
                                                   data,
                                                   "isSelectBox",
-                                                  e
+                                                  e,"study_area"
                                                 )
                                               }
-                                              name={"StudyAreas"}
+                                              name={"study_area"}
                                               options={studyAreasData}
                                             />
                                           </div>
@@ -444,27 +499,27 @@ const SearchProgram = () => {
                                             </h2>
                                             <Select
                                               id="Intaketxt"
-                                              name="Duration"
+                                              name="duration"
                                               placeholder="Select"
                                               options={[
                                                 {
-                                                  value: "1",
+                                                  value: "12",
                                                   label: "0 - 1 Years",
                                                 },
                                                 {
-                                                  value: "2",
+                                                  value: "24",
                                                   label: "1 - 2 Years",
                                                 },
                                                 {
-                                                  value: "3",
+                                                  value: "36",
                                                   label: "2 - 3 Years",
                                                 },
                                                 {
-                                                  value: "4",
+                                                  value: "48",
                                                   label: "3 - 4 Years",
                                                 },
                                                 {
-                                                  value: "5",
+                                                  value: "60",
                                                   label: "4 and above Years",
                                                 },
                                               ]}
@@ -527,16 +582,15 @@ const SearchProgram = () => {
                                                           </div>
                                                         )}
                                                         <label
-                                                          className={`${
-                                                            item.disabled &&
+                                                          className={`${item.disabled &&
                                                             "disabled-checkbox"
-                                                          } u-check padding-left-30 labelwrap`}
+                                                            } u-check padding-left-30 labelwrap`}
                                                         >
                                                           <input
                                                             className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0"
                                                             type="checkbox"
                                                             id="chkIsStemCourse"
-                                                            name="Requirements"
+                                                            name="requirements"
                                                             value={item.label}
                                                             disabled={
                                                               item.disabled
@@ -570,7 +624,7 @@ const SearchProgram = () => {
                                                     className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0"
                                                     type="checkbox"
                                                     id="chkScholarshipAvailable"
-                                                    name="Requirements"
+                                                    name="requirements"
                                                     value={
                                                       "Scholarship Available"
                                                     }
@@ -598,7 +652,7 @@ const SearchProgram = () => {
                                                     className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0"
                                                     type="checkbox"
                                                     id="chkScholarshipAvailable"
-                                                    name="Requirements"
+                                                    name="requirements"
                                                     value={
                                                       "With 15 Years of Education"
                                                     }
@@ -629,7 +683,7 @@ const SearchProgram = () => {
                                                       className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0"
                                                       type="checkbox"
                                                       id="chkIsApplicationFeeWaiver"
-                                                      name="Requirements"
+                                                      name="requirements"
                                                       value={
                                                         "Application Fee Waiver (upto 100%)"
                                                       }
@@ -669,7 +723,6 @@ const SearchProgram = () => {
                                     >
                                       <div
                                         className="hidden-xs  clearBtn"
-                                        onclick="SearchProgram.ClearSearch('/SearchProgram')"
                                       >
                                         Clear All
                                       </div>
@@ -678,7 +731,6 @@ const SearchProgram = () => {
                                     <div className="col-lg-3 col-md-4 col-sm-5">
                                       <div
                                         className="hidden-lg hidden-md hidden-sm clearBtn text-center"
-                                        onclick="SearchProgram.ClearSearch('/SearchProgram')"
                                       >
                                         {" "}
                                         Clear All
@@ -694,7 +746,8 @@ const SearchProgram = () => {
                       </form>{" "}
                     </div>
                   </div>
-                  <Result />
+                  {!!searchRes?.length && <Result searchRes={searchRes} />}
+
                 </div>
               </div>
             </section>

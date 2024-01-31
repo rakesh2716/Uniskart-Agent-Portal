@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
@@ -34,7 +34,6 @@ const [loginFaild,setLoginFail] = useState({})
       }
     },
   });
-console.log(!formik.errors.password  && !formik.errors.email && !!loginFaild?.response?.data?.msg?.length,"loginFaild");
   return (
     <div className="content-wrap logonbox-container">
       <div className="body-content">

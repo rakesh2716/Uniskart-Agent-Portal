@@ -73,8 +73,11 @@ export const searchProgram = async (req, res) => {
       page_no,
       number_of_rows,
       requirements,
+      program_level,
+      country,
+      study_area,
+      duration,
     } = req.query;
-    console.log(req.query);
     let matchedObject = {};
     if (courses) {
       const escaped_search_text = courses.replace(
@@ -86,9 +89,84 @@ export const searchProgram = async (req, res) => {
         Name: { $regex: escaped_search_text, $options: "ims" },
       };
     }
+    const countriesData = [
+      "United States of America",
+      "Australia",
+      "Canada",
+      "United Kingdom",
+      "New Zealand",
+      "Singapore",
+      "Dubai",
+      "Ireland",
+      "Germany",
+      "France",
+      "Sweden",
+      "Netherlands",
+      "Austria",
+      "Denmark",
+      "Finland",
+      "Italy",
+      "Hungary",
+      "Switzerland",
+      "Spain",
+      "Lithuania",
+      "Cyprus",
+      "Poland",
+      "Malaysia",
+      "Mauritius",
+      "China",
+      "Vietnam",
+      "Malta",
+      "Japan",
+      "Belgium",
+      "Russia",
+      "South Korea",
+      "India",
+      "Georgia",
+    ];
+  if (country){
+     const arr = JSON.parse(country)
+     for(let elem of arr){
+  
+      if(countriesData.includes(elem)){
+        matchedObject.Country = elem 
+      }
+     }
+  }
+    if (duration) {
+      matchedObject.Duration = Number(duration)
+    }
+    if (study_area) {
+      let arr = JSON.parse(study_area);
+      arr.map(item => matchedObject.CategoryId = item)
+    }
 
+    if (program_level) {
+      let arr = JSON.parse(program_level);
+      arr.map(item => matchedObject.ProgramLevel = Number(item))
+    }
+    const intakeOptions = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ];
     if (intakeMonth) {
-      matchedObject.intake = intakeMonth;
+      let arr = JSON.parse(intakeMonth);
+      for (const elem of arr) {
+        if (intakeOptions.includes(elem)){
+          matchedObject.intake = elem
+        }
+   
+      }
     }
 
     if (intakeYear) {
@@ -110,29 +188,29 @@ export const searchProgram = async (req, res) => {
         if (elem === "TOEFL") {
           matchedObject.ToeflRequired = true;
         }
-        if(elem==="PTE"){
+        if (elem === "PTE") {
           matchedObject.PteRequired = true;
         }
-        if(elem==="DET"){
+        if (elem === "DET") {
           matchedObject.DETRequired = true;
         }
-        if(elem==="ACT"){
+        if (elem === "ACT") {
           matchedObject.ActRequired = true;
         }
-        if(elem==="GRE"){
+        if (elem === "GRE") {
           matchedObject.GreRequired = true;
         }
-        if(elem==="Without English Proficiency"){
+        if (elem === "Without English Proficiency") {
           matchedObject.WithoutEnglishProficiency = true;
         }
-        
-        if(elem==="Without Maths"){
+
+        if (elem === "Without Maths") {
           matchedObject.WithoutMaths = true;
         }
-        if(elem==="Application Fee Waiver (upto 100%)"){
+        if (elem === "Application Fee Waiver (upto 100%)") {
           matchedObject.AppFeeWaiverAvailable = true;
         }
-        if(elem==="Scholarship Available"){
+        if (elem === "Scholarship Available") {
           matchedObject.ScholarshipAvailable = true;
         }
       }

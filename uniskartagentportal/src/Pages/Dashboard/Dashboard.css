@@ -35870,3 +35870,15 @@ input[type=range]::-moz-range-thumb {
 .css-1nmdiq5-menu{
   width: 190%!important;
 }
+.switch,.switchh  label{
+    margin-right: 20px;
+}
+.Search_checkbox{
+    margin-left: 14px!important;
+}
+.css-1n6sfyn-MenuList label{
+    font-weight: 400!important;
+}
+.css-1nmdiq5-menu{
+    z-index: 999!important;;
+}

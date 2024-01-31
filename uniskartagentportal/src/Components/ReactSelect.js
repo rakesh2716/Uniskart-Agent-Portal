@@ -17,7 +17,7 @@ const Option = (props) => {
   );
 };
 
-const SingleSelect = ({ truckVal, customStyles2, onChange, name, options }) => {
+const SingleSelect = ({ truckVal, customStyles2, onChange, name, options, value}) => {
   const ValueContainer = ({ children, getValue, ...props }) => {
     const values = getValue();
     let valueLabel = "";
@@ -59,6 +59,7 @@ const SingleSelect = ({ truckVal, customStyles2, onChange, name, options }) => {
       styles={customStyles2}
       getOptionLabel={(option) => option.label}
       hideSelectedOptions={false}
+      value={value}
     />
   );
 };
