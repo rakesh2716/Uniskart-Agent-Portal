@@ -3,7 +3,7 @@ import "./Dashboard.css"
 
 import Footer from '../../Components/Footer';
 import Navbar from '../../Components/Navbar';
-import SummeryInfo from '../../Components/SummeryInfo';
+import SummeryInfo from '../../Components/NewStudentRegistrationForm';
 import Filters from '../../Components/Filters';
 import PTfilterresult from '../../Components/PTfilterresult';
 import PTbottomdashboard from '../../Components/PTbottomdashboard';

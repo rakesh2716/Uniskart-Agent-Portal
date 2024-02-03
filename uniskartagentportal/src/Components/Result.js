@@ -3412,8 +3412,8 @@ const Result = ({searchRes}) => {
                       className="switch_input"
                     />
                   </label>
-                  <input type="checkbox" id="ShortlistAll" class="switch_input"></input>
-                  <span class="lever"></span>
+                  <input type="checkbox" id="ShortlistAll" className="switch_input"></input>
+                  <span className="lever"></span>
                 </div>
               </div>
             </div>
@@ -3444,11 +3444,11 @@ const Result = ({searchRes}) => {
                           className="universityProgram 127952"
                           data-unicount="953_false"
                         >
-                          <i class="fa fa-university text-blue"></i>
+                          <i className="fa fa-university text-blue"></i>
                           <b>University:</b> {item.University}
                         </div>
                         <div className="search_result_items countrydiv">
-                        <i class="fa fa-globe text-blue"></i>
+                        <i className="fa fa-globe text-blue"></i>
                           <b>Country:</b> {item.Country}
                         </div>
                         <div className="search_result_items durationdiv">
@@ -3456,7 +3456,7 @@ const Result = ({searchRes}) => {
                         </div>
                         <div className="divintake">
                           <div className="intakeIconDiv">
-                          <i class="fa fa-user-plus text-blue"></i>
+                          <i className="fa fa-user-plus text-blue"></i>
                             <span>
                               <b>Intakes:</b>
                             </span>
@@ -3498,7 +3498,7 @@ const Result = ({searchRes}) => {
                           </div>
                         </div>
                         <div className="tutiondiv">
-                        <i class="fa fa-money text-blue"></i>
+                        <i className="fa fa-money text-blue"></i>
                           <b>Yearly Tuition Fee:</b> {item.TutionFee}
                         </div>
                         <div className="applicationdiv">

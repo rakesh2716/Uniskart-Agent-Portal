@@ -17,7 +17,7 @@ const Filters = () => {
                 {!getSelectedCountry?.length && <div className="all-countriesIco">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18.997" height="18.997" viewBox="0 0 18.997 18.997">
                         <g id="Icon_feather-globe" data-name="Icon feather-globe" transform="translate(-2 -2)">
-                            <path id="Path_1665" data-name="Path 1665" d="M20,11.5A8.5,8.5,0,1,1,11.5,3,8.5,8.5,0,0,1,20,11.5Z" transform="translate(0 0)" fill="none" stroke="#0A4D9B" strokeLinecap="round" strokeLinejoinn="round" strokeWidth="2" />
+                            <path id="Path_1665" data-name="Path 1665" d="M20,11.5A8.5,8.5,0,1,1,11.5,3,8.5,8.5,0,0,1,20,11.5Z" transform="translate(0 0)" fill="none" stroke="#0A4D9B" strokeLinecap="round"  strokeWidth="2" />
                             <path id="Path_1666" data-name="Path 1666" d="M3,18H20" transform="translate(0 -6.501)" fill="none" stroke="#0A4D9B" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
                             <path id="Path_1667" data-name="Path 1667" d="M15.4,3a13,13,0,0,1,3.4,8.5A13,13,0,0,1,15.4,20,13,13,0,0,1,12,11.5,13,13,0,0,1,15.4,3Z" transform="translate(-3.901 0)" fill="none" stroke="#0A4D9B" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
                         </g>

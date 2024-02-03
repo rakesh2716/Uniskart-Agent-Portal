@@ -1,4 +1,4 @@
-import * as actionTypes from './Auth_types';
+import * as actionTypes from '../_types';
 const initialState = {
   user: '',
   loading: false,

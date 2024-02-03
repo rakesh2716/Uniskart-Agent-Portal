@@ -1,6 +1,6 @@
 
-import { URLs } from '../../../Utils/Api_urls';
-import * as actionTypes from './Search_type';
+import { URLs } from '../../Utils/Api_urls';
+import * as actionTypes from '../_types';
 import axios from "axios";
 
 const searchProgramRequest = () => ({

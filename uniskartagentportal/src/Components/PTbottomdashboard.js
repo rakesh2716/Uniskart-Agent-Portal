@@ -40,7 +40,7 @@ const PTbottomdashboard = () => {
                             clipRule: 'evenodd',
                         }}
                         viewBox="0 0 10.03 12.63"
-                        xmlnsXodm="http://www.corel.com/coreldraw/odm/2003"
+                        // xmlnsXodm="http://www.corel.com/coreldraw/odm/2003"
                     >
                         <g id="Layer_x0020_1">
                             <metadata id="CorelCorpID_0Corel-Layer"></metadata>
@@ -102,16 +102,16 @@ const PTbottomdashboard = () => {
             </div>
         </div>
     </div>
-    <div class="col-sm-3">
-        <div class="PTbdbox SPbox Elan rm">
-            <div class="PTbd-icon">
+    <div className="col-sm-3">
+        <div className="PTbdbox SPbox Elan rm">
+            <div className="PTbd-icon">
                 <img src="/assets/images/user1.webp" alt="" />
             </div>
-            <h4 class="title">
+            <h4 className="title">
                 Contact your<br />
                 Head of Sales
             </h4>
-            <div class="PTbd-content">
+            <div className="PTbd-content">
                 <ul>
                     <li>Based at Nagpur</li>
                     <li>Abhijit Naik</li>
