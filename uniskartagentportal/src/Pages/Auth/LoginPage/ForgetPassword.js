@@ -8,7 +8,7 @@ const ForgetPassword = () => {
 
             <div className="content-wrap logonbox-container">
                 <div className="body-content">
-                    <div classNameName="logoNew">
+                    <div className="logoNew">
                         <h3>Uniskart Agent Portal</h3>
                     </div>
                     <div className="container">

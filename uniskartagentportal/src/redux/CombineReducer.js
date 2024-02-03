@@ -1,6 +1,6 @@
 // rootReducer.js
 import { combineReducers } from 'redux';
-import loginReducer from './Auth/Auth_reducer';
+import loginReducer from "./Auth/Auth_reducer"
 import searchDataReducer from './SearProgram/SearchProgramReducer';
 
 
