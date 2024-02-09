@@ -8,7 +8,7 @@ import SingleSelect, { customStylesTest } from "../../Components/ReactSelect";
 import Result from "../../Components/Result";
 import { customStyles2 } from "../../Utils/Themes";
 import { useDispatch, useSelector } from "react-redux"
-import { searchProgramApi } from "../../Components/redux/SearProgram/SearchProgram";
+import { searchProgramApi } from "../../redux/SearProgram/SearchProgram";
 import Swal from 'sweetalert2'
 
 const SearchProgram = () => {
@@ -133,7 +133,7 @@ const SearchProgram = () => {
         icon: "error",
         title: "Oops...",
         text: !getSearchData.courses.length ? "Please enter course" : !getSearchData.intakeMonth.length ? "Please enter any Intake" : !getSearchData?.intakeYear?.length && "Please enter any Year" ,
-        // footer: '<a href="#">Why do I have this issue?</a>'
+        
       });
     }
   };

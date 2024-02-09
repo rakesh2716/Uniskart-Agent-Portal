@@ -1,5 +1,5 @@
-import { URLs} from '../../../Utils/Api_urls';
-import * as actionTypes from './Auth_types';
+import { URLs } from '../../Utils/Api_urls';
+import * as actionTypes from '../_types';
 import axios from "axios";
 
 const loginRequest = () => ({

@@ -7607,7 +7607,7 @@ svg path {
             background-color: var(--btColor);
             border: 1px solid var(--btColor);
             border-radius: 4px;
-            padding: 2px 25px 2px;
+            /* padding: 2px 25px 2px; */
             font-size: 14px;
             margin: 17px 0px 0 0;
             text-transform: capitalize;
@@ -7770,6 +7770,7 @@ svg path {
     .MSL-Searchform .select::after {
         right: 18px;
         border-color: #090000 transparent transparent transparent;
+        display: none;
     }
 
     .MSL-Searchform .btn-primary {
@@ -7777,7 +7778,7 @@ svg path {
         background-color: var(--btColor);
         border: 1px solid var(--btColor);
         border-radius: 4px;
-        padding: 1px 12px;
+        /* padding: 1px 12px; */
         width: 100%;
         font-size: 16px;
         margin: 0px 0px 0 0;
@@ -8996,7 +8997,7 @@ svg path {
         background: #fff;
         -webkit-box-shadow: 0 0 7px #E1E4E6;
                 box-shadow: 0 0 7px #E1E4E6;
-        padding: 25px 35px 7px 35px;
+        padding: 18px 35px 18px 35px;
         border-radius: 10px;
         margin-bottom: 30px;
         line-height: 20px;
@@ -9090,7 +9091,6 @@ svg path {
 
     .PIbox .form-control, .PIbox .text-box {
         background-color: #ffffff !important;
-        border: 1px solid #c9c9c9 !important;
         outline: none !important;
         height: 40px !important;
         width: 100% !important;
@@ -9464,6 +9464,7 @@ svg path {
         display: inline-block;
         line-height: 26px;
         font-weight: 400;
+        margin-left: 6px;
     }
 
         .MS-tabs label span.requiretxx {
@@ -9662,7 +9663,7 @@ svg path {
         background-color: var(--btColor);
         border: 1px solid var(--btColor);
         border-radius: 4px;
-        padding: 2px 12px;
+        /* padding: 2px 12px; */
         width: 226px;
         font-size: 16px;
         margin: 17px 0px 0 0;
@@ -9837,7 +9838,6 @@ svg path {
             background-color: var(--btColor);
             border: 1px solid var(--btColor);
             border-radius: 4px;
-            padding: 2px 12px;
             width: 200px;
             font-size: 16px;
             margin: 17px 0px 0 0;
@@ -9854,7 +9854,6 @@ svg path {
         background-color: var(--btColor);
         border: 1px solid var(--btColor);
         border-radius: 4px;
-        padding: 1px 12px;
         width: 100%;
         font-size: 16px;
         margin: 28px 0px 0 0;
@@ -20900,7 +20899,7 @@ svg path {
         background: #EBEBEB !important;
         border-radius: 50px !important;
         opacity: 1 !important;
-        color: #ffffff;
+        /* color: #ffffff; */
         font-weight: normal;
     }
 
@@ -32640,7 +32639,7 @@ input[type=range]::-moz-range-thumb {
     .modal-student-flywire-payer .modal-content {
         background-color: #ffffff;
         margin: auto;
-        padding: 20px;
+        /* padding: 20px; */
         border: 1px solid #00458d !important;
         width: 100%;
     }
@@ -32652,7 +32651,7 @@ input[type=range]::-moz-range-thumb {
         background: #00458d !important;
         border-radius: 50px !important;
         opacity: 1 !important;
-        color: #ffffff;
+        /* color: #ffffff; */
         font-weight: 100 !important;
         margin-top: -33px !important;
         margin-right: -50px !important;
@@ -32757,7 +32756,7 @@ input[type=range]::-moz-range-thumb {
             background: #00458d !important;
             border-radius: 50px !important;
             opacity: 1 !important;
-            color: #ffffff;
+            /* color: #ffffff; */
             font-weight: 100 !important;
             margin-right: -50px !important;
         }
@@ -32910,7 +32909,7 @@ input[type=range]::-moz-range-thumb {
     .modal-student-accommodation .modal-content {
         background-color: #ffffff;
         margin: auto;
-        padding: 20px;
+        /* padding: 20px; */
         border: 1px solid #00458d !important;
         width: 100%;
     }
@@ -32922,7 +32921,7 @@ input[type=range]::-moz-range-thumb {
         background: #00458d !important;
         border-radius: 50px !important;
         opacity: 1 !important;
-        color: #ffffff;
+        /* color: #ffffff; */
         font-weight: 100 !important;
         margin-top: -33px !important;
         margin-right: -50px !important;
@@ -33010,7 +33009,7 @@ input[type=range]::-moz-range-thumb {
     .modal-student-gic .modal-content {
         background-color: #ffffff;
         margin: auto;
-        padding: 20px;
+        /* padding: 20px; */
         border: 1px solid #00458d !important;
         width: 100%;
     }
@@ -33022,7 +33021,7 @@ input[type=range]::-moz-range-thumb {
         background: #00458d !important;
         border-radius: 50px !important;
         opacity: 1 !important;
-        color: #ffffff;
+        /* color: #ffffff; */
         font-weight: 100 !important;
         margin-top: -33px !important;
         margin-right: -50px !important;
@@ -35173,7 +35172,7 @@ input[type=range]::-moz-range-thumb {
 .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    /* padding: 20px; */
     border: 1px solid #888;
     width: 100%;
 }
@@ -35881,4 +35880,114 @@ input[type=range]::-moz-range-thumb {
 }
 .css-1nmdiq5-menu{
     z-index: 999!important;;
+}
+.modal-dialog{
+    width: 33%!important;
+}
+.modal-footer{
+    border-top:none!important;
+}
+.modal-body{
+    overflow: auto!important;
+}
+.modal-body .student_form{
+    margin-bottom: 16px;
+}
+.modal-body .student_form label{
+    font-weight: 500;
+}
+.react-tel-input  .form-control {
+    width: 100%!important;
+    border: 1px solid #ebebeb!important;
+    height: 40px!important;
+}
+.react-tel-input .flag-dropdown {
+    border: 1px solid #ebebeb!important;
+}
+.modal-header .close {
+    margin-top: 4px!important;
+}
+.modal-content .register_student_label{
+    font-weight: 800;
+    font-size: 28px;
+}
+
+
+
+
+
+
+#EditMobVal {
+    color: white;
+    background: rgb(255 0 255 / 0%);
+    border: 1px solid #ffffff !important;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+    #EditMobVal:focus-visible {
+        outline: -webkit-focus-ring-color auto 0 !important;
+    }
+
+    .MSWrap .welcomeUser .namefld .copLink svg path {
+        fill: #ffffff;
+    }
+   
+     .iti--separate-dial-code .iti__selected-dial-code {
+        margin-left: 3px;
+        font-size: 13px;
+    }
+.iti__arrow{
+    border-top-color: #ffffff;
+}
+.iti__arrow--up {
+    border-bottom-color: #ffffff;
+}
+.iti__selected-flag {
+    padding-left: 5px;
+}
+
+
+svg path {
+    fill: var(--icoColor);
+}
+@media(max-width:768px) {
+    #EditMobVal {
+        width: 100%;
+    }
+    #editMob {
+        margin-bottom: 25px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    #EditMobVal {
+        width: 70%;
+        font-size: 12px;
+        height: 30px;
+    }
+    .iti--separate-dial-code .iti__selected-dial-code{
+        font-size:12px !important;
+    }
+}
+
+@media(min-width:992px) and (max-width:1070px) {
+    #EditMobVal {
+        width: 100%;
+    }
+}
+.MS-main-tabs .register_student_form{
+   padding: 20px 0!important;
+}
+.MS-main-tabs .pibox_student_register{
+    /* border:2px solid red!important; */
+    margin: 8px 0;
+}
+.requiretxx{
+    color:"red!important"
+}
+#btnSearchData{
+    padding: 8px 0!important;
+}
+.SF-Date .rs-input-group{
+    padding: 3px 0;
 }

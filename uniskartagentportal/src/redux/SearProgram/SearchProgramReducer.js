@@ -1,28 +1,28 @@
-import * as actionTypes from './Auth_types';
+import * as actionTypes from '../_types';
 const initialState = {
-  user: '',
+  searchData: '',
   loading: false,
   error: null,
 };
 
-const loginReducer = (state = initialState, action) => {
+const searchDataReducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.LOGIN_REQUEST:
+    case actionTypes.SEARCH_PROGRAM_REQUEST:
       return {
         ...state,
         loading: true,
         error: null,
       };
 
-    case actionTypes.LOGIN_SUCCESS:
+    case actionTypes.SEARCH_PROGRAM_SUCCESS:
       return {
         ...state,
-        user: action.payload,
+        searchData: action.payload,
         loading: false,
         error: null,
       };
 
-    case actionTypes.LOGIN_FAILED:
+    case actionTypes.SEARCH_PROGRAM_FAILED:
       return {
         ...state,
         loading: false,
@@ -34,4 +34,4 @@ const loginReducer = (state = initialState, action) => {
   }
 };
 
-export default loginReducer;
+export default searchDataReducer;

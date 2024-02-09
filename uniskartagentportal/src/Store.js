@@ -1,13 +1,12 @@
-// store.js
-import {  applyMiddleware } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
 import {thunk} from 'redux-thunk';
-import { configureStore } from '@reduxjs/toolkit'
-import rootReducer from './Components/redux/CombineReducer';
-const middleware = [thunk];
+import rootReducer from './redux/CombineReducer';
+
 const store = configureStore({
-    reducer: {
-      reducers: rootReducer,
-    }
-  })
+  reducer: {
+    reducers: rootReducer,
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
+});
 
 export default store;

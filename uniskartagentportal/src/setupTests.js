@@ -1,76 +1,76 @@
 <div
-  class="container-fluid bg-white margin-top-6rem m-t-83 SearchProgramFontFamily"
+  className="container-fluid bg-white margin-top-6rem m-t-83 SearchProgramFontFamily"
   style={{ clear: left, marginBottom: "13px" }}
   id="showdta"
 >
-  <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
-    <div id="search_filter_box" class="hidden-lg hidden-md hidden-sm">
+  <div className="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+    <div id="search_filter_box" className="hidden-lg hidden-md hidden-sm">
       <br />
-      <h2 class="h5 text-uppercase font-bold justify-content-betweenHeading search_filter_box_h2">
+      <h2 className="h5 text-uppercase font-bold justify-content-betweenHeading search_filter_box_h2">
         Show Filters
       </h2>
     </div>
     <div id="sticky-anchortwo"></div>
-    <div id="stickyonetwo" class="filterdiv hidden-xs">
+    <div id="stickyonetwo" className="filterdiv hidden-xs">
       <img src="/images/ncf-images/Filter.svg" alt="Filter" /> Filters
     </div>
-    <div id="sidedta" class="" style={{ display: "block" }}>
-      <div class="search_result_filter_options1 eligibility" id="divUniversity">
-        <h2 class="h5 text-uppercase font-bold justify-content-betweenHeading bg-primary">
+    <div id="sidedta" className="" style={{ display: "block" }}>
+      <div className="search_result_filter_options1 eligibility" id="divUniversity">
+        <h2 className="h5 text-uppercase font-bold justify-content-betweenHeading bg-primary">
           ELIGIBILITY
         </h2>
-        <div class="eligibility-panel">
+        <div className="eligibility-panel">
           <form>
-            <div class="form-group col-sm-12">
+            <div className="form-group col-sm-12">
               <label>Select Student</label>
-              <div class="btn-group bootstrap-select show-tick form-control eligibility_select eligibility_student_select yearfield mydropdown-menu">
+              <div className="btn-group bootstrap-select show-tick form-control eligibility_select eligibility_student_select yearfield mydropdown-menu">
                 <button
                   type="button"
-                  class="btn dropdown-toggle btn-default"
+                  className="btn dropdown-toggle btn-default"
                   data-toggle="dropdown"
                   data-id="eli_student"
                   title="Select..."
                 >
-                  <span class="filter-option pull-left">Select...</span>&nbsp;
+                  <span className="filter-option pull-left">Select...</span>
                 </button>
-                <div class="dropdown-menu open">
-                  <div class="bs-searchbox">
+                <div className="dropdown-menu open">
+                  <div className="bs-searchbox">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       autocomplete="off"
                     />
                   </div>
-                  <ul class="dropdown-menu inner" role="menu">
-                    <div class="dot-flashing" style={{ display: "none" }}></div>
-                    <div class="no-records-found" style={{ display: "none" }}>
+                  <ul className="dropdown-menu inner" role="menu">
+                    <div className="dot-flashing" style={{ display: "none" }}></div>
+                    <div className="no-records-found" style={{ display: "none" }}>
                       No records found
                     </div>
                     <a
                       href="#"
                       id="btn_AddStudent"
                       name="btn_AddStudent"
-                      class="btn btn-primary"
+                      className="btn btn-primary"
                     >
                       Add New Student
                     </a>
                   </ul>
-                  <div class="dot-flashing" style={{ display: "none" }}></div>
-                  <div class="no-records-found" style={{ display: "none" }}>
+                  <div className="dot-flashing" style={{ display: "none" }}></div>
+                  <div className="no-records-found" style={{ display: "none" }}>
                     No records found
                   </div>
                   <a
                     href="#"
                     id="btn_AddStudent"
                     name="btn_AddStudent"
-                    class="btn btn-primary"
+                    className="btn btn-primary"
                   >
                     Add New Student
                   </a>
                 </div>
                 <select
                   title="Select..."
-                  class="form-control eligibility_select eligibility_student_select selectpicker show-tick yearfield mydropdown-menu"
+                  className="form-control eligibility_select eligibility_student_select selectpicker show-tick yearfield mydropdown-menu"
                   multiple="multiple"
                   data-live-search="true"
                   data-dropup-auto="false"
@@ -83,1252 +83,1252 @@
                 ></select>
               </div>
             </div>
-            <div class="form-group col-sm-12">
+            <div className="form-group col-sm-12">
               <label>Country of Residence *</label>
-              <div class="btn-group bootstrap-select show-tick form-control eligibility_select yearfield mandatory_filed">
+              <div className="btn-group bootstrap-select show-tick form-control eligibility_select yearfield mandatory_filed">
                 <button
                   type="button"
-                  class="btn dropdown-toggle btn-default"
+                  className="btn dropdown-toggle btn-default"
                   data-toggle="dropdown"
                   data-id="eli_nationality"
                   title="Select..."
                 >
-                  <span class="filter-option pull-left">Select...</span>&nbsp;
+                  <span className="filter-option pull-left">Select...</span>
                 </button>
-                <div class="dropdown-menu open">
-                  <div class="bs-searchbox">
+                <div className="dropdown-menu open">
+                  <div className="bs-searchbox">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       autocomplete="off"
                     />
                   </div>
-                  <ul class="dropdown-menu inner" role="menu">
+                  <ul className="dropdown-menu inner" role="menu">
                     <li data-original-index="0">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Afghanistan</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Afghanistan</span>
                       </a>
                     </li>
                     <li data-original-index="1">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Albania</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Albania</span>
                       </a>
                     </li>
                     <li data-original-index="2">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Algeria</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Algeria</span>
                       </a>
                     </li>
                     <li data-original-index="3">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">American Samoa</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">American Samoa</span>
                       </a>
                     </li>
                     <li data-original-index="4">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Andorra</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Andorra</span>
                       </a>
                     </li>
                     <li data-original-index="5">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Angola</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Angola</span>
                       </a>
                     </li>
                     <li data-original-index="6">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Anguilla</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Anguilla</span>
                       </a>
                     </li>
                     <li data-original-index="7">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Antarctica</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Antarctica</span>
                       </a>
                     </li>
                     <li data-original-index="8">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Antigua and Barbuda</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Antigua and Barbuda</span>
                       </a>
                     </li>
                     <li data-original-index="9">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Argentina</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Argentina</span>
                       </a>
                     </li>
                     <li data-original-index="10">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Armenia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Armenia</span>
                       </a>
                     </li>
                     <li data-original-index="11">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Aruba</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Aruba</span>
                       </a>
                     </li>
                     <li data-original-index="12">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Australia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Australia</span>
                       </a>
                     </li>
                     <li data-original-index="13">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Austria</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Austria</span>
                       </a>
                     </li>
                     <li data-original-index="14">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Azerbaijan</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Azerbaijan</span>
                       </a>
                     </li>
                     <li data-original-index="15">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Bahamas</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Bahamas</span>
                       </a>
                     </li>
                     <li data-original-index="16">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Bahrain</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Bahrain</span>
                       </a>
                     </li>
                     <li data-original-index="17">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Bangladesh</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Bangladesh</span>
                       </a>
                     </li>
                     <li data-original-index="18">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Barbados</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Barbados</span>
                       </a>
                     </li>
                     <li data-original-index="19">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Belarus</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Belarus</span>
                       </a>
                     </li>
                     <li data-original-index="20">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Belgium</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Belgium</span>
                       </a>
                     </li>
                     <li data-original-index="21">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Belize</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Belize</span>
                       </a>
                     </li>
                     <li data-original-index="22">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Benin</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Benin</span>
                       </a>
                     </li>
                     <li data-original-index="23">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Bermuda</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Bermuda</span>
                       </a>
                     </li>
                     <li data-original-index="24">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Bhutan</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Bhutan</span>
                       </a>
                     </li>
                     <li data-original-index="25">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Bolivia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Bolivia</span>
                       </a>
                     </li>
                     <li data-original-index="26">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Bosnia and Herzegovina</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Bosnia and Herzegovina</span>
                       </a>
                     </li>
                     <li data-original-index="27">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Botswana</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Botswana</span>
                       </a>
                     </li>
                     <li data-original-index="28">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Bouvet Island</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Bouvet Island</span>
                       </a>
                     </li>
                     <li data-original-index="29">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Brazil</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Brazil</span>
                       </a>
                     </li>
                     <li data-original-index="30">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">British Indian Ocean Territory</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">British Indian Ocean Territory</span>
                       </a>
                     </li>
                     <li data-original-index="31">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Brunei Darussalam</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Brunei Darussalam</span>
                       </a>
                     </li>
                     <li data-original-index="32">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Bulgaria</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Bulgaria</span>
                       </a>
                     </li>
                     <li data-original-index="33">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Burkina Faso</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Burkina Faso</span>
                       </a>
                     </li>
                     <li data-original-index="34">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Burundi</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Burundi</span>
                       </a>
                     </li>
                     <li data-original-index="35">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Cambodia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Cambodia</span>
                       </a>
                     </li>
                     <li data-original-index="36">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Cameroon</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Cameroon</span>
                       </a>
                     </li>
                     <li data-original-index="37">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Canada</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Canada</span>
                       </a>
                     </li>
                     <li data-original-index="38">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Cape Verde</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Cape Verde</span>
                       </a>
                     </li>
                     <li data-original-index="39">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Cayman Islands</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Cayman Islands</span>
                       </a>
                     </li>
                     <li data-original-index="40">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Central African Republic</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Central African Republic</span>
                       </a>
                     </li>
                     <li data-original-index="41">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Chad</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Chad</span>
                       </a>
                     </li>
                     <li data-original-index="42">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Chile</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Chile</span>
                       </a>
                     </li>
                     <li data-original-index="43">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">China</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">China</span>
                       </a>
                     </li>
                     <li data-original-index="44">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Christmas Island</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Christmas Island</span>
                       </a>
                     </li>
                     <li data-original-index="45">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Cocos (Keeling) Islands</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Cocos (Keeling) Islands</span>
                       </a>
                     </li>
                     <li data-original-index="46">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Colombia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Colombia</span>
                       </a>
                     </li>
                     <li data-original-index="47">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Comoros</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Comoros</span>
                       </a>
                     </li>
                     <li data-original-index="48">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Congo</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Congo</span>
                       </a>
                     </li>
                     <li data-original-index="49">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">
                           Congo, the Democratic Republic of the
                         </span>
                       </a>
                     </li>
                     <li data-original-index="50">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Cook Islands</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Cook Islands</span>
                       </a>
                     </li>
                     <li data-original-index="51">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Costa Rica</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Costa Rica</span>
                       </a>
                     </li>
                     <li data-original-index="52">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Cote D'Ivoire</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Cote D'Ivoire</span>
                       </a>
                     </li>
                     <li data-original-index="53">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Croatia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Croatia</span>
                       </a>
                     </li>
                     <li data-original-index="54">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Cuba</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Cuba</span>
                       </a>
                     </li>
                     <li data-original-index="55">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Cyprus</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Cyprus</span>
                       </a>
                     </li>
                     <li data-original-index="56">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Czech Republic</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Czech Republic</span>
                       </a>
                     </li>
                     <li data-original-index="57">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Denmark</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Denmark</span>
                       </a>
                     </li>
                     <li data-original-index="58">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Djibouti</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Djibouti</span>
                       </a>
                     </li>
                     <li data-original-index="59">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Dominica</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Dominica</span>
                       </a>
                     </li>
                     <li data-original-index="60">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Dominican Republic</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Dominican Republic</span>
                       </a>
                     </li>
                     <li data-original-index="61">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Ecuador</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Ecuador</span>
                       </a>
                     </li>
                     <li data-original-index="62">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Egypt</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Egypt</span>
                       </a>
                     </li>
                     <li data-original-index="63">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">El Salvador</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">El Salvador</span>
                       </a>
                     </li>
                     <li data-original-index="64">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Equatorial Guinea</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Equatorial Guinea</span>
                       </a>
                     </li>
                     <li data-original-index="65">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Eritrea</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Eritrea</span>
                       </a>
                     </li>
                     <li data-original-index="66">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Estonia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Estonia</span>
                       </a>
                     </li>
                     <li data-original-index="67">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Ethiopia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Ethiopia</span>
                       </a>
                     </li>
                     <li data-original-index="68">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Falkland Islands (Malvinas)</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Falkland Islands (Malvinas)</span>
                       </a>
                     </li>
                     <li data-original-index="69">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Faroe Islands</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Faroe Islands</span>
                       </a>
                     </li>
                     <li data-original-index="70">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Fiji</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Fiji</span>
                       </a>
                     </li>
                     <li data-original-index="71">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Finland</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Finland</span>
                       </a>
                     </li>
                     <li data-original-index="72">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">France</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">France</span>
                       </a>
                     </li>
                     <li data-original-index="73">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">French Guiana</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">French Guiana</span>
                       </a>
                     </li>
                     <li data-original-index="74">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">French Polynesia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">French Polynesia</span>
                       </a>
                     </li>
                     <li data-original-index="75">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">French Southern Territories</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">French Southern Territories</span>
                       </a>
                     </li>
                     <li data-original-index="76">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Gabon</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Gabon</span>
                       </a>
                     </li>
                     <li data-original-index="77">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Gambia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Gambia</span>
                       </a>
                     </li>
                     <li data-original-index="78">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Georgia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Georgia</span>
                       </a>
                     </li>
                     <li data-original-index="79">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Germany</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Germany</span>
                       </a>
                     </li>
                     <li data-original-index="80">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Ghana</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Ghana</span>
                       </a>
                     </li>
                     <li data-original-index="81">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Gibraltar</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Gibraltar</span>
                       </a>
                     </li>
                     <li data-original-index="82">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Greece</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Greece</span>
                       </a>
                     </li>
                     <li data-original-index="83">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Greenland</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Greenland</span>
                       </a>
                     </li>
                     <li data-original-index="84">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Grenada</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Grenada</span>
                       </a>
                     </li>
                     <li data-original-index="85">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Guadeloupe</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Guadeloupe</span>
                       </a>
                     </li>
                     <li data-original-index="86">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Guam</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Guam</span>
                       </a>
                     </li>
                     <li data-original-index="87">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Guatemala</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Guatemala</span>
                       </a>
                     </li>
                     <li data-original-index="88">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Guinea</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Guinea</span>
                       </a>
                     </li>
                     <li data-original-index="89">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Guinea-Bissau</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Guinea-Bissau</span>
                       </a>
                     </li>
                     <li data-original-index="90">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Guyana</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Guyana</span>
                       </a>
                     </li>
                     <li data-original-index="91">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Haiti</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Haiti</span>
                       </a>
                     </li>
                     <li data-original-index="92">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">
                           Heard Island and Mcdonald Islands
                         </span>
                       </a>
                     </li>
                     <li data-original-index="93">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Holy See (Vatican City State)</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Holy See (Vatican City State)</span>
                       </a>
                     </li>
                     <li data-original-index="94">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Honduras</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Honduras</span>
                       </a>
                     </li>
                     <li data-original-index="95">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Hong Kong</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Hong Kong</span>
                       </a>
                     </li>
                     <li data-original-index="96">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Hungary</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Hungary</span>
                       </a>
                     </li>
                     <li data-original-index="97">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Iceland</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Iceland</span>
                       </a>
                     </li>
                     <li data-original-index="98">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">India</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">India</span>
                       </a>
                     </li>
                     <li data-original-index="99">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Indonesia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Indonesia</span>
                       </a>
                     </li>
                     <li data-original-index="100">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Iran, Islamic Republic of</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Iran, Islamic Republic of</span>
                       </a>
                     </li>
                     <li data-original-index="101">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Iraq</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Iraq</span>
                       </a>
                     </li>
                     <li data-original-index="102">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Ireland</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Ireland</span>
                       </a>
                     </li>
                     <li data-original-index="103">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Israel</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Israel</span>
                       </a>
                     </li>
                     <li data-original-index="104">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Italy</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Italy</span>
                       </a>
                     </li>
                     <li data-original-index="105">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Jamaica</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Jamaica</span>
                       </a>
                     </li>
                     <li data-original-index="106">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Japan</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Japan</span>
                       </a>
                     </li>
                     <li data-original-index="107">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Jordan</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Jordan</span>
                       </a>
                     </li>
                     <li data-original-index="108">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Kazakhstan</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Kazakhstan</span>
                       </a>
                     </li>
                     <li data-original-index="109">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Kenya</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Kenya</span>
                       </a>
                     </li>
                     <li data-original-index="110">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Kiribati</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Kiribati</span>
                       </a>
                     </li>
                     <li data-original-index="111">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">
                           Korea, Democratic People's Republic of
                         </span>
                       </a>
                     </li>
                     <li data-original-index="112">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Korea, Republic of</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Korea, Republic of</span>
                       </a>
                     </li>
                     <li data-original-index="113">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Kosovo</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Kosovo</span>
                       </a>
                     </li>
                     <li data-original-index="114">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Kuwait</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Kuwait</span>
                       </a>
                     </li>
                     <li data-original-index="115">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Kyrgyzstan</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Kyrgyzstan</span>
                       </a>
                     </li>
                     <li data-original-index="116">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">
                           Lao People's Democratic Republic
                         </span>
                       </a>
                     </li>
                     <li data-original-index="117">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Latvia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Latvia</span>
                       </a>
                     </li>
                     <li data-original-index="118">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Lebanon</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Lebanon</span>
                       </a>
                     </li>
                     <li data-original-index="119">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Lesotho</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Lesotho</span>
                       </a>
                     </li>
                     <li data-original-index="120">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Liberia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Liberia</span>
                       </a>
                     </li>
                     <li data-original-index="121">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Libyan Arab Jamahiriya</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Libyan Arab Jamahiriya</span>
                       </a>
                     </li>
                     <li data-original-index="122">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Liechtenstein</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Liechtenstein</span>
                       </a>
                     </li>
                     <li data-original-index="123">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Lithuania</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Lithuania</span>
                       </a>
                     </li>
                     <li data-original-index="124">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Luxembourg</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Luxembourg</span>
                       </a>
                     </li>
                     <li data-original-index="125">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Macao</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Macao</span>
                       </a>
                     </li>
                     <li data-original-index="126">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">
                           Macedonia, the Former Yugoslav Republic of
                         </span>
                       </a>
                     </li>
                     <li data-original-index="127">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Madagascar</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Madagascar</span>
                       </a>
                     </li>
                     <li data-original-index="128">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Malawi</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Malawi</span>
                       </a>
                     </li>
                     <li data-original-index="129">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Malaysia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Malaysia</span>
                       </a>
                     </li>
                     <li data-original-index="130">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Maldives</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Maldives</span>
                       </a>
                     </li>
                     <li data-original-index="131">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Mali</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Mali</span>
                       </a>
                     </li>
                     <li data-original-index="132">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Malta</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Malta</span>
                       </a>
                     </li>
                     <li data-original-index="133">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Marshall Islands</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Marshall Islands</span>
                       </a>
                     </li>
                     <li data-original-index="134">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Martinique</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Martinique</span>
                       </a>
                     </li>
                     <li data-original-index="135">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Mauritania</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Mauritania</span>
                       </a>
                     </li>
                     <li data-original-index="136">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Mauritius</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Mauritius</span>
                       </a>
                     </li>
                     <li data-original-index="137">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Mayotte</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Mayotte</span>
                       </a>
                     </li>
                     <li data-original-index="138">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Mexico</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Mexico</span>
                       </a>
                     </li>
                     <li data-original-index="139">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">
                           Micronesia, Federated States of
                         </span>
                       </a>
                     </li>
                     <li data-original-index="140">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Moldova, Republic of</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Moldova, Republic of</span>
                       </a>
                     </li>
                     <li data-original-index="141">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Monaco</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Monaco</span>
                       </a>
                     </li>
                     <li data-original-index="142">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Mongolia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Mongolia</span>
                       </a>
                     </li>
                     <li data-original-index="143">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Montserrat</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Montserrat</span>
                       </a>
                     </li>
                     <li data-original-index="144">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Morocco</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Morocco</span>
                       </a>
                     </li>
                     <li data-original-index="145">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Mozambique</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Mozambique</span>
                       </a>
                     </li>
                     <li data-original-index="146">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Myanmar</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Myanmar</span>
                       </a>
                     </li>
                     <li data-original-index="147">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Namibia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Namibia</span>
                       </a>
                     </li>
                     <li data-original-index="148">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Nauru</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Nauru</span>
                       </a>
                     </li>
                     <li data-original-index="149">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Nepal</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Nepal</span>
                       </a>
                     </li>
                     <li data-original-index="150">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Netherlands</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Netherlands</span>
                       </a>
                     </li>
                     <li data-original-index="151">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Netherlands Antilles</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Netherlands Antilles</span>
                       </a>
                     </li>
                     <li data-original-index="152">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">New Caledonia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">New Caledonia</span>
                       </a>
                     </li>
                     <li data-original-index="153">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">New Zealand</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">New Zealand</span>
                       </a>
                     </li>
                     <li data-original-index="154">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Nicaragua</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Nicaragua</span>
                       </a>
                     </li>
                     <li data-original-index="155">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Niger</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Niger</span>
                       </a>
                     </li>
                     <li data-original-index="156">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Nigeria</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Nigeria</span>
                       </a>
                     </li>
                     <li data-original-index="157">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Niue</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Niue</span>
                       </a>
                     </li>
                     <li data-original-index="158">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Norfolk Island</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Norfolk Island</span>
                       </a>
                     </li>
                     <li data-original-index="159">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Northern Mariana Islands</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Northern Mariana Islands</span>
                       </a>
                     </li>
                     <li data-original-index="160">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Norway</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Norway</span>
                       </a>
                     </li>
                     <li data-original-index="161">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Oman</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Oman</span>
                       </a>
                     </li>
                     <li data-original-index="162">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Pakistan</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Pakistan</span>
                       </a>
                     </li>
                     <li data-original-index="163">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Palau</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Palau</span>
                       </a>
                     </li>
                     <li data-original-index="164">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">
                           Palestinian Territory, Occupied
                         </span>
                       </a>
                     </li>
                     <li data-original-index="165">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Panama</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Panama</span>
                       </a>
                     </li>
                     <li data-original-index="166">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Papua New Guinea</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Papua New Guinea</span>
                       </a>
                     </li>
                     <li data-original-index="167">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Paraguay</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Paraguay</span>
                       </a>
                     </li>
                     <li data-original-index="168">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Peru</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Peru</span>
                       </a>
                     </li>
                     <li data-original-index="169">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Philippines</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Philippines</span>
                       </a>
                     </li>
                     <li data-original-index="170">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Pitcairn</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Pitcairn</span>
                       </a>
                     </li>
                     <li data-original-index="171">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Poland</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Poland</span>
                       </a>
                     </li>
                     <li data-original-index="172">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Portugal</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Portugal</span>
                       </a>
                     </li>
                     <li data-original-index="173">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Puerto Rico</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Puerto Rico</span>
                       </a>
                     </li>
                     <li data-original-index="174">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Qatar</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Qatar</span>
                       </a>
                     </li>
                     <li data-original-index="175">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Reunion</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Reunion</span>
                       </a>
                     </li>
                     <li data-original-index="176">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Romania</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Romania</span>
                       </a>
                     </li>
                     <li data-original-index="177">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Russian Federation</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Russian Federation</span>
                       </a>
                     </li>
                     <li data-original-index="178">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Rwanda</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Rwanda</span>
                       </a>
                     </li>
                     <li data-original-index="179">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Saint Helena</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Saint Helena</span>
                       </a>
                     </li>
                     <li data-original-index="180">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Saint Kitts and Nevis</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Saint Kitts and Nevis</span>
                       </a>
                     </li>
                     <li data-original-index="181">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Saint Lucia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Saint Lucia</span>
                       </a>
                     </li>
                     <li data-original-index="182">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Saint Pierre and Miquelon</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Saint Pierre and Miquelon</span>
                       </a>
                     </li>
                     <li data-original-index="183">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">
                           Saint Vincent and the Grenadines
                         </span>
                       </a>
                     </li>
                     <li data-original-index="184">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Samoa</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Samoa</span>
                       </a>
                     </li>
                     <li data-original-index="185">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">San Marino</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">San Marino</span>
                       </a>
                     </li>
                     <li data-original-index="186">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Sao Tome and Principe</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Sao Tome and Principe</span>
                       </a>
                     </li>
                     <li data-original-index="187">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Saudi Arabia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Saudi Arabia</span>
                       </a>
                     </li>
                     <li data-original-index="188">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Senegal</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Senegal</span>
                       </a>
                     </li>
                     <li data-original-index="189">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Serbia and Montenegro</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Serbia and Montenegro</span>
                       </a>
                     </li>
                     <li data-original-index="190">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Seychelles</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Seychelles</span>
                       </a>
                     </li>
                     <li data-original-index="191">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Sierra Leone</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Sierra Leone</span>
                       </a>
                     </li>
                     <li data-original-index="192">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Singapore</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Singapore</span>
                       </a>
                     </li>
                     <li data-original-index="193">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Slovakia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Slovakia</span>
                       </a>
                     </li>
                     <li data-original-index="194">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Slovenia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Slovenia</span>
                       </a>
                     </li>
                     <li data-original-index="195">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Solomon Islands</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Solomon Islands</span>
                       </a>
                     </li>
                     <li data-original-index="196">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Somalia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Somalia</span>
                       </a>
                     </li>
                     <li data-original-index="197">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">South Africa</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">South Africa</span>
                       </a>
                     </li>
                     <li data-original-index="198">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">
                           South Georgia and the South Sandwich Islands
                         </span>
                       </a>
                     </li>
                     <li data-original-index="199">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Spain</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Spain</span>
                       </a>
                     </li>
                     <li data-original-index="200">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Sri Lanka</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Sri Lanka</span>
                       </a>
                     </li>
                     <li data-original-index="201">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Sudan</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Sudan</span>
                       </a>
                     </li>
                     <li data-original-index="202">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Suriname</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Suriname</span>
                       </a>
                     </li>
                     <li data-original-index="203">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Svalbard and Jan Mayen</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Svalbard and Jan Mayen</span>
                       </a>
                     </li>
                     <li data-original-index="204">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Swaziland</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Swaziland</span>
                       </a>
                     </li>
                     <li data-original-index="205">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Sweden</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Sweden</span>
                       </a>
                     </li>
                     <li data-original-index="206">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Switzerland</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Switzerland</span>
                       </a>
                     </li>
                     <li data-original-index="207">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Syrian Arab Republic</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Syrian Arab Republic</span>
                       </a>
                     </li>
                     <li data-original-index="208">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Taiwan, Province of China</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Taiwan, Province of China</span>
                       </a>
                     </li>
                     <li data-original-index="209">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Tajikistan</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Tajikistan</span>
                       </a>
                     </li>
                     <li data-original-index="210">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Tanzania, United Republic of</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Tanzania, United Republic of</span>
                       </a>
                     </li>
                     <li data-original-index="211">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Thailand</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Thailand</span>
                       </a>
                     </li>
                     <li data-original-index="212">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Timor-Leste</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Timor-Leste</span>
                       </a>
                     </li>
                     <li data-original-index="213">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Togo</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Togo</span>
                       </a>
                     </li>
                     <li data-original-index="214">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Tokelau</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Tokelau</span>
                       </a>
                     </li>
                     <li data-original-index="215">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Tonga</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Tonga</span>
                       </a>
                     </li>
                     <li data-original-index="216">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Trinidad and Tobago</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Trinidad and Tobago</span>
                       </a>
                     </li>
                     <li data-original-index="217">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Tunisia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Tunisia</span>
                       </a>
                     </li>
                     <li data-original-index="218">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Turkey</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Turkey</span>
                       </a>
                     </li>
                     <li data-original-index="219">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Turkmenistan</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Turkmenistan</span>
                       </a>
                     </li>
                     <li data-original-index="220">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Turks and Caicos Islands</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Turks and Caicos Islands</span>
                       </a>
                     </li>
                     <li data-original-index="221">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Tuvalu</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Tuvalu</span>
                       </a>
                     </li>
                     <li data-original-index="222">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Uganda</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Uganda</span>
                       </a>
                     </li>
                     <li data-original-index="223">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Ukraine</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Ukraine</span>
                       </a>
                     </li>
                     <li data-original-index="224">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">United Arab Emirates</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">United Arab Emirates</span>
                       </a>
                     </li>
                     <li data-original-index="225">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">United Kingdom</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">United Kingdom</span>
                       </a>
                     </li>
                     <li data-original-index="226">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">United States</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">United States</span>
                       </a>
                     </li>
                     <li data-original-index="227">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">
                           United States Minor Outlying Islands
                         </span>
                       </a>
                     </li>
                     <li data-original-index="228">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Uruguay</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Uruguay</span>
                       </a>
                     </li>
                     <li data-original-index="229">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Uzbekistan</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Uzbekistan</span>
                       </a>
                     </li>
                     <li data-original-index="230">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Vanuatu</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Vanuatu</span>
                       </a>
                     </li>
                     <li data-original-index="231">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Venezuela</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Venezuela</span>
                       </a>
                     </li>
                     <li data-original-index="232">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Vietnam</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Vietnam</span>
                       </a>
                     </li>
                     <li data-original-index="233">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Virgin Islands, British</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Virgin Islands, British</span>
                       </a>
                     </li>
                     <li data-original-index="234">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Virgin Islands, U.s.</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Virgin Islands, U.s.</span>
                       </a>
                     </li>
                     <li data-original-index="235">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Wallis and Futuna</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Wallis and Futuna</span>
                       </a>
                     </li>
                     <li data-original-index="236">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Western Sahara</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Western Sahara</span>
                       </a>
                     </li>
                     <li data-original-index="237">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Yemen</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Yemen</span>
                       </a>
                     </li>
                     <li data-original-index="238">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Zambia</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Zambia</span>
                       </a>
                     </li>
                     <li data-original-index="239">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Zimbabwe</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Zimbabwe</span>
                       </a>
                     </li>
                   </ul>
                 </div>
                 <select
                   title="Select..."
-                  class="form-control eligibility_select selectpicker show-tick yearfield mandatory_filed"
+                  className="form-control eligibility_select selectpicker show-tick yearfield mandatory_filed"
                   id="eli_nationality"
                   name="eli_nationality"
                   multiple="multiple"
@@ -1593,47 +1593,47 @@
               </div>
             </div>
             <div
-              class="form-group col-sm-12 error_eli_nationality error_mandate"
+              className="form-group col-sm-12 error_eli_nationality error_mandate"
               style={{ display: "none", color: "red" }}
             >
               Country of Residence is required
             </div>
-            <div class="form-group col-sm-12 custTip">
+            <div className="form-group col-sm-12 custTip">
               <label>State of Residence *</label>
-              <div style={{ verticalAlign: "inherit" }} class="tooltip">
-                <div class="right">
-                  <div class="text-content">
+              <div style={{ verticalAlign: "inherit" }} className="tooltip">
+                <div className="right">
+                  <div className="text-content">
                     Fill country of residence first to enable State of Residence
                   </div>
                 </div>
               </div>
-              <div class="btn-group bootstrap-select show-tick form-control eligibility_select yearfield mandatory_filed">
+              <div className="btn-group bootstrap-select show-tick form-control eligibility_select yearfield mandatory_filed">
                 <button
                   type="button"
-                  class="btn dropdown-toggle btn-default"
+                  className="btn dropdown-toggle btn-default"
                   data-toggle="dropdown"
                   data-id="eli_stateOfResident"
                   title="Select..."
                 >
-                  <span class="filter-option pull-left">Select...</span>&nbsp;
+                  <span className="filter-option pull-left">Select...</span>
                 </button>
-                <div class="dropdown-menu open">
-                  <div class="bs-searchbox">
+                <div className="dropdown-menu open">
+                  <div className="bs-searchbox">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       autocomplete="off"
                     />
                   </div>
-                  <ul class="dropdown-menu inner" role="menu">
+                  <ul className="dropdown-menu inner" role="menu">
                     <li data-original-index="0">
-                      <a tabindex="0" class="" data-tokens="null"></a>
+                      <a tabindex="0" className="" data-tokens="null"></a>
                     </li>
                   </ul>
                 </div>
                 <select
                   title="Select..."
-                  class="form-control eligibility_select selectpicker show-tick yearfield mandatory_filed"
+                  className="form-control eligibility_select selectpicker show-tick yearfield mandatory_filed"
                   id="eli_stateOfResident"
                   name="eli_stateOfResident"
                   multiple="multiple"
@@ -1649,52 +1649,52 @@
               </div>
             </div>
             <div
-              class="form-group col-sm-12 error_eli_stateOfResident error_mandate"
+              className="form-group col-sm-12 error_eli_stateOfResident error_mandate"
               style={{ display: "none", color: "red" }}
             >
               State of Residence is required
             </div>
-            <div class="form-group col-sm-12">
+            <div className="form-group col-sm-12">
               <label>Highest Qualification Studied *</label>
-              <div class="btn-group bootstrap-select show-tick form-control eligibility_select yearfield mandatory_filed">
+              <div className="btn-group bootstrap-select show-tick form-control eligibility_select yearfield mandatory_filed">
                 <button
                   type="button"
-                  class="btn dropdown-toggle btn-default"
+                  className="btn dropdown-toggle btn-default"
                   data-toggle="dropdown"
                   data-id="eli_levelofstudy"
                   title="Select..."
                 >
-                  <span class="filter-option pull-left">Select...</span>&nbsp;
+                  <span className="filter-option pull-left">Select...</span>
                 </button>
-                <div class="dropdown-menu open">
-                  <div class="bs-searchbox">
+                <div className="dropdown-menu open">
+                  <div className="bs-searchbox">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       autocomplete="off"
                     />
                   </div>
-                  <ul class="dropdown-menu inner" role="menu">
+                  <ul className="dropdown-menu inner" role="menu">
                     <li data-original-index="0">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Postgraduate</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Postgraduate</span>
                       </a>
                     </li>
                     <li data-original-index="1">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Undergraduate</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Undergraduate</span>
                       </a>
                     </li>
                     <li data-original-index="2">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">Grade 12th or equivalent</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">Grade 12th or equivalent</span>
                       </a>
                     </li>
                   </ul>
                 </div>
                 <select
                   title="Select..."
-                  class="form-control eligibility_select selectpicker show-tick yearfield mandatory_filed"
+                  className="form-control eligibility_select selectpicker show-tick yearfield mandatory_filed"
                   id="eli_levelofstudy"
                   name="eli_levelofstudy"
                   data-live-search="true"
@@ -1712,79 +1712,79 @@
               </div>
             </div>
             <div
-              class="form-group col-sm-12 error_eli_levelofstudy error_mandate"
+              className="form-group col-sm-12 error_eli_levelofstudy error_mandate"
               style={{ display: "none", color: "red" }}
             >
               Highest Qualification Studied is required
             </div>
-            <div class="row form-group col-sm-12 w100">
-              <div class="form-group col-sm-12 custTip" style={{ padding: 0 }}>
-                <div class="droDown40per">
+            <div className="row form-group col-sm-12 w100">
+              <div className="form-group col-sm-12 custTip" style={{ padding: 0 }}>
+                <div className="droDown40per">
                   <div>
                     <label>Grading System(12th) *</label>
-                    <div style={{ verticalAlign: "inherit" }} class="tooltip">
-                      <div class="right">
-                        <div class="text-content">
+                    <div style={{ verticalAlign: "inherit" }} className="tooltip">
+                      <div className="right">
+                        <div className="text-content">
                           If you don’t have your final percentage yet please
                           enter predicted or aggregate percentage
                         </div>
                       </div>
                     </div>
-                    <div class="btn-group bootstrap-select show-tick form-control eligibility_select yearfield mandatory_filed">
+                    <div className="btn-group bootstrap-select show-tick form-control eligibility_select yearfield mandatory_filed">
                       <button
                         type="button"
-                        class="btn dropdown-toggle btn-default"
+                        className="btn dropdown-toggle btn-default"
                         data-toggle="dropdown"
                         data-id="eli_grading_option_12"
                         title="Select..."
                       >
-                        <span class="filter-option pull-left">Select...</span>
+                        <span className="filter-option pull-left">Select...</span>
                         &nbsp;
                       </button>
-                      <div class="dropdown-menu open">
-                        <div class="bs-searchbox">
+                      <div className="dropdown-menu open">
+                        <div className="bs-searchbox">
                           <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             autocomplete="off"
                           />
                         </div>
-                        <ul class="dropdown-menu inner" role="menu">
+                        <ul className="dropdown-menu inner" role="menu">
                           <li data-original-index="0">
-                            <a tabindex="0" class="" data-tokens="null">
-                              <span class="text">Out of 100</span>
+                            <a tabindex="0" className="" data-tokens="null">
+                              <span className="text">Out of 100</span>
                             </a>
                           </li>
                           <li data-original-index="1">
-                            <a tabindex="0" class="" data-tokens="null">
-                              <span class="text">Out of 45</span>
+                            <a tabindex="0" className="" data-tokens="null">
+                              <span className="text">Out of 45</span>
                             </a>
                           </li>
                           <li data-original-index="2">
-                            <a tabindex="0" class="" data-tokens="null">
-                              <span class="text">Out of 10</span>
+                            <a tabindex="0" className="" data-tokens="null">
+                              <span className="text">Out of 10</span>
                             </a>
                           </li>
                           <li data-original-index="3">
-                            <a tabindex="0" class="" data-tokens="null">
-                              <span class="text">Out of 7</span>
+                            <a tabindex="0" className="" data-tokens="null">
+                              <span className="text">Out of 7</span>
                             </a>
                           </li>
                           <li data-original-index="4">
-                            <a tabindex="0" class="" data-tokens="null">
-                              <span class="text">Out of 5</span>
+                            <a tabindex="0" className="" data-tokens="null">
+                              <span className="text">Out of 5</span>
                             </a>
                           </li>
                           <li data-original-index="5">
-                            <a tabindex="0" class="" data-tokens="null">
-                              <span class="text">Out of 4</span>
+                            <a tabindex="0" className="" data-tokens="null">
+                              <span className="text">Out of 4</span>
                             </a>
                           </li>
                         </ul>
                       </div>
                       <select
                         title="Select..."
-                        class="form-control eligibility_select selectpicker show-tick yearfield mandatory_filed"
+                        className="form-control eligibility_select selectpicker show-tick yearfield mandatory_filed"
                         id="eli_grading_option_12"
                         name="eli_grading_option_12"
                         data-live-search="true"
@@ -1805,17 +1805,17 @@
                     </div>
                   </div>
                   <div
-                    class="col-sm-12 error_eli_grading_option_12 error_mandate"
+                    className="col-sm-12 error_eli_grading_option_12 error_mandate"
                     style={{ display: "none", color: "red" }}
                   >
                     Please select Grading System
                   </div>
                 </div>
-                <div class="droDown48per">
+                <div className="droDown48per">
                   <label id="txt_12Score">Score(12th)</label>
                   <input
                     type="number"
-                    class="form-control numbers mandatory_filed"
+                    className="form-control numbers mandatory_filed"
                     id="txt_12Percentage"
                     min="0"
                     max="100"
@@ -1824,7 +1824,7 @@
                     onkeyup="checkGradingPattern(this,'eli_grading_option_12');"
                   />
                   <div
-                    class="col-sm-12 error_txt_12Percentage error_mandate error_mandateGre"
+                    className="col-sm-12 error_txt_12Percentage error_mandate error_mandateGre"
                     style={{ display: "none", color: "red",paddingRight:0 }}
                   >
                     Score(Grade 12) is required
@@ -1833,69 +1833,69 @@
               </div>
               <div style={{ clear: "both" }}></div>
             </div>
-            <div class="form-group col-sm-12 w100">
-              <div class="col-sm-12 custTipPer UGPercentage" style={{padding:0}}>
-                <div class="droDown40per">
-                  <div class="mr35">
+            <div className="form-group col-sm-12 w100">
+              <div className="col-sm-12 custTipPer UGPercentage" style={{padding:0}}>
+                <div className="droDown40per">
+                  <div className="mr35">
                     <label>Grading System(UG) *</label>
-                    <div style={{ verticalAlign: "inherit" }} class="tooltip">
-                      <div class="right">
-                        <div class="text-content">
+                    <div style={{ verticalAlign: "inherit" }} className="tooltip">
+                      <div className="right">
+                        <div className="text-content">
                           If you don’t have your final percentage yet please
                           enter predicted or aggregate percentage
                         </div>
                       </div>
                     </div>
-                    <div class="btn-group bootstrap-select show-tick form-control eligibility_select yearfield mandatory_filed">
+                    <div className="btn-group bootstrap-select show-tick form-control eligibility_select yearfield mandatory_filed">
                       <button
                         type="button"
-                        class="btn dropdown-toggle btn-default"
+                        className="btn dropdown-toggle btn-default"
                         data-toggle="dropdown"
                         data-id="eli_grading_option_UG"
                         title="Select..."
                       >
-                        <span class="filter-option pull-left">Select...</span>
+                        <span className="filter-option pull-left">Select...</span>
                         &nbsp;
                       </button>
-                      <div class="dropdown-menu open">
-                        <div class="bs-searchbox">
+                      <div className="dropdown-menu open">
+                        <div className="bs-searchbox">
                           <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             autocomplete="off"
                           />
                         </div>
-                        <ul class="dropdown-menu inner" role="menu">
+                        <ul className="dropdown-menu inner" role="menu">
                           <li data-original-index="0">
-                            <a tabindex="0" class="" data-tokens="null">
-                              <span class="text">Out of 100</span>
+                            <a tabindex="0" className="" data-tokens="null">
+                              <span className="text">Out of 100</span>
                             </a>
                           </li>
                           <li data-original-index="1">
-                            <a tabindex="0" class="" data-tokens="null">
-                              <span class="text">Out of 10</span>
+                            <a tabindex="0" className="" data-tokens="null">
+                              <span className="text">Out of 10</span>
                             </a>
                           </li>
                           <li data-original-index="2">
-                            <a tabindex="0" class="" data-tokens="null">
-                              <span class="text">Out of 7</span>
+                            <a tabindex="0" className="" data-tokens="null">
+                              <span className="text">Out of 7</span>
                             </a>
                           </li>
                           <li data-original-index="3">
-                            <a tabindex="0" class="" data-tokens="null">
-                              <span class="text">Out of 5</span>
+                            <a tabindex="0" className="" data-tokens="null">
+                              <span className="text">Out of 5</span>
                             </a>
                           </li>
                           <li data-original-index="4">
-                            <a tabindex="0" class="" data-tokens="null">
-                              <span class="text">Out of 4</span>
+                            <a tabindex="0" className="" data-tokens="null">
+                              <span className="text">Out of 4</span>
                             </a>
                           </li>
                         </ul>
                       </div>
                       <select
                         title="Select..."
-                        class="form-control eligibility_select selectpicker show-tick yearfield mandatory_filed"
+                        className="form-control eligibility_select selectpicker show-tick yearfield mandatory_filed"
                         id="eli_grading_option_UG"
                         name="eli_grading_option_UG"
                         data-live-search="true"
@@ -1915,17 +1915,17 @@
                     </div>
                   </div>
                   <div
-                    class="col-sm-12 error_eli_grading_option_12 error_mandate"
+                    className="col-sm-12 error_eli_grading_option_12 error_mandate"
                     style={{ display: "none", color: "red" }}
                   >
                     Please select Grading System
                   </div>
                 </div>
-                <div class="droDown48per">
+                <div className="droDown48per">
                   <label id="txt_UGScore">Score(UG)</label>
                   <input
                     type="number"
-                    class="form-control numbers mandatory_filed"
+                    className="form-control numbers mandatory_filed"
                     id="txt_UGPercentage"
                     min="0"
                     max="100"
@@ -1934,7 +1934,7 @@
                     onkeyup="checkGradingPattern(this,'eli_grading_option_UG');"
                   />
                   <div
-                    class="col-sm-12 error_txt_UGPercentage error_mandate error_mandateGre"
+                    className="col-sm-12 error_txt_UGPercentage error_mandate error_mandateGre"
                     style={{ display: "none", color: "red", paddingRight: 0 }}
                   >
                     Score(UG) is required
@@ -1943,92 +1943,92 @@
               </div>
               <div style={{ clear: "both" }}></div>
             </div>
-            <div class="form-group col-sm-12 mr35">
+            <div className="form-group col-sm-12 mr35">
               <label>Backlogs</label>{" "}
               <input
                 type="number"
-                class="form-control numbers"
+                className="form-control numbers"
                 id="txt_backlog"
                 min="0"
                 name="txt_backlog"
                 placeholder="Enter…"
               />
             </div>
-            <div class="form-group col-sm-12">
+            <div className="form-group col-sm-12">
               <label>Work Experience (Years)</label>
               <input
                 type="number"
-                class="form-control numbers"
+                className="form-control numbers"
                 id="txt_workexp"
                 min="0"
                 name="txt_workexp"
                 placeholder="Enter…"
               />
             </div>
-            <div class="form-group col-sm-12 custTip">
+            <div className="form-group col-sm-12 custTip">
               <label>English Proficiency Exam *</label>
-              <div style={{ verticalAlign: "inherit" }} class="tooltip">
-                <div class="right">
-                  <div class="text-content">
+              <div style={{ verticalAlign: "inherit" }} className="tooltip">
+                <div className="right">
+                  <div className="text-content">
                     For Without IELTS case, please select 'I will provide this
                     later' option below
                   </div>
                 </div>
               </div>
-              <div class="btn-group bootstrap-select show-tick form-control eligibility_select yearfield mandatory_filed">
+              <div className="btn-group bootstrap-select show-tick form-control eligibility_select yearfield mandatory_filed">
                 <button
                   type="button"
-                  class="btn dropdown-toggle btn-default"
+                  className="btn dropdown-toggle btn-default"
                   data-toggle="dropdown"
                   data-id="eli_Test"
                   title="Select..."
                 >
-                  <span class="filter-option pull-left">Select...</span>&nbsp;
+                  <span className="filter-option pull-left">Select...</span>
                 </button>
-                <div class="dropdown-menu open">
-                  <div class="bs-searchbox">
+                <div className="dropdown-menu open">
+                  <div className="bs-searchbox">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       autocomplete="off"
                     />
                   </div>
-                  <ul class="dropdown-menu inner" role="menu">
+                  <ul className="dropdown-menu inner" role="menu">
                     <li data-original-index="0">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">I don't have this</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">I don't have this</span>
                       </a>
                     </li>
                     <li data-original-index="1">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">I will provide this later</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">I will provide this later</span>
                       </a>
                     </li>
                     <li data-original-index="2">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">IELTS</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">IELTS</span>
                       </a>
                     </li>
                     <li data-original-index="3">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">TOEFL</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">TOEFL</span>
                       </a>
                     </li>
                     <li data-original-index="4">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">PTE</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">PTE</span>
                       </a>
                     </li>
                     <li data-original-index="5">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">DET</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">DET</span>
                       </a>
                     </li>
                   </ul>
                 </div>
                 <select
                   title="Select..."
-                  class="form-control eligibility_select selectpicker show-tick yearfield mandatory_filed"
+                  className="form-control eligibility_select selectpicker show-tick yearfield mandatory_filed"
                   id="eli_Test"
                   name="eli_Test"
                   multiple="multiple"
@@ -2051,79 +2051,79 @@
               </div>
             </div>
             <div
-              class="form-group col-sm-12 error_eli_Test error_mandate"
+              className="form-group col-sm-12 error_eli_Test error_mandate"
               style={{ display: "none", color: "red" }}
             >
               English Proficiency Exam is required
             </div>
             <div
-              class="divTests"
+              className="divTests"
               id="div_IELTS"
               name="div_IELTS"
               style={{ display: "none" }}
             >
-              <div class="row cust47">
-                <div class="col-lg-3 col-md-3 col-sm-12">
-                  <div class="form-group">
+              <div className="row cust47">
+                <div className="col-lg-3 col-md-3 col-sm-12">
+                  <div className="form-group">
                     <label>Listening *</label>{" "}
                     <input
                       type="text"
                       onkeyup="checktestlimit(this, 'ieltsTest','listening');"
                       id="txt_L_IELTS"
                       name="txt_L_IELTS"
-                      class="form-control IELTS_Mandate_Check"
+                      className="form-control IELTS_Mandate_Check"
                       value=""
                     />
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12">
-                  <div class="form-group">
+                <div className="col-lg-3 col-md-3 col-sm-12">
+                  <div className="form-group">
                     <label>Reading *</label>{" "}
                     <input
                       type="text"
                       onkeyup="checktestlimit(this, 'ieltsTest','reading');"
                       id="txt_R_IELTS"
                       name="txt_R_IELTS"
-                      class="form-control IELTS_Mandate_Check"
+                      className="form-control IELTS_Mandate_Check"
                       value=""
                     />
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12">
-                  <div class="form-group">
+                <div className="col-lg-3 col-md-3 col-sm-12">
+                  <div className="form-group">
                     <label>Writing *</label>{" "}
                     <input
                       type="text"
                       onkeyup="checktestlimit(this, 'ieltsTest','writing');"
                       id="txt_W_IELTS"
                       name="txt_W_IELTS"
-                      class="form-control IELTS_Mandate_Check"
+                      className="form-control IELTS_Mandate_Check"
                       value=""
                     />
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12">
-                  <div class="form-group">
+                <div className="col-lg-3 col-md-3 col-sm-12">
+                  <div className="form-group">
                     <label>Speaking *</label>{" "}
                     <input
                       type="text"
                       onkeyup="checktestlimit(this, 'ieltsTest','speaking');"
                       id="txt_S_IELTS"
                       name="txt_S_IELTS"
-                      class="form-control IELTS_Mandate_Check"
+                      className="form-control IELTS_Mandate_Check"
                       value=""
                     />
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12">
-                  <div class="form-group">
+                <div className="col-lg-3 col-md-3 col-sm-12">
+                  <div className="form-group">
                     <label>Overall *</label>{" "}
                     <input
                       type="text"
                       onkeyup="checklimit(this, 'ieltsTest');"
                       id="txt_O_IELTS"
                       name="txt_O_IELTS"
-                      class="form-control IELTS_Mandate_Check"
+                      className="form-control IELTS_Mandate_Check"
                       value=""
                     />
                   </div>
@@ -2131,73 +2131,73 @@
               </div>
             </div>
             <div
-              class="row divTests"
+              className="row divTests"
               id="div_PTE"
               name="div_PTE"
               style={{ display: "none" }}
             >
-              <div class="row cust47">
-                <div class="col-sm-3 col-md-3 col-sm-12">
-                  <div class="form-group">
+              <div className="row cust47">
+                <div className="col-sm-3 col-md-3 col-sm-12">
+                  <div className="form-group">
                     <label>Overall *</label>{" "}
                     <input
                       type="text"
                       onkeyup="checklimit(this, 'pteTest');"
                       id="txt_O_PTE"
                       name="txt_O_PTE"
-                      class="form-control PTE_Mandate_Check"
+                      className="form-control PTE_Mandate_Check"
                       value=""
                     />
                   </div>
                 </div>
-                <div class="col-sm-3 col-md-3 col-sm-12">
-                  <div class="form-group">
+                <div className="col-sm-3 col-md-3 col-sm-12">
+                  <div className="form-group">
                     <label>Listening *</label>{" "}
                     <input
                       type="text"
                       onkeyup="checktestlimit(this, 'pteTest','listening');"
                       id="txt_L_PTE"
                       name="txt_L_PTE"
-                      class="form-control PTE_Mandate_Check"
+                      className="form-control PTE_Mandate_Check"
                       value=""
                     />
                   </div>
                 </div>
-                <div class="col-sm-3 col-md-3 col-sm-12">
-                  <div class="form-group">
+                <div className="col-sm-3 col-md-3 col-sm-12">
+                  <div className="form-group">
                     <label>Reading *</label>{" "}
                     <input
                       type="text"
                       onkeyup="checktestlimit(this, 'pteTest','reading');"
                       id="txt_R_PTE"
                       name="txt_R_PTE"
-                      class="form-control PTE_Mandate_Check"
+                      className="form-control PTE_Mandate_Check"
                       value=""
                     />
                   </div>
                 </div>
-                <div class="col-sm-3 col-md-3 col-sm-12">
-                  <div class="form-group">
+                <div className="col-sm-3 col-md-3 col-sm-12">
+                  <div className="form-group">
                     <label>Writing *</label>{" "}
                     <input
                       type="text"
                       onkeyup="checktestlimit(this, 'pteTest','writing');"
                       id="txt_W_PTE"
                       name="txt_W_PTE"
-                      class="form-control PTE_Mandate_Check"
+                      className="form-control PTE_Mandate_Check"
                       value=""
                     />
                   </div>
                 </div>
-                <div class="col-sm-3 col-md-3 col-sm-12">
-                  <div class="form-group">
+                <div className="col-sm-3 col-md-3 col-sm-12">
+                  <div className="form-group">
                     <label>Speaking *</label>{" "}
                     <input
                       type="text"
                       onkeyup="checktestlimit(this, 'pteTest','speaking');"
                       id="txt_S_PTE"
                       name="txt_S_PTE"
-                      class="form-control PTE_Mandate_Check"
+                      className="form-control PTE_Mandate_Check"
                       value=""
                     />
                   </div>
@@ -2205,73 +2205,73 @@
               </div>
             </div>
             <div
-              class="row divTests"
+              className="row divTests"
               id="div_TOEFL"
               name="div_TOEFL"
               style={{ display: "none" }}
             >
-              <div class="row cust47">
-                <div class="col-sm-3 col-md-3 col-sm-12">
-                  <div class="form-group">
+              <div className="row cust47">
+                <div className="col-sm-3 col-md-3 col-sm-12">
+                  <div className="form-group">
                     <label>Overall *</label>{" "}
                     <input
                       type="text"
                       onkeyup="checklimit(this, 'toeflTest');"
                       id="txt_O_TOEFL"
                       name="txt_O_TOEFL"
-                      class="form-control TOEFL_Mandate_Check"
+                      className="form-control TOEFL_Mandate_Check"
                       value=""
                     />
                   </div>
                 </div>
-                <div class="col-sm-3 col-md-3 col-sm-12">
-                  <div class="form-group">
+                <div className="col-sm-3 col-md-3 col-sm-12">
+                  <div className="form-group">
                     <label>Listening *</label>{" "}
                     <input
                       type="text"
                       onkeyup="checktestlimit(this, 'toeflTest','listening');"
                       id="txt_L_TOEFL"
                       name="txt_L_TOEFL"
-                      class="form-control TOEFL_Mandate_Check"
+                      className="form-control TOEFL_Mandate_Check"
                       value=""
                     />
                   </div>
                 </div>
-                <div class="col-sm-3 col-md-3 col-sm-12">
-                  <div class="form-group">
+                <div className="col-sm-3 col-md-3 col-sm-12">
+                  <div className="form-group">
                     <label>Reading *</label>{" "}
                     <input
                       type="text"
                       onkeyup="checktestlimit(this, 'toeflTest','reading');"
                       id="txt_R_TOEFL"
                       name="txt_R_TOEFL"
-                      class="form-control TOEFL_Mandate_Check"
+                      className="form-control TOEFL_Mandate_Check"
                       value=""
                     />
                   </div>
                 </div>
-                <div class="col-sm-3 col-md-3 col-sm-12">
-                  <div class="form-group">
+                <div className="col-sm-3 col-md-3 col-sm-12">
+                  <div className="form-group">
                     <label>Writing *</label>{" "}
                     <input
                       type="text"
                       onkeyup="checktestlimit(this, 'toeflTest','writing');"
                       id="txt_W_TOEFL"
                       name="txt_W_TOEFL"
-                      class="form-control TOEFL_Mandate_Check"
+                      className="form-control TOEFL_Mandate_Check"
                       value=""
                     />
                   </div>
                 </div>
-                <div class="col-sm-3 col-md-3 col-sm-12">
-                  <div class="form-group">
+                <div className="col-sm-3 col-md-3 col-sm-12">
+                  <div className="form-group">
                     <label>Speaking *</label>{" "}
                     <input
                       type="text"
                       onkeyup="checktestlimit(this, 'toeflTest','speaking');"
                       id="txt_S_TOEFL"
                       name="txt_S_TOEFL"
-                      class="form-control TOEFL_Mandate_Check"
+                      className="form-control TOEFL_Mandate_Check"
                       value=""
                     />
                   </div>
@@ -2279,85 +2279,85 @@
               </div>
             </div>
             <div
-              class="row divTests"
+              className="row divTests"
               id="div_DET"
               name="div_DET"
               style={{ display: "none" }}
             >
-              <div class="col-sm-3">
-                <div class="form-group">
+              <div className="col-sm-3">
+                <div className="form-group">
                   <label>Overall *</label>{" "}
                   <input
                     type="text"
                     onkeyup="checklimit(this, 'detTest');"
                     id="txt_O_DET"
                     name="txt_O_DET"
-                    class="form-control DET_Mandate_Check"
+                    className="form-control DET_Mandate_Check"
                     value=""
                   />
                 </div>
               </div>
             </div>
             <div
-              class="form-group col-sm-12 error_eng_test error_mandate"
+              className="form-group col-sm-12 error_eng_test error_mandate"
               style={{ display: "none", color: "red" }}
             >
               Please fill the above required field(s)
             </div>
-            <div class="form-group col-sm-12 custTipPerOther">
+            <div className="form-group col-sm-12 custTipPerOther">
               <label>Other Exams</label>
-              <div style={{ verticalAlign: "inherit" }} class="tooltip">
-                <div class="right">
-                  <div class="text-content">
+              <div style={{ verticalAlign: "inherit" }} className="tooltip">
+                <div className="right">
+                  <div className="text-content">
                     For Without GRE case, please select GRE and enter 0 for
                     Overall Score below
                   </div>
                 </div>
               </div>
-              <div class="btn-group bootstrap-select show-tick form-control eligibility_select yearfield">
+              <div className="btn-group bootstrap-select show-tick form-control eligibility_select yearfield">
                 <button
                   type="button"
-                  class="btn dropdown-toggle btn-default"
+                  className="btn dropdown-toggle btn-default"
                   data-toggle="dropdown"
                   data-id="eli_other_Test"
                   title="Select..."
                 >
-                  <span class="filter-option pull-left">Select...</span>&nbsp;
+                  <span className="filter-option pull-left">Select...</span>
                 </button>
-                <div class="dropdown-menu open">
-                  <div class="bs-searchbox">
+                <div className="dropdown-menu open">
+                  <div className="bs-searchbox">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       autocomplete="off"
                     />
                   </div>
-                  <ul class="dropdown-menu inner" role="menu">
+                  <ul className="dropdown-menu inner" role="menu">
                     <li data-original-index="0">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">SAT</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">SAT</span>
                       </a>
                     </li>
                     <li data-original-index="1">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">ACT</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">ACT</span>
                       </a>
                     </li>
                     <li data-original-index="2">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">GRE</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">GRE</span>
                       </a>
                     </li>
                     <li data-original-index="3">
-                      <a tabindex="0" class="" data-tokens="null">
-                        <span class="text">GMAT</span>
+                      <a tabindex="0" className="" data-tokens="null">
+                        <span className="text">GMAT</span>
                       </a>
                     </li>
                   </ul>
                 </div>
                 <select
                   title="Select..."
-                  class="form-control eligibility_select selectpicker show-tick yearfield"
+                  className="form-control eligibility_select selectpicker show-tick yearfield"
                   id="eli_other_Test"
                   name="eli_other_Test"
                   multiple="multiple"
@@ -2376,104 +2376,104 @@
               </div>
             </div>
             <div
-              class="row divTests"
+              className="row divTests"
               id="div_GRE"
               name="div_GRE"
               style={{ display: "none" }}
             >
-              <div class="col-sm-4">
-                <div class="form-group">
+              <div className="col-sm-4">
+                <div className="form-group">
                   <label>Overall Score *</label>{" "}
                   <input
                     type="text"
                     onkeyup="checklimit(this, 'greTest');"
                     id="txt_O_GRE"
                     name="txt_O_GRE"
-                    class="form-control GRE_Mandate_Check"
+                    className="form-control GRE_Mandate_Check"
                     value=""
                   />
                 </div>
               </div>
             </div>
             <div
-              class="row divTests"
+              className="row divTests"
               id="div_GMAT"
               name="div_GMAT"
               style={{ display: "none" }}
             >
-              <div class="col-sm-4">
-                <div class="form-group">
+              <div className="col-sm-4">
+                <div className="form-group">
                   <label>Overall Score *</label>{" "}
                   <input
                     type="text"
                     onkeyup="checklimit(this, 'gmatTest');"
                     id="txt_O_GMAT"
                     name="txt_O_GMAT"
-                    class="form-control GMAT_Mandate_Check"
+                    className="form-control GMAT_Mandate_Check"
                     value=""
                   />
                 </div>
               </div>
             </div>
             <div
-              class="row divTests"
+              className="row divTests"
               id="div_SAT"
               name="div_SAT"
               style={{ display: "none" }}
             >
-              <div class="col-sm-4">
-                <div class="form-group">
+              <div className="col-sm-4">
+                <div className="form-group">
                   <label>Overall Score *</label>{" "}
                   <input
                     type="text"
                     onkeyup="checklimit(this, 'satTest');"
                     id="txt_O_SAT"
                     name="txt_O_SAT"
-                    class="form-control SAT_Mandate_Check"
+                    className="form-control SAT_Mandate_Check"
                     value=""
                   />
                 </div>
               </div>
             </div>
             <div
-              class="row divTests"
+              className="row divTests"
               id="div_ACT"
               name="div_ACT"
               style={{ display: "none" }}
             >
-              <div class="col-sm-4">
-                <div class="form-group">
+              <div className="col-sm-4">
+                <div className="form-group">
                   <label>Overall Score *</label>{" "}
                   <input
                     type="text"
                     onkeyup="checklimit(this, 'actTest');"
                     id="txt_O_ACT"
                     name="txt_O_ACT"
-                    class="form-control ACT_Mandate_Check"
+                    className="form-control ACT_Mandate_Check"
                     value=""
                   />
                 </div>
               </div>
             </div>
             <div
-              class="form-group col-sm-12 error_other_test error_mandate"
+              className="form-group col-sm-12 error_other_test error_mandate"
               style={{ display: "none", color: "red" }}
             >
               Overall score is required
             </div>
-            <div class="row custBt">
-              <div class="elg_btn_div col-sm-6">
+            <div className="row custBt">
+              <div className="elg_btn_div col-sm-6">
                 <button
-                  class="btn app_fil_btn"
+                  className="btn app_fil_btn"
                   id="btn_ResetFilter"
                   name="btn_ResetFilter"
                 >
                   RESET
                 </button>
               </div>
-              <div class="elg_btn_div col-sm-6">
+              <div className="elg_btn_div col-sm-6">
                 <button
-                  class="btn app_fil_btn right"
+                  className="btn app_fil_btn right"
                   id="btn_ApplyFilter"
                   name="btn_ApplyFilter"
                 >
@@ -2483,10 +2483,10 @@
             </div>
           </form>
         </div>
-        <div class="search_result_filter_options1" id="divUniversity">
-          <h2 class="h5 text-uppercase font-bold justify-content-betweenHeading bg-primary">
+        <div className="search_result_filter_options1" id="divUniversity">
+          <h2 className="h5 text-uppercase font-bold justify-content-betweenHeading bg-primary">
             Universities
-            <span class="search-university-icon">
+            <span className="search-university-icon">
               <img
                 src="/images/Icon/searchUniversityIcon.svg"
                 width="18"
@@ -2495,34 +2495,29 @@
               />
             </span>
           </h2>
-          <div class="searchTooglediv" style={{ display: "none" }}>
+          <div className="searchTooglediv" style={{ display: "none" }}>
             <input
               type="text"
-              class="form-control search-university"
+              className="form-control search-university"
               placeholder="Search university..."
-            />{" "}
-            <span class="search-university-close">
-              <img
-                src="/images/Icon/closed.svg"
-                width="18"
-                height="18"
-                alt="closed"
-              />
+            />
+            <span className="search-university-close">
+           
             </span>
           </div>
           <ul
-            class="list-unstyled"
+            className="list-unstyled"
             style={{ maxHeight: "250px", overflowY: "scroll" }}
             id="UniversityFilter"
           >
-            <li class="margin-top-6 margin-bottom-6" data-item-title="953">
+            <li className="margin-top-6 margin-bottom-6" data-item-title="953">
               <div
-                class="form-group margin-bottom-0"
+                className="form-group margin-bottom-0"
                 title=" (STUDY GROUP) University of Leeds, Leeds"
               >
-                <label class="u-check padding-left-30">
+                <label className="u-check padding-left-30">
                   <input
-                    class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
+                    className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
                     type="checkbox"
                     data-name="(STUDY GROUP) University of Leeds, Leeds"
                     data-id="953"
@@ -2534,19 +2529,19 @@
                   />{" "}
                   (STUDY GROUP) University of Leeds, Leeds
                 </label>
-                <span class="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
+                <span className="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
                   163
                 </span>
               </div>
             </li>
-            <li class="margin-top-6 margin-bottom-6" data-item-title="949">
+            <li className="margin-top-6 margin-bottom-6" data-item-title="949">
               <div
-                class="form-group margin-bottom-0"
+                className="form-group margin-bottom-0"
                 title="(KAPLAN) University of Nottingham International College"
               >
-                <label class="u-check padding-left-30">
+                <label className="u-check padding-left-30">
                   <input
-                    class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
+                    className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
                     type="checkbox"
                     data-name="(KAPLAN) University of Nottingham International College"
                     data-id="949"
@@ -2558,19 +2553,19 @@
                   />
                   (KAPLAN) University of Nottingham International College
                 </label>
-                <span class="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
+                <span className="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
                   6
                 </span>
               </div>
             </li>
-            <li class="margin-top-6 margin-bottom-6" data-item-title="956">
+            <li className="margin-top-6 margin-bottom-6" data-item-title="956">
               <div
-                class="form-group margin-bottom-0"
+                className="form-group margin-bottom-0"
                 title="(STUDY GROUP) The University of Sheffield International College"
               >
-                <label class="u-check padding-left-30">
+                <label className="u-check padding-left-30">
                   <input
-                    class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
+                    className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
                     type="checkbox"
                     data-name="(STUDY GROUP) The University of Sheffield International College"
                     data-id="956"
@@ -2583,19 +2578,19 @@
                   (STUDY GROUP) The University of Sheffield International
                   College
                 </label>
-                <span class="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
+                <span className="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
                   316
                 </span>
               </div>
             </li>
-            <li class="margin-top-6 margin-bottom-6" data-item-title="1132">
+            <li className="margin-top-6 margin-bottom-6" data-item-title="1132">
               <div
-                class="form-group margin-bottom-0"
+                className="form-group margin-bottom-0"
                 title="University of Leeds"
               >
-                <label class="u-check padding-left-30">
+                <label className="u-check padding-left-30">
                   <input
-                    class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
+                    className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
                     type="checkbox"
                     data-name="University of Leeds"
                     data-id="1132"
@@ -2607,19 +2602,19 @@
                   />
                   University of Leeds
                 </label>
-                <span class="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
+                <span className="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
                   400
                 </span>
               </div>
             </li>
-            <li class="margin-top-6 margin-bottom-6" data-item-title="980">
+            <li className="margin-top-6 margin-bottom-6" data-item-title="980">
               <div
-                class="form-group margin-bottom-0"
+                className="form-group margin-bottom-0"
                 title="(INTO) Newcastle University"
               >
-                <label class="u-check padding-left-30">
+                <label className="u-check padding-left-30">
                   <input
-                    class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
+                    className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
                     type="checkbox"
                     data-name="(INTO) Newcastle University"
                     data-id="980"
@@ -2631,19 +2626,19 @@
                   />
                   (INTO) Newcastle University
                 </label>
-                <span class="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
+                <span className="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
                   180
                 </span>
               </div>
             </li>
-            <li class="margin-top-6 margin-bottom-6" data-item-title="985">
+            <li className="margin-top-6 margin-bottom-6" data-item-title="985">
               <div
-                class="form-group margin-bottom-0"
+                className="form-group margin-bottom-0"
                 title="(KAPLAN) University of Glasgow International College"
               >
-                <label class="u-check padding-left-30">
+                <label className="u-check padding-left-30">
                   <input
-                    class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
+                    className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
                     type="checkbox"
                     data-name="(KAPLAN) University of Glasgow International College"
                     data-id="985"
@@ -2655,19 +2650,19 @@
                   />
                   (KAPLAN) University of Glasgow International College
                 </label>
-                <span class="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
+                <span className="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
                   14
                 </span>
               </div>
             </li>
-            <li class="margin-top-6 margin-bottom-6" data-item-title="1078">
+            <li className="margin-top-6 margin-bottom-6" data-item-title="1078">
               <div
-                class="form-group margin-bottom-0"
+                className="form-group margin-bottom-0"
                 title="University of Nottingham"
               >
-                <label class="u-check padding-left-30">
+                <label className="u-check padding-left-30">
                   <input
-                    class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
+                    className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
                     type="checkbox"
                     data-name="University of Nottingham"
                     data-id="1078"
@@ -2679,19 +2674,19 @@
                   />
                   University of Nottingham
                 </label>
-                <span class="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
+                <span className="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
                   381
                 </span>
               </div>
             </li>
-            <li class="margin-top-6 margin-bottom-6" data-item-title="913">
+            <li className="margin-top-6 margin-bottom-6" data-item-title="913">
               <div
-                class="form-group margin-bottom-0"
+                className="form-group margin-bottom-0"
                 title="(KAPLAN) Queen Mary University of London"
               >
-                <label class="u-check padding-left-30">
+                <label className="u-check padding-left-30">
                   <input
-                    class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
+                    className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
                     type="checkbox"
                     data-name="(KAPLAN) Queen Mary University of London"
                     data-id="913"
@@ -2703,19 +2698,19 @@
                   />
                   (KAPLAN) Queen Mary University of London
                 </label>
-                <span class="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
+                <span className="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
                   23
                 </span>
               </div>
             </li>
-            <li class="margin-top-6 margin-bottom-6" data-item-title="600">
+            <li className="margin-top-6 margin-bottom-6" data-item-title="600">
               <div
-                class="form-group margin-bottom-0"
+                className="form-group margin-bottom-0"
                 title="University of Bristol"
               >
-                <label class="u-check padding-left-30">
+                <label className="u-check padding-left-30">
                   <input
-                    class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
+                    className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
                     type="checkbox"
                     data-name="University of Bristol"
                     data-id="600"
@@ -2727,19 +2722,19 @@
                   />
                   University of Bristol
                 </label>
-                <span class="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
+                <span className="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
                   375
                 </span>
               </div>
             </li>
-            <li class="margin-top-6 margin-bottom-6" data-item-title="1060">
+            <li className="margin-top-6 margin-bottom-6" data-item-title="1060">
               <div
-                class="form-group margin-bottom-0"
+                className="form-group margin-bottom-0"
                 title="The University of Sheffield"
               >
-                <label class="u-check padding-left-30">
+                <label className="u-check padding-left-30">
                   <input
-                    class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
+                    className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
                     type="checkbox"
                     data-name="The University of Sheffield"
                     data-id="1060"
@@ -2751,19 +2746,19 @@
                   />
                   The University of Sheffield
                 </label>
-                <span class="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
+                <span className="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
                   440
                 </span>
               </div>
             </li>
-            <li class="margin-top-6 margin-bottom-6" data-item-title="306">
+            <li className="margin-top-6 margin-bottom-6" data-item-title="306">
               <div
-                class="form-group margin-bottom-0"
+                className="form-group margin-bottom-0"
                 title="University of Glasgow"
               >
-                <label class="u-check padding-left-30">
+                <label className="u-check padding-left-30">
                   <input
-                    class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
+                    className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
                     type="checkbox"
                     data-name="University of Glasgow"
                     data-id="306"
@@ -2775,19 +2770,19 @@
                   />
                   University of Glasgow
                 </label>
-                <span class="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
+                <span className="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
                   326
                 </span>
               </div>
             </li>
-            <li class="margin-top-6 margin-bottom-6" data-item-title="311">
+            <li className="margin-top-6 margin-bottom-6" data-item-title="311">
               <div
-                class="form-group margin-bottom-0"
+                className="form-group margin-bottom-0"
                 title="Newcastle University"
               >
-                <label class="u-check padding-left-30">
+                <label className="u-check padding-left-30">
                   <input
-                    class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
+                    className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
                     type="checkbox"
                     data-name="Newcastle University"
                     data-id="311"
@@ -2799,19 +2794,19 @@
                   />
                   Newcastle University
                 </label>
-                <span class="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
+                <span className="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
                   383
                 </span>
               </div>
             </li>
-            <li class="margin-top-6 margin-bottom-6" data-item-title="381">
+            <li className="margin-top-6 margin-bottom-6" data-item-title="381">
               <div
-                class="form-group margin-bottom-0"
+                className="form-group margin-bottom-0"
                 title="(KAPLAN) University of York"
               >
-                <label class="u-check padding-left-30">
+                <label className="u-check padding-left-30">
                   <input
-                    class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
+                    className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 UniversityFilterChk"
                     type="checkbox"
                     data-name="(KAPLAN) University of York"
                     data-id="381"
@@ -2823,7 +2818,7 @@
                   />
                   (KAPLAN) University of York
                 </label>
-                <span class="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
+                <span className="countbox d-inline-block font-size12 min-width-40 g-brd-around g-color-gray-dark-v5 g-brd-gray-light-v3 text-center rounded g-px-10 g-py-3">
                   28
                 </span>
               </div>
@@ -2831,16 +2826,16 @@
           </ul>
         </div>
       </div>
-      <div class="search_result_filter_options1" id="divCountryLevel"></div>
+      <div className="search_result_filter_options1" id="divCountryLevel"></div>
       <div id="divFeeSection">
-        <h2 class="h5 text-uppercase font-bold justify-content-betweenHeading bg-primary">
+        <h2 className="h5 text-uppercase font-bold justify-content-betweenHeading bg-primary">
           Tuition Fees
         </h2>
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12">
+        <div className="row">
+          <div className="col-lg-12 col-md-12 col-sm-12">
             <ul>
               <li
-                class="margin-top-0 course_detail_text_span"
+                className="margin-top-0 course_detail_text_span"
                 data-item-title="Above 100000"
                 style={{
                   listStyle: "none",
@@ -2848,10 +2843,10 @@
                   textAlign: "right",
                 }}
               >
-                <div class="form-group margin-bottom-0" title="Above 100000">
-                  <label class="u-check padding-left-30">
+                <div className="form-group margin-bottom-0" title="Above 100000">
+                  <label className="u-check padding-left-30">
                     <input
-                      class="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 FeesRangeFilterChk"
+                      className="g-hidden-xs-up g-pos-abs g-top-0 g-left-0 FeesRangeFilterChk"
                       type="checkbox"
                       name="prglvl"
                       data-id="feesRangeCheckBox"
@@ -2863,42 +2858,42 @@
                   </label>
                 </div>
               </li>
-              <span class="irs js-irs-2 irs-with-grid">
-                <span class="irs">
-                  <span class="irs-min" style={{ visibility: "hidden" }}>
+              <span className="irs js-irs-2 irs-with-grid">
+                <span className="irs">
+                  <span className="irs-min" style={{ visibility: "hidden" }}>
                     0
                   </span>
-                  <span class="irs-max" style={{ visibility: "hidden" }}>
+                  <span className="irs-max" style={{ visibility: "hidden" }}>
                     100 000
                   </span>
                   <span
-                    class="irs-from"
+                    className="irs-from"
                     style={{ visibility: "hidden", left: "-0.720829%" }}
                   >
                     0
                   </span>
                   <span
-                    class="irs-to"
+                    className="irs-to"
                     style={{ visibility: "hidden", left: "92.0452%" }}
                   >
                     100 000
                   </span>
                   <span
-                    class="irs-single"
+                    className="irs-single"
                     style={{ visibility: "hidden", left: "42.8684%" }}
                   >
                     0 — 100 000
                   </span>
                 </span>
-                <span class="irs-grid" style="width: 96.9972%; left: 1.40139%;">
+                <span className="irs-grid" style="width: 96.9972%; left: 1.40139%;">
                   <span
-                    class="irs-grid-text js-grid-text-0"
+                    className="irs-grid-text js-grid-text-0"
                     style={{ left: "0%", marginLeft: "-1.61441%" }}
                   >
                     0
                   </span>
                   <span
-                    class="irs-grid-text js-grid-text-1"
+                    className="irs-grid-text js-grid-text-1"
                     style={{
                       left: "25%",
                       marginLeft: "-4.98828%",
@@ -2908,7 +2903,7 @@
                     25 000
                   </span>
                   <span
-                    class="irs-grid-text js-grid-text-2"
+                    className="irs-grid-text js-grid-text-2"
                     style={{
                       left: "50%",
                       marginLeft: "-5.07784%",
@@ -2918,7 +2913,7 @@
                     50 000
                   </span>
                   <span
-                    class="irs-grid-text js-grid-text-3"
+                    className="irs-grid-text js-grid-text-3"
                     style={{
                       left: "75%",
                       marginLeft: "-4.95628%",
@@ -2928,7 +2923,7 @@
                     75 000
                   </span>
                   <span
-                    class="irs-grid-text js-grid-text-4"
+                    className="irs-grid-text js-grid-text-4"
                     style={{
                       left: "100%",
                       marginLeft: "-5.5257%",
@@ -2943,7 +2938,7 @@
                 id="feesRange"
                 name="feesRange"
                 value=""
-                class="irs-hidden-input"
+                className="irs-hidden-input"
                 tabindex="-1"
                 readonly
               />
@@ -2952,14 +2947,14 @@
         </div>
       </div>
       <div id="divPercentageSection" style={{ display: "none" }}>
-        <h2 class="h5 text-uppercase font-bold justify-content-betweenHeading bg-primary">
+        <h2 className="h5 text-uppercase font-bold justify-content-betweenHeading bg-primary">
           Entry Requirements
         </h2>
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12">
-            <div class="col-lg-4" style={{ paddingLeft: 0, paddingRight: 0 }}>
+        <div className="row">
+          <div className="col-lg-12 col-md-12 col-sm-12">
+            <div className="col-lg-4" style={{ paddingLeft: 0, paddingRight: 0 }}>
               <h2
-                class="h5 text-uppercase font-bold justify-content-betweenHeading"
+                className="h5 text-uppercase font-bold justify-content-betweenHeading"
                 style={{
                   textIndent: 0,
                   backgroundColor: "#fff",
@@ -2969,31 +2964,31 @@
                 Percentage marks
               </h2>
             </div>
-            <div class="col-lg-8" style={{ paddingLeft: 0, paddingRight: 0 }}>
+            <div className="col-lg-8" style={{ paddingLeft: 0, paddingRight: 0 }}>
               <input
                 type="range"
                 id="percentageMarksToggle"
                 name="points"
                 min="1"
-                class="rangeAll"
+                className="rangeAll"
                 max="3"
                 value="2"
               />
             </div>
-            <div class="col-lg-12">
-              <div class="col-lg-4"></div>
+            <div className="col-lg-12">
+              <div className="col-lg-4"></div>
               <div
-                class="col-lg-8 col-xs-12"
+                className="col-lg-8 col-xs-12"
                 style={{ paddingLeft: 0, paddingRight: 0 }}
               >
                 <div
-                  class="col-sm-4 col-xs-4"
+                  className="col-sm-4 col-xs-4"
                   style={{ paddingLeft: 0, paddingRight: 0 }}
                 >
                   12th or equivelent
                 </div>
                 <div
-                  class="col-sm-4 col-xs-4"
+                  className="col-sm-4 col-xs-4"
                   style={{
                     paddingLeft: 0,
                     paddingRight: 0,
@@ -3003,7 +2998,7 @@
                   All
                 </div>
                 <div
-                  class="col-sm-4 col-xs-4"
+                  className="col-sm-4 col-xs-4"
                   style={{
                     paddingLeft: 0,
                     paddingRight: 0,
@@ -3014,42 +3009,42 @@
                 </div>
               </div>
             </div>
-            <div class="mt-51">
-              <span class="irs js-irs-3 irs-with-grid">
-                <span class="irs">
-                  <span class="irs-min">0%</span>
-                  <span class="irs-max">100%</span>
-                  <span class="irs-from">0</span>
-                  <span class="irs-to">0</span>
-                  <span class="irs-single">0</span>
+            <div className="mt-51">
+              <span className="irs js-irs-3 irs-with-grid">
+                <span className="irs">
+                  <span className="irs-min">0%</span>
+                  <span className="irs-max">100%</span>
+                  <span className="irs-from">0</span>
+                  <span className="irs-to">0</span>
+                  <span className="irs-single">0</span>
                 </span>
-                <span class="irs-grid">
+                <span className="irs-grid">
                   <span
-                    class="irs-grid-text js-grid-text-0"
+                    className="irs-grid-text js-grid-text-0"
                     style={{ left: "0%" }}
                   >
                     0
                   </span>
                   <span
-                    class="irs-grid-text js-grid-text-1"
+                    className="irs-grid-text js-grid-text-1"
                     style={{ left: "25%", visibility: "hidden" }}
                   >
                     25
                   </span>
                   <span
-                    class="irs-grid-text js-grid-text-2"
+                    className="irs-grid-text js-grid-text-2"
                     style={{ left: "50%", visibility: "hidden" }}
                   >
                     50
                   </span>
                   <span
-                    class="irs-grid-text js-grid-text-3"
+                    className="irs-grid-text js-grid-text-3"
                     style={{ left: "75%", visibility: "hidden" }}
                   >
                     75
                   </span>
                   <span
-                    class="irs-grid-text js-grid-text-4"
+                    className="irs-grid-text js-grid-text-4"
                     style={{ left: "100%" }}
                   >
                     100
@@ -3061,7 +3056,7 @@
                 id="percentageMarks"
                 name="percentageMarks"
                 value=""
-                class="irs-hidden-input"
+                className="irs-hidden-input"
                 tabindex="-1"
                 readonly
               />
@@ -3070,44 +3065,44 @@
         </div>
       </div>
       <div id="divPercentageSection" style={{ display: "none" }}>
-        <h2 class="h5 text-uppercase font-bold justify-content-betweenHeading bg-primary">
+        <h2 className="h5 text-uppercase font-bold justify-content-betweenHeading bg-primary">
           Entry Requirements
         </h2>
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12">
-            <div class="col-lg-4" style={{ paddingLeft: 0, paddingRight: 0 }}>
+        <div className="row">
+          <div className="col-lg-12 col-md-12 col-sm-12">
+            <div className="col-lg-4" style={{ paddingLeft: 0, paddingRight: 0 }}>
               <h2
-                class="h5 text-uppercase font-bold justify-content-betweenHeading"
+                className="h5 text-uppercase font-bold justify-content-betweenHeading"
                 style={{textIndent: 0,backgroundColor: "#fff",color: "#000000"}}
               >
                 Percentage marks
               </h2>
             </div>
-            <div class="col-lg-8" style={{ paddingLeft: 0, paddingRight: 0 }}>
+            <div className="col-lg-8" style={{ paddingLeft: 0, paddingRight: 0 }}>
               <input
                 type="range"
                 id="percentageMarksToggle"
                 name="points"
                 min="1"
-                class="rangeAll"
+                className="rangeAll"
                 max="3"
                 value="2"
               />
             </div>
-            <div class="col-lg-12">
-              <div class="col-lg-4"></div>
+            <div className="col-lg-12">
+              <div className="col-lg-4"></div>
               <div
-                class="col-lg-8 col-xs-12"
+                className="col-lg-8 col-xs-12"
                 style={{ paddingLeft: 0, paddingRight: 0 }}
               >
                 <div
-                  class="col-sm-4 col-xs-4"
+                  className="col-sm-4 col-xs-4"
                   style={{ paddingLeft: 0, paddingRight: 0 }}
                 >
                   12th or equivelent
                 </div>
                 <div
-                  class="col-sm-4 col-xs-4"
+                  className="col-sm-4 col-xs-4"
                   style={{
                     paddingLeft: 0,
                     paddingRight: 0,
@@ -3117,7 +3112,7 @@
                   All
                 </div>
                 <div
-                  class="col-sm-4 col-xs-4"
+                  className="col-sm-4 col-xs-4"
                   style={{
                     paddingLeft: 0,
                     paddingRight: 0,
@@ -3128,7 +3123,7 @@
                 </div>
               </div>
             </div>
-            <div class="mt-51">
+            <div className="mt-51">
               <input
                 type="text"
                 id="percentageMarks"
@@ -3141,62 +3136,62 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-    <div id="sortby" class="row sortby tooltip-holder">
-      <div class="col-lg-4 col-md-4 col-sm-6"></div>
+  <div className="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+    <div id="sortby" className="row sortby tooltip-holder">
+      <div className="col-lg-4 col-md-4 col-sm-6"></div>
       <div
-        class="col-lg-2 col-md-2 col-sm-2 text-right sort-by-label"
+        className="col-lg-2 col-md-2 col-sm-2 text-right sort-by-label"
         id="sort-by"
       >
         <label>Sort By</label>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-4">
-        <div class="tooltip programsortby-tooltip">
-          <div class="bottom">
+      <div className="col-lg-6 col-md-6 col-sm-4">
+        <div className="tooltip programsortby-tooltip">
+          <div className="bottom">
             To sort, please select a single country in the country dropdown
           </div>
-          <div class="btn-group bootstrap-select form-control program-sort-by disabled">
+          <div className="btn-group bootstrap-select form-control program-sort-by disabled">
             <button
               type="button"
-              class="btn dropdown-toggle disabled btn-default"
+              className="btn dropdown-toggle disabled btn-default"
               data-toggle="dropdown"
               data-id="ProgramSortBy"
               title="Ranking"
               tabindex="-1"
             >
-              <span class="filter-option pull-left">Ranking</span>&nbsp;
+              <span className="filter-option pull-left">Ranking</span>
             </button>
-            <div class="dropdown-menu open">
-              <ul class="dropdown-menu inner" role="menu">
-                <li data-original-index="0" class="selected">
-                  <a tabindex="0" class="" data-tokens="null">
-                    <span class="text">Ranking</span>
+            <div className="dropdown-menu open">
+              <ul className="dropdown-menu inner" role="menu">
+                <li data-original-index="0" className="selected">
+                  <a tabindex="0" className="" data-tokens="null">
+                    <span className="text">Ranking</span>
                   </a>
                 </li>
                 <li data-original-index="1">
-                  <a tabindex="0" class="" data-tokens="null">
-                    <span class="text">Tuition Fee - High to Low</span>
+                  <a tabindex="0" className="" data-tokens="null">
+                    <span className="text">Tuition Fee - High to Low</span>
                   </a>
                 </li>
                 <li data-original-index="2">
-                  <a tabindex="0" class="" data-tokens="null">
-                    <span class="text">Tuition Fee - Low to High</span>
+                  <a tabindex="0" className="" data-tokens="null">
+                    <span className="text">Tuition Fee - Low to High</span>
                   </a>
                 </li>
                 <li data-original-index="3">
-                  <a tabindex="0" class="" data-tokens="null">
-                    <span class="text">Application Fee - High to Low</span>
+                  <a tabindex="0" className="" data-tokens="null">
+                    <span className="text">Application Fee - High to Low</span>
                   </a>
                 </li>
                 <li data-original-index="4">
-                  <a tabindex="0" class="" data-tokens="null">
-                    <span class="text">Application Fee - Low to High</span>
+                  <a tabindex="0" className="" data-tokens="null">
+                    <span className="text">Application Fee - Low to High</span>
                   </a>
                 </li>
               </ul>
             </div>
             <select
-              class="form-control program-sort-by"
+              className="form-control program-sort-by"
               id="ProgramSortBy"
               name="ProgramSortBy"
               tabindex="-98"
@@ -3218,21 +3213,21 @@
     </div>
     <div id="searchdta">
       <div id="sticky-anchor"></div>
-      <div id="stickyone" class="">
-        <div class="SPresultpage">
-          <span class="resultfound eligibility_search_Result_badge">
+      <div id="stickyone" className="">
+        <div className="SPresultpage">
+          <span className="resultfound eligibility_search_Result_badge">
             38376 Courses Found
           </span>
-          <span class="pntxt">Page 1 of 3838</span>
+          <span className="pntxt">Page 1 of 3838</span>
         </div>
       </div>
-      <div class="justify-content-between-title margin-bottom-10 bg-primary download-sortlist-tab">
-        <div class="row">
-          <div class="col-lg-6 downloadbox" style={{ paddingRight: 0 }}>
-            <div class="row">
-              <div class="col-md-12 col-xs-12 paddingleft0 results-anchor ipad-align-left">
+      <div className="justify-content-between-title margin-bottom-10 bg-primary download-sortlist-tab">
+        <div className="row">
+          <div className="col-lg-6 downloadbox" style={{ paddingRight: 0 }}>
+            <div className="row">
+              <div className="col-md-12 col-xs-12 paddingleft0 results-anchor ipad-align-left">
                 <a
-                  class="u-link-v5 text-white actionLinks download1box"
+                  className="u-link-v5 text-white actionLinks download1box"
                   href="javascript:void(0);"
                   onclick="SearchProgram.GetCoureseToExport('normal')"
                 >
@@ -3241,31 +3236,31 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 text-right padding-0 margin-top-5 shortlist-area">
-            <div class="switch switchh">
-              <label class="text-white shortlist-all">
-                <i class="fa fa-check-square-o g-pos-rel margin-right-5 short">
+          <div className="col-lg-6 text-right padding-0 margin-top-5 shortlist-area">
+            <div className="switch switchh">
+              <label className="text-white shortlist-all">
+                <i className="fa fa-check-square-o g-pos-rel margin-right-5 short">
                   &nbsp;&nbsp;
                 </i>
                 Shortlist All
-                <input type="checkbox" id="ShortlistAll" class="switch_input" />
+                <input type="checkbox" id="ShortlistAll" className="switch_input" />
               </label>
             </div>
           </div>
         </div>
       </div>
-      <article class="crbox">
-        <div class="row">
-          <article class="crbox program_results_127952">
-            <div class="row d-flex">
-              <div class="col-lg-8 col-md-8 col-sm-8 courseDetails">
+      <article className="crbox">
+        <div className="row">
+          <article className="crbox program_results_127952">
+            <div className="row d-flex">
+              <div className="col-lg-8 col-md-8 col-sm-8 courseDetails">
                 <div style={{ float: "left", width: "80%" }}>
                   <h3
-                    class="h4 margin-bottom-10 student-eligibility-h3"
+                    className="h4 margin-bottom-10 student-eligibility-h3"
                     style={{ width: "100%" }}
                   >
                     <a
-                      class="u-link-v5 text-black font-size16 font-bold"
+                      className="u-link-v5 text-black font-size16 font-bold"
                       style={{ textDecoration: "none!important" }}
                       target="_blank"
                       href="/SearchProgram/CourseDetail?uid=MTI3OTUy"
@@ -3275,59 +3270,59 @@
                     </a>
                   </h3>
                 </div>
-                <div class="font-size13 clearfix">
+                <div className="font-size13 clearfix">
                   <div
-                    class="universityProgram 127952"
+                    className="universityProgram 127952"
                     data-unicount="953_false"
                   >
                     <b>University:</b> (STUDY GROUP) University of Leeds, Leeds
                   </div>
-                  <div class="search_result_items countrydiv">
+                  <div className="search_result_items countrydiv">
                     <b>Country:</b> United Kingdom
                   </div>
-                  <div class="search_result_items durationdiv">
+                  <div className="search_result_items durationdiv">
                     <b>Duration:</b> 12 Month(s)
                   </div>
-                  <div class="divintake">
-                    <div class="intakeIconDiv">
+                  <div className="divintake">
+                    <div className="intakeIconDiv">
                       <span>
                         <b>Intakes:</b>
                       </span>
                     </div>
-                    <div class="openCloseIntakeWrapper">
-                      <div class="openIntakeDiv">
-                        <div class="open-width-span">
-                          <span class="label label-success custom-label label-success-bg">
+                    <div className="openCloseIntakeWrapper">
+                      <div className="openIntakeDiv">
+                        <div className="open-width-span">
+                          <span className="label label-success custom-label label-success-bg">
                             Open
                           </span>
                         </div>
-                        <span class="intakeCard 127952">Sep</span>
+                        <span className="intakeCard 127952">Sep</span>
                       </div>
-                      <div class="closedIntakeDiv">
-                        <div class="closed-width-span">
-                          <span class="label label-danger custom-label label-danger-bg">
+                      <div className="closedIntakeDiv">
+                        <div className="closed-width-span">
+                          <span className="label label-danger custom-label label-danger-bg">
                             Closed
                           </span>
                         </div>
-                        <span class="intakeCard 127952 closed-intake">Jan</span>
+                        <span className="intakeCard 127952 closed-intake">Jan</span>
                         <div
                           style={{ verticalAlign: "inherit" }}
-                          class="tooltip"
+                          className="tooltip"
                           id="intake_tooltip_127952"
                           data-id="127952"
                           data-intake="Jan"
                         >
-                          <div class="right closedIntakeRight">
-                            <div class="text-content"></div>
+                          <div className="right closedIntakeRight">
+                            <div className="text-content"></div>
                             <div
-                              class="loader"
+                              className="loader"
                               style={{ display: "none" }}
                             ></div>
                           </div>
-                          <span class="intakeCard 127952 closed-intake">
+                          <span className="intakeCard 127952 closed-intake">
                             <img
                               src="/images/Icon/infoicon.svg"
-                              class="infoiconimg"
+                              className="infoiconimg"
                               onmouseover="javascript:fetchTooltipContent(this,true,0)"
                               ontouchstart="javascript:fetchTooltipContent(this,true,0)"
                               onmouseout="javascript:fetchTooltipContent(this,false,0)"
@@ -3339,32 +3334,32 @@
                       </div>
                     </div>
                   </div>
-                  <div class="tutiondiv">
+                  <div className="tutiondiv">
                     <b>Yearly Tuition Fee:</b> £ 19800
                   </div>
-                  <div class="applicationdiv">
+                  <div className="applicationdiv">
                     <b>Application Fee:</b> No application fee
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
-                <div class="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
+              <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
+                <div className="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
                   <a
-                    class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
+                    className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
                     target="_blank"
                     href="/SearchProgram/CourseDetail?uid=MTI3OTUy"
                   >
-                    <i class="fa fa-list g-pos-rel margin-right-5">&nbsp;</i>
+                    <i className="fa fa-list g-pos-rel margin-right-5">&nbsp;</i>
                     View Details
                   </a>
                 </div>
-                <div class="switch search_result_second_box_shortlist ipad-lever">
+                <div className="switch search_result_second_box_shortlist ipad-lever">
                   <label>
                     Shortlist
                     <input
                       id="shortlist_uni_953"
                       type="checkbox"
-                      class="shortlist"
+                      className="shortlist"
                       data-cid="127952"
                       data-unid="953"
                       onclick="SearchProgram.AddToExportList('127952',$(this), true)"
@@ -3374,18 +3369,18 @@
                     Compare
                     <input
                       type="checkbox"
-                      class="compare"
+                      className="compare"
                       data-cid="127952"
                       onclick="SearchProgram.AddToCompareList('127952',$(this))"
                     />
                   </label>
                   <span id="127952"></span>
                 </div>
-                <div class="modalCourseCorrectionsRequestLink">
+                <div className="modalCourseCorrectionsRequestLink">
                   <div style={{ float: "right" }}>
                     <a
                       style={{ cursor: "pointer" }}
-                      class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
+                      className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
                       target="_blank"
                       onclick="CourseCorrectionRequest(127952)"
                     >
@@ -3395,32 +3390,32 @@
                 </div>
               </div>
             </div>
-            <div class="row margindiv">
-              <div class="col-sm-12">
-                <div class="rankingdiv">
-                  <div class="rankborder">
+            <div className="row margindiv">
+              <div className="col-sm-12">
+                <div className="rankingdiv">
+                  <div className="rankborder">
                     <span>2</span> in Webometrics United Kingdom National
                     Ranking
                   </div>
-                  <div class="rankborder">
+                  <div className="rankborder">
                     <span>46</span> in Webometrics World Ranking
                   </div>
                 </div>
               </div>
             </div>
           </article>
-          <article class="crbox">
-            <div class="row">
-              <article class="crbox program_results_127953">
-                <div class="row d-flex">
-                  <div class="col-lg-8 col-md-8 col-sm-8 courseDetails">
+          <article className="crbox">
+            <div className="row">
+              <article className="crbox program_results_127953">
+                <div className="row d-flex">
+                  <div className="col-lg-8 col-md-8 col-sm-8 courseDetails">
                     <div style={{ float: "left", width: "80%" }}>
                       <h3
-                        class="h4 margin-bottom-10 student-eligibility-h3"
+                        className="h4 margin-bottom-10 student-eligibility-h3"
                         style={{ width: "100%" }}
                       >
                         <a
-                          class="u-link-v5 text-black font-size16 font-bold"
+                          className="u-link-v5 text-black font-size16 font-bold"
                           style={{ textDecoration: "none !important" }}
                           target="_blank"
                           href="/SearchProgram/CourseDetail?uid=MTI3OTUz"
@@ -3430,62 +3425,62 @@
                         </a>
                       </h3>
                     </div>
-                    <div class="font-size13 clearfix">
+                    <div className="font-size13 clearfix">
                       <div
-                        class="universityProgram 127953"
+                        className="universityProgram 127953"
                         data-unicount="953_false"
                       >
                         <b>University:</b> (STUDY GROUP) University of Leeds,
                         Leeds
                       </div>
-                      <div class="search_result_items countrydiv">
+                      <div className="search_result_items countrydiv">
                         <b>Country:</b> United Kingdom
                       </div>
-                      <div class="search_result_items durationdiv">
+                      <div className="search_result_items durationdiv">
                         <b>Duration:</b> 12 Month(s)
                       </div>
-                      <div class="divintake">
-                        <div class="intakeIconDiv">
+                      <div className="divintake">
+                        <div className="intakeIconDiv">
                           <span>
                             <b>Intakes:</b>
                           </span>
                         </div>
-                        <div class="openCloseIntakeWrapper">
-                          <div class="openIntakeDiv">
-                            <div class="open-width-span">
-                              <span class="label label-success custom-label label-success-bg">
+                        <div className="openCloseIntakeWrapper">
+                          <div className="openIntakeDiv">
+                            <div className="open-width-span">
+                              <span className="label label-success custom-label label-success-bg">
                                 Open
                               </span>
                             </div>
-                            <span class="intakeCard 127953">Sep</span>
+                            <span className="intakeCard 127953">Sep</span>
                           </div>
-                          <div class="closedIntakeDiv">
-                            <div class="closed-width-span">
-                              <span class="label label-danger custom-label label-danger-bg">
+                          <div className="closedIntakeDiv">
+                            <div className="closed-width-span">
+                              <span className="label label-danger custom-label label-danger-bg">
                                 Closed
                               </span>
                             </div>
-                            <span class="intakeCard 127953 closed-intake">
+                            <span className="intakeCard 127953 closed-intake">
                               Jan
                             </span>
                             <div
                               style={{ verticalAlign: "inherit" }}
-                              class="tooltip"
+                              className="tooltip"
                               id="intake_tooltip_127953"
                               data-id="127953"
                               data-intake="Jan"
                             >
-                              <div class="right closedIntakeRight">
-                                <div class="text-content"></div>
+                              <div className="right closedIntakeRight">
+                                <div className="text-content"></div>
                                 <div
-                                  class="loader"
+                                  className="loader"
                                   style={{ display: "none" }}
                                 ></div>
                               </div>
-                              <span class="intakeCard 127953 closed-intake">
+                              <span className="intakeCard 127953 closed-intake">
                                 <img
                                   src="/images/Icon/infoicon.svg"
-                                  class="infoiconimg"
+                                  className="infoiconimg"
                                   onmouseover="javascript:fetchTooltipContent(this,true,0)"
                                   ontouchstart="javascript:fetchTooltipContent(this,true,0)"
                                   onmouseout="javascript:fetchTooltipContent(this,false,0)"
@@ -3497,34 +3492,34 @@
                           </div>
                         </div>
                       </div>
-                      <div class="tutiondiv">
+                      <div className="tutiondiv">
                         <b>Yearly Tuition Fee:</b> £ 19800
                       </div>
-                      <div class="applicationdiv">
+                      <div className="applicationdiv">
                         <b>Application Fee:</b> No application fee
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
-                    <div class="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
+                  <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
+                    <div className="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
                       <a
-                        class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
+                        className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
                         target="_blank"
                         href="/SearchProgram/CourseDetail?uid=MTI3OTUz"
                       >
-                        <i class="fa fa-list g-pos-rel margin-right-5">
+                        <i className="fa fa-list g-pos-rel margin-right-5">
                           &nbsp;
                         </i>
                         View Details
                       </a>
                     </div>
-                    <div class="switch search_result_second_box_shortlist ipad-lever">
+                    <div className="switch search_result_second_box_shortlist ipad-lever">
                       <label>
                         Shortlist
                         <input
                           id="shortlist_uni_953"
                           type="checkbox"
-                          class="shortlist"
+                          className="shortlist"
                           data-cid="127953"
                           data-unid="953"
                           onclick="SearchProgram.AddToExportList('127953',$(this), true)"
@@ -3534,18 +3529,18 @@
                         Compare
                         <input
                           type="checkbox"
-                          class="compare"
+                          className="compare"
                           data-cid="127953"
                           onclick="SearchProgram.AddToCompareList('127953',$(this))"
                         />
                       </label>
                       <span id="127953"></span>
                     </div>
-                    <div class="modalCourseCorrectionsRequestLink">
+                    <div className="modalCourseCorrectionsRequestLink">
                       <div style={{ float: "right" }}>
                         <a
                           style={{ cursor: "pointer" }}
-                          class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
+                          className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
                           target="_blank"
                           onclick="CourseCorrectionRequest(127953)"
                         >
@@ -3555,32 +3550,32 @@
                     </div>
                   </div>
                 </div>
-                <div class="row margindiv">
-                  <div class="col-sm-12">
-                    <div class="rankingdiv">
-                      <div class="rankborder">
+                <div className="row margindiv">
+                  <div className="col-sm-12">
+                    <div className="rankingdiv">
+                      <div className="rankborder">
                         <span>2</span> in Webometrics United Kingdom National
                         Ranking
                       </div>
-                      <div class="rankborder">
+                      <div className="rankborder">
                         <span>46</span> in Webometrics World Ranking
                       </div>
                     </div>
                   </div>
                 </div>
               </article>
-              <article class="crbox">
-                <div class="row">
-                  <article class="crbox program_results_127954">
-                    <div class="row d-flex">
-                      <div class="col-lg-8 col-md-8 col-sm-8 courseDetails">
+              <article className="crbox">
+                <div className="row">
+                  <article className="crbox program_results_127954">
+                    <div className="row d-flex">
+                      <div className="col-lg-8 col-md-8 col-sm-8 courseDetails">
                         <div style={{ float: "left", width: "80%" }}>
                           <h3
-                            class="h4 margin-bottom-10 student-eligibility-h3"
+                            className="h4 margin-bottom-10 student-eligibility-h3"
                             style={{ width: "100%" }}
                           >
                             <a
-                              class="u-link-v5 text-black font-size16 font-bold"
+                              className="u-link-v5 text-black font-size16 font-bold"
                               style={{ textDecoration: "none !important" }}
                               target="_blank"
                               href="/SearchProgram/CourseDetail?uid=MTI3OTU0"
@@ -3590,62 +3585,62 @@
                             </a>
                           </h3>
                         </div>
-                        <div class="font-size13 clearfix">
+                        <div className="font-size13 clearfix">
                           <div
-                            class="universityProgram 127954"
+                            className="universityProgram 127954"
                             data-unicount="953_false"
                           >
                             <b>University:</b> (STUDY GROUP) University of
                             Leeds, Leeds
                           </div>
-                          <div class="search_result_items countrydiv">
+                          <div className="search_result_items countrydiv">
                             <b>Country:</b> United Kingdom
                           </div>
-                          <div class="search_result_items durationdiv">
+                          <div className="search_result_items durationdiv">
                             <b>Duration:</b> 12 Month(s)
                           </div>
-                          <div class="divintake">
-                            <div class="intakeIconDiv">
+                          <div className="divintake">
+                            <div className="intakeIconDiv">
                               <span>
                                 <b>Intakes:</b>
                               </span>
                             </div>
-                            <div class="openCloseIntakeWrapper">
-                              <div class="openIntakeDiv">
-                                <div class="open-width-span">
-                                  <span class="label label-success custom-label label-success-bg">
+                            <div className="openCloseIntakeWrapper">
+                              <div className="openIntakeDiv">
+                                <div className="open-width-span">
+                                  <span className="label label-success custom-label label-success-bg">
                                     Open
                                   </span>
                                 </div>
-                                <span class="intakeCard 127954">Sep</span>
+                                <span className="intakeCard 127954">Sep</span>
                               </div>
-                              <div class="closedIntakeDiv">
-                                <div class="closed-width-span">
-                                  <span class="label label-danger custom-label label-danger-bg">
+                              <div className="closedIntakeDiv">
+                                <div className="closed-width-span">
+                                  <span className="label label-danger custom-label label-danger-bg">
                                     Closed
                                   </span>
                                 </div>
-                                <span class="intakeCard 127954 closed-intake">
+                                <span className="intakeCard 127954 closed-intake">
                                   Jan
                                 </span>
                                 <div
                                   style={{ verticalAlign: "inherit" }}
-                                  class="tooltip"
+                                  className="tooltip"
                                   id="intake_tooltip_127954"
                                   data-id="127954"
                                   data-intake="Jan"
                                 >
-                                  <div class="right closedIntakeRight">
-                                    <div class="text-content"></div>
+                                  <div className="right closedIntakeRight">
+                                    <div className="text-content"></div>
                                     <div
-                                      class="loader"
+                                      className="loader"
                                       style={{ display: "none" }}
                                     ></div>
                                   </div>
-                                  <span class="intakeCard 127954 closed-intake">
+                                  <span className="intakeCard 127954 closed-intake">
                                     <img
                                       src="/images/Icon/infoicon.svg"
-                                      class="infoiconimg"
+                                      className="infoiconimg"
                                       onmouseover="javascript:fetchTooltipContent(this,true,0)"
                                       ontouchstart="javascript:fetchTooltipContent(this,true,0)"
                                       onmouseout="javascript:fetchTooltipContent(this,false,0)"
@@ -3657,34 +3652,34 @@
                               </div>
                             </div>
                           </div>
-                          <div class="tutiondiv">
+                          <div className="tutiondiv">
                             <b>Yearly Tuition Fee:</b> £ 19800
                           </div>
-                          <div class="applicationdiv">
+                          <div className="applicationdiv">
                             <b>Application Fee:</b> No application fee
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
-                        <div class="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
+                      <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
+                        <div className="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
                           <a
-                            class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
+                            className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
                             target="_blank"
                             href="/SearchProgram/CourseDetail?uid=MTI3OTU0"
                           >
-                            <i class="fa fa-list g-pos-rel margin-right-5">
+                            <i className="fa fa-list g-pos-rel margin-right-5">
                               &nbsp;
                             </i>
                             View Details
                           </a>
                         </div>
-                        <div class="switch search_result_second_box_shortlist ipad-lever">
+                        <div className="switch search_result_second_box_shortlist ipad-lever">
                           <label>
                             Shortlist
                             <input
                               id="shortlist_uni_953"
                               type="checkbox"
-                              class="shortlist"
+                              className="shortlist"
                               data-cid="127954"
                               data-unid="953"
                               onclick="SearchProgram.AddToExportList('127954',$(this), true)"
@@ -3694,18 +3689,18 @@
                             Compare
                             <input
                               type="checkbox"
-                              class="compare"
+                              className="compare"
                               data-cid="127954"
                               onclick="SearchProgram.AddToCompareList('127954',$(this))"
                             />
                           </label>
                           <span id="127954"></span>
                         </div>
-                        <div class="modalCourseCorrectionsRequestLink">
+                        <div className="modalCourseCorrectionsRequestLink">
                           <div style={{ float: "right" }}>
                             <a
                               style={{ cursor: "pointer" }}
-                              class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
+                              className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
                               target="_blank"
                               onclick="CourseCorrectionRequest(127954)"
                             >
@@ -3715,32 +3710,32 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row margindiv">
-                      <div class="col-sm-12">
-                        <div class="rankingdiv">
-                          <div class="rankborder">
+                    <div className="row margindiv">
+                      <div className="col-sm-12">
+                        <div className="rankingdiv">
+                          <div className="rankborder">
                             <span>2</span> in Webometrics United Kingdom
                             National Ranking
                           </div>
-                          <div class="rankborder">
+                          <div className="rankborder">
                             <span>46</span> in Webometrics World Ranking
                           </div>
                         </div>
                       </div>
                     </div>
                   </article>
-                  <article class="crbox">
-                    <div class="row">
-                      <article class="crbox program_results_127955">
-                        <div class="row d-flex">
-                          <div class="col-lg-8 col-md-8 col-sm-8 courseDetails">
+                  <article className="crbox">
+                    <div className="row">
+                      <article className="crbox program_results_127955">
+                        <div className="row d-flex">
+                          <div className="col-lg-8 col-md-8 col-sm-8 courseDetails">
                             <div style={{ float: "left", width: "80%" }}>
                               <h3
-                                class="h4 margin-bottom-10 student-eligibility-h3"
+                                className="h4 margin-bottom-10 student-eligibility-h3"
                                 style={{ width: "100%" }}
                               >
                                 <a
-                                  class="u-link-v5 text-black font-size16 font-bold"
+                                  className="u-link-v5 text-black font-size16 font-bold"
                                   style={{ textDecoration: "none!important" }}
                                   target="_blank"
                                   href="/SearchProgram/CourseDetail?uid=MTI3OTU1"
@@ -3750,62 +3745,62 @@
                                 </a>
                               </h3>
                             </div>
-                            <div class="font-size13 clearfix">
+                            <div className="font-size13 clearfix">
                               <div
-                                class="universityProgram 127955"
+                                className="universityProgram 127955"
                                 data-unicount="953_false"
                               >
                                 <b>University:</b> (STUDY GROUP) University of
                                 Leeds, Leeds
                               </div>
-                              <div class="search_result_items countrydiv">
+                              <div className="search_result_items countrydiv">
                                 <b>Country:</b> United Kingdom
                               </div>
-                              <div class="search_result_items durationdiv">
+                              <div className="search_result_items durationdiv">
                                 <b>Duration:</b> 12 Month(s)
                               </div>
-                              <div class="divintake">
-                                <div class="intakeIconDiv">
+                              <div className="divintake">
+                                <div className="intakeIconDiv">
                                   <span>
                                     <b>Intakes:</b>
                                   </span>
                                 </div>
-                                <div class="openCloseIntakeWrapper">
-                                  <div class="openIntakeDiv">
-                                    <div class="open-width-span">
-                                      <span class="label label-success custom-label label-success-bg">
+                                <div className="openCloseIntakeWrapper">
+                                  <div className="openIntakeDiv">
+                                    <div className="open-width-span">
+                                      <span className="label label-success custom-label label-success-bg">
                                         Open
                                       </span>
                                     </div>
-                                    <span class="intakeCard 127955">Sep</span>
+                                    <span className="intakeCard 127955">Sep</span>
                                   </div>
-                                  <div class="closedIntakeDiv">
-                                    <div class="closed-width-span">
-                                      <span class="label label-danger custom-label label-danger-bg">
+                                  <div className="closedIntakeDiv">
+                                    <div className="closed-width-span">
+                                      <span className="label label-danger custom-label label-danger-bg">
                                         Closed
                                       </span>
                                     </div>
-                                    <span class="intakeCard 127955 closed-intake">
+                                    <span className="intakeCard 127955 closed-intake">
                                       Jan
                                     </span>
                                     <div
                                       style={{ verticalAlign: "inherit" }}
-                                      class="tooltip"
+                                      className="tooltip"
                                       id="intake_tooltip_127955"
                                       data-id="127955"
                                       data-intake="Jan"
                                     >
-                                      <div class="right closedIntakeRight">
-                                        <div class="text-content"></div>
+                                      <div className="right closedIntakeRight">
+                                        <div className="text-content"></div>
                                         <div
-                                          class="loader"
+                                          className="loader"
                                           style={{ display: "none" }}
                                         ></div>
                                       </div>
-                                      <span class="intakeCard 127955 closed-intake">
+                                      <span className="intakeCard 127955 closed-intake">
                                         <img
                                           src="/images/Icon/infoicon.svg"
-                                          class="infoiconimg"
+                                          className="infoiconimg"
                                           onmouseover="javascript:fetchTooltipContent(this,true,0)"
                                           ontouchstart="javascript:fetchTooltipContent(this,true,0)"
                                           onmouseout="javascript:fetchTooltipContent(this,false,0)"
@@ -3817,34 +3812,34 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="tutiondiv">
+                              <div className="tutiondiv">
                                 <b>Yearly Tuition Fee:</b> £ 19800
                               </div>
-                              <div class="applicationdiv">
+                              <div className="applicationdiv">
                                 <b>Application Fee:</b> No application fee
                               </div>
                             </div>
                           </div>
-                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
-                            <div class="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
+                          <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
+                            <div className="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
                               <a
-                                class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
+                                className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
                                 target="_blank"
                                 href="/SearchProgram/CourseDetail?uid=MTI3OTU1"
                               >
-                                <i class="fa fa-list g-pos-rel margin-right-5">
+                                <i className="fa fa-list g-pos-rel margin-right-5">
                                   &nbsp;
                                 </i>
                                 View Details
                               </a>
                             </div>
-                            <div class="switch search_result_second_box_shortlist ipad-lever">
+                            <div className="switch search_result_second_box_shortlist ipad-lever">
                               <label>
                                 Shortlist
                                 <input
                                   id="shortlist_uni_953"
                                   type="checkbox"
-                                  class="shortlist"
+                                  className="shortlist"
                                   data-cid="127955"
                                   data-unid="953"
                                   onclick="SearchProgram.AddToExportList('127955',$(this), true)"
@@ -3854,18 +3849,18 @@
                                 Compare
                                 <input
                                   type="checkbox"
-                                  class="compare"
+                                  className="compare"
                                   data-cid="127955"
                                   onclick="SearchProgram.AddToCompareList('127955',$(this))"
                                 />
                               </label>
                               <span id="127955"></span>
                             </div>
-                            <div class="modalCourseCorrectionsRequestLink">
+                            <div className="modalCourseCorrectionsRequestLink">
                               <div style={{ float: "right" }}>
                                 <a
                                   style={{ cursor: "pointer" }}
-                                  class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
+                                  className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
                                   target="_blank"
                                   onclick="CourseCorrectionRequest(127955)"
                                 >
@@ -3875,32 +3870,32 @@
                             </div>
                           </div>
                         </div>
-                        <div class="row margindiv">
-                          <div class="col-sm-12">
-                            <div class="rankingdiv">
-                              <div class="rankborder">
+                        <div className="row margindiv">
+                          <div className="col-sm-12">
+                            <div className="rankingdiv">
+                              <div className="rankborder">
                                 <span>2</span> in Webometrics United Kingdom
                                 National Ranking
                               </div>
-                              <div class="rankborder">
+                              <div className="rankborder">
                                 <span>46</span> in Webometrics World Ranking
                               </div>
                             </div>
                           </div>
                         </div>
                       </article>
-                      <article class="crbox">
-                        <div class="row">
-                          <article class="crbox program_results_127956">
-                            <div class="row d-flex">
-                              <div class="col-lg-8 col-md-8 col-sm-8 courseDetails">
+                      <article className="crbox">
+                        <div className="row">
+                          <article className="crbox program_results_127956">
+                            <div className="row d-flex">
+                              <div className="col-lg-8 col-md-8 col-sm-8 courseDetails">
                                 <div style={{ float: "left", width: "80%" }}>
                                   <h3
-                                    class="h4 margin-bottom-10 student-eligibility-h3"
+                                    className="h4 margin-bottom-10 student-eligibility-h3"
                                     style={{ width: "100%" }}
                                   >
                                     <a
-                                      class="u-link-v5 text-black font-size16 font-bold"
+                                      className="u-link-v5 text-black font-size16 font-bold"
                                       style={{
                                         textDecoration: "none!important",
                                       }}
@@ -3912,64 +3907,64 @@
                                     </a>
                                   </h3>
                                 </div>
-                                <div class="font-size13 clearfix">
+                                <div className="font-size13 clearfix">
                                   <div
-                                    class="universityProgram 127956"
+                                    className="universityProgram 127956"
                                     data-unicount="953_false"
                                   >
                                     <b>University:</b> (STUDY GROUP) University
                                     of Leeds, Leeds
                                   </div>
-                                  <div class="search_result_items countrydiv">
+                                  <div className="search_result_items countrydiv">
                                     <b>Country:</b> United Kingdom
                                   </div>
-                                  <div class="search_result_items durationdiv">
+                                  <div className="search_result_items durationdiv">
                                     <b>Duration:</b> 12 Month(s)
                                   </div>
-                                  <div class="divintake">
-                                    <div class="intakeIconDiv">
+                                  <div className="divintake">
+                                    <div className="intakeIconDiv">
                                       <span>
                                         <b>Intakes:</b>
                                       </span>
                                     </div>
-                                    <div class="openCloseIntakeWrapper">
-                                      <div class="openIntakeDiv">
-                                        <div class="open-width-span">
-                                          <span class="label label-success custom-label label-success-bg">
+                                    <div className="openCloseIntakeWrapper">
+                                      <div className="openIntakeDiv">
+                                        <div className="open-width-span">
+                                          <span className="label label-success custom-label label-success-bg">
                                             Open
                                           </span>
                                         </div>
-                                        <span class="intakeCard 127956">
+                                        <span className="intakeCard 127956">
                                           Sep
                                         </span>
                                       </div>
-                                      <div class="closedIntakeDiv">
-                                        <div class="closed-width-span">
-                                          <span class="label label-danger custom-label label-danger-bg">
+                                      <div className="closedIntakeDiv">
+                                        <div className="closed-width-span">
+                                          <span className="label label-danger custom-label label-danger-bg">
                                             Closed
                                           </span>
                                         </div>
-                                        <span class="intakeCard 127956 closed-intake">
+                                        <span className="intakeCard 127956 closed-intake">
                                           Jan
                                         </span>
                                         <div
                                           style={{ verticalAlign: "inherit" }}
-                                          class="tooltip"
+                                          className="tooltip"
                                           id="intake_tooltip_127956"
                                           data-id="127956"
                                           data-intake="Jan"
                                         >
-                                          <div class="right closedIntakeRight">
-                                            <div class="text-content"></div>
+                                          <div className="right closedIntakeRight">
+                                            <div className="text-content"></div>
                                             <div
-                                              class="loader"
+                                              className="loader"
                                               style={{ display: "none" }}
                                             ></div>
                                           </div>
-                                          <span class="intakeCard 127956 closed-intake">
+                                          <span className="intakeCard 127956 closed-intake">
                                             <img
                                               src="/images/Icon/infoicon.svg"
-                                              class="infoiconimg"
+                                              className="infoiconimg"
                                               onmouseover="javascript:fetchTooltipContent(this,true,0)"
                                               ontouchstart="javascript:fetchTooltipContent(this,true,0)"
                                               onmouseout="javascript:fetchTooltipContent(this,false,0)"
@@ -3981,34 +3976,34 @@
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="tutiondiv">
+                                  <div className="tutiondiv">
                                     <b>Yearly Tuition Fee:</b> £ 19800
                                   </div>
-                                  <div class="applicationdiv">
+                                  <div className="applicationdiv">
                                     <b>Application Fee:</b> No application fee
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
-                                <div class="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
+                              <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
+                                <div className="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
                                   <a
-                                    class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
+                                    className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
                                     target="_blank"
                                     href="/SearchProgram/CourseDetail?uid=MTI3OTU2"
                                   >
-                                    <i class="fa fa-list g-pos-rel margin-right-5">
+                                    <i className="fa fa-list g-pos-rel margin-right-5">
                                       &nbsp;
                                     </i>
                                     View Details
                                   </a>
                                 </div>
-                                <div class="switch search_result_second_box_shortlist ipad-lever">
+                                <div className="switch search_result_second_box_shortlist ipad-lever">
                                   <label>
                                     Shortlist
                                     <input
                                       id="shortlist_uni_953"
                                       type="checkbox"
-                                      class="shortlist"
+                                      className="shortlist"
                                       data-cid="127956"
                                       data-unid="953"
                                       onclick="SearchProgram.AddToExportList('127956',$(this), true)"
@@ -4018,18 +4013,18 @@
                                     Compare
                                     <input
                                       type="checkbox"
-                                      class="compare"
+                                      className="compare"
                                       data-cid="127956"
                                       onclick="SearchProgram.AddToCompareList('127956',$(this))"
                                     />
                                   </label>
                                   <span id="127956"></span>
                                 </div>
-                                <div class="modalCourseCorrectionsRequestLink">
+                                <div className="modalCourseCorrectionsRequestLink">
                                   <div style={{ float: "right" }}>
                                     <a
                                       style={{ cursor: "pointer" }}
-                                      class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
+                                      className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
                                       target="_blank"
                                       onclick="CourseCorrectionRequest(127956)"
                                     >
@@ -4039,34 +4034,34 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="row margindiv">
-                              <div class="col-sm-12">
-                                <div class="rankingdiv">
-                                  <div class="rankborder">
+                            <div className="row margindiv">
+                              <div className="col-sm-12">
+                                <div className="rankingdiv">
+                                  <div className="rankborder">
                                     <span>2</span> in Webometrics United Kingdom
                                     National Ranking
                                   </div>
-                                  <div class="rankborder">
+                                  <div className="rankborder">
                                     <span>46</span> in Webometrics World Ranking
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </article>
-                          <article class="crbox">
-                            <div class="row">
-                              <article class="crbox program_results_127957">
-                                <div class="row d-flex">
-                                  <div class="col-lg-8 col-md-8 col-sm-8 courseDetails">
+                          <article className="crbox">
+                            <div className="row">
+                              <article className="crbox program_results_127957">
+                                <div className="row d-flex">
+                                  <div className="col-lg-8 col-md-8 col-sm-8 courseDetails">
                                     <div
                                       style={{ float: "left", width: "80%" }}
                                     >
                                       <h3
-                                        class="h4 margin-bottom-10 student-eligibility-h3"
+                                        className="h4 margin-bottom-10 student-eligibility-h3"
                                         style={{ width: "100%" }}
                                       >
                                         <a
-                                          class="u-link-v5 text-black font-size16 font-bold"
+                                          className="u-link-v5 text-black font-size16 font-bold"
                                           style={{
                                             textDecoration: "none!important",
                                           }}
@@ -4079,66 +4074,66 @@
                                         </a>
                                       </h3>
                                     </div>
-                                    <div class="font-size13 clearfix">
+                                    <div className="font-size13 clearfix">
                                       <div
-                                        class="universityProgram 127957"
+                                        className="universityProgram 127957"
                                         data-unicount="953_false"
                                       >
                                         <b>University:</b> (STUDY GROUP)
                                         University of Leeds, Leeds
                                       </div>
-                                      <div class="search_result_items countrydiv">
+                                      <div className="search_result_items countrydiv">
                                         <b>Country:</b> United Kingdom
                                       </div>
-                                      <div class="search_result_items durationdiv">
+                                      <div className="search_result_items durationdiv">
                                         <b>Duration:</b> 12 Month(s)
                                       </div>
-                                      <div class="divintake">
-                                        <div class="intakeIconDiv">
+                                      <div className="divintake">
+                                        <div className="intakeIconDiv">
                                           <span>
                                             <b>Intakes:</b>
                                           </span>
                                         </div>
-                                        <div class="openCloseIntakeWrapper">
-                                          <div class="openIntakeDiv">
-                                            <div class="open-width-span">
-                                              <span class="label label-success custom-label label-success-bg">
+                                        <div className="openCloseIntakeWrapper">
+                                          <div className="openIntakeDiv">
+                                            <div className="open-width-span">
+                                              <span className="label label-success custom-label label-success-bg">
                                                 Open
                                               </span>
                                             </div>
-                                            <span class="intakeCard 127957">
+                                            <span className="intakeCard 127957">
                                               Sep
                                             </span>
                                           </div>
-                                          <div class="closedIntakeDiv">
-                                            <div class="closed-width-span">
-                                              <span class="label label-danger custom-label label-danger-bg">
+                                          <div className="closedIntakeDiv">
+                                            <div className="closed-width-span">
+                                              <span className="label label-danger custom-label label-danger-bg">
                                                 Closed
                                               </span>
                                             </div>
-                                            <span class="intakeCard 127957 closed-intake">
+                                            <span className="intakeCard 127957 closed-intake">
                                               Jan
                                             </span>
                                             <div
                                               style={{
                                                 verticalAlign: "inherit",
                                               }}
-                                              class="tooltip"
+                                              className="tooltip"
                                               id="intake_tooltip_127957"
                                               data-id="127957"
                                               data-intake="Jan"
                                             >
-                                              <div class="right closedIntakeRight">
-                                                <div class="text-content"></div>
+                                              <div className="right closedIntakeRight">
+                                                <div className="text-content"></div>
                                                 <div
-                                                  class="loader"
+                                                  className="loader"
                                                   style={{ display: "none" }}
                                                 ></div>
                                               </div>
-                                              <span class="intakeCard 127957 closed-intake">
+                                              <span className="intakeCard 127957 closed-intake">
                                                 <img
                                                   src="/images/Icon/infoicon.svg"
-                                                  class="infoiconimg"
+                                                  className="infoiconimg"
                                                   onmouseover="javascript:fetchTooltipContent(this,true,0)"
                                                   ontouchstart="javascript:fetchTooltipContent(this,true,0)"
                                                   onmouseout="javascript:fetchTooltipContent(this,false,0)"
@@ -4150,35 +4145,35 @@
                                           </div>
                                         </div>
                                       </div>
-                                      <div class="tutiondiv">
+                                      <div className="tutiondiv">
                                         <b>Yearly Tuition Fee:</b> £ 19800
                                       </div>
-                                      <div class="applicationdiv">
+                                      <div className="applicationdiv">
                                         <b>Application Fee:</b> No application
                                         fee
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
-                                    <div class="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
+                                  <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
+                                    <div className="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
                                       <a
-                                        class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
+                                        className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
                                         target="_blank"
                                         href="/SearchProgram/CourseDetail?uid=MTI3OTU3"
                                       >
-                                        <i class="fa fa-list g-pos-rel margin-right-5">
+                                        <i className="fa fa-list g-pos-rel margin-right-5">
                                           &nbsp;
                                         </i>
                                         View Details
                                       </a>
                                     </div>
-                                    <div class="switch search_result_second_box_shortlist ipad-lever">
+                                    <div className="switch search_result_second_box_shortlist ipad-lever">
                                       <label>
                                         Shortlist
                                         <input
                                           id="shortlist_uni_953"
                                           type="checkbox"
-                                          class="shortlist"
+                                          className="shortlist"
                                           data-cid="127957"
                                           data-unid="953"
                                           onclick="SearchProgram.AddToExportList('127957',$(this), true)"
@@ -4188,18 +4183,18 @@
                                         Compare
                                         <input
                                           type="checkbox"
-                                          class="compare"
+                                          className="compare"
                                           data-cid="127957"
                                           onclick="SearchProgram.AddToCompareList('127957',$(this))"
                                         />
                                       </label>
                                       <span id="127957"></span>
                                     </div>
-                                    <div class="modalCourseCorrectionsRequestLink">
+                                    <div className="modalCourseCorrectionsRequestLink">
                                       <div style={{ float: "right" }}>
                                         <a
                                           style={{ cursor: "pointer" }}
-                                          class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
+                                          className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
                                           target="_blank"
                                           onclick="CourseCorrectionRequest(127957)"
                                         >
@@ -4209,14 +4204,14 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="row margindiv">
-                                  <div class="col-sm-12">
-                                    <div class="rankingdiv">
-                                      <div class="rankborder">
+                                <div className="row margindiv">
+                                  <div className="col-sm-12">
+                                    <div className="rankingdiv">
+                                      <div className="rankborder">
                                         <span>2</span> in Webometrics United
                                         Kingdom National Ranking
                                       </div>
-                                      <div class="rankborder">
+                                      <div className="rankborder">
                                         <span>46</span> in Webometrics World
                                         Ranking
                                       </div>
@@ -4224,11 +4219,11 @@
                                   </div>
                                 </div>
                               </article>
-                              <article class="crbox">
-                                <div class="row">
-                                  <article class="crbox program_results_127958">
-                                    <div class="row d-flex">
-                                      <div class="col-lg-8 col-md-8 col-sm-8 courseDetails">
+                              <article className="crbox">
+                                <div className="row">
+                                  <article className="crbox program_results_127958">
+                                    <div className="row d-flex">
+                                      <div className="col-lg-8 col-md-8 col-sm-8 courseDetails">
                                         <div
                                           style={{
                                             float: "left",
@@ -4236,11 +4231,11 @@
                                           }}
                                         >
                                           <h3
-                                            class="h4 margin-bottom-10 student-eligibility-h3"
+                                            className="h4 margin-bottom-10 student-eligibility-h3"
                                             style={{ width: "100%" }}
                                           >
                                             <a
-                                              class="u-link-v5 text-black font-size16 font-bold"
+                                              className="u-link-v5 text-black font-size16 font-bold"
                                               style={{
                                                 textDecoration:
                                                   "none !important",
@@ -4253,68 +4248,68 @@
                                             </a>
                                           </h3>
                                         </div>
-                                        <div class="font-size13 clearfix">
+                                        <div className="font-size13 clearfix">
                                           <div
-                                            class="universityProgram 127958"
+                                            className="universityProgram 127958"
                                             data-unicount="953_false"
                                           >
                                             <b>University:</b> (STUDY GROUP)
                                             University of Leeds, Leeds
                                           </div>
-                                          <div class="search_result_items countrydiv">
+                                          <div className="search_result_items countrydiv">
                                             <b>Country:</b> United Kingdom
                                           </div>
-                                          <div class="search_result_items durationdiv">
+                                          <div className="search_result_items durationdiv">
                                             <b>Duration:</b> 12 Month(s)
                                           </div>
-                                          <div class="divintake">
-                                            <div class="intakeIconDiv">
+                                          <div className="divintake">
+                                            <div className="intakeIconDiv">
                                               <span>
                                                 <b>Intakes:</b>
                                               </span>
                                             </div>
-                                            <div class="openCloseIntakeWrapper">
-                                              <div class="openIntakeDiv">
-                                                <div class="open-width-span">
-                                                  <span class="label label-success custom-label label-success-bg">
+                                            <div className="openCloseIntakeWrapper">
+                                              <div className="openIntakeDiv">
+                                                <div className="open-width-span">
+                                                  <span className="label label-success custom-label label-success-bg">
                                                     Open
                                                   </span>
                                                 </div>
-                                                <span class="intakeCard 127958">
+                                                <span className="intakeCard 127958">
                                                   Sep
                                                 </span>
                                               </div>
-                                              <div class="closedIntakeDiv">
-                                                <div class="closed-width-span">
-                                                  <span class="label label-danger custom-label label-danger-bg">
+                                              <div className="closedIntakeDiv">
+                                                <div className="closed-width-span">
+                                                  <span className="label label-danger custom-label label-danger-bg">
                                                     Closed
                                                   </span>
                                                 </div>
-                                                <span class="intakeCard 127958 closed-intake">
+                                                <span className="intakeCard 127958 closed-intake">
                                                   Jan
                                                 </span>
                                                 <div
                                                   style={{
                                                     verticalAlign: "inherit",
                                                   }}
-                                                  class="tooltip"
+                                                  className="tooltip"
                                                   id="intake_tooltip_127958"
                                                   data-id="127958"
                                                   data-intake="Jan"
                                                 >
-                                                  <div class="right closedIntakeRight">
-                                                    <div class="text-content"></div>
+                                                  <div className="right closedIntakeRight">
+                                                    <div className="text-content"></div>
                                                     <div
-                                                      class="loader"
+                                                      className="loader"
                                                       style={{
                                                         display: "none",
                                                       }}
                                                     ></div>
                                                   </div>
-                                                  <span class="intakeCard 127958 closed-intake">
+                                                  <span className="intakeCard 127958 closed-intake">
                                                     <img
                                                       src="/images/Icon/infoicon.svg"
-                                                      class="infoiconimg"
+                                                      className="infoiconimg"
                                                       onmouseover="javascript:fetchTooltipContent(this,true,0)"
                                                       ontouchstart="javascript:fetchTooltipContent(this,true,0)"
                                                       onmouseout="javascript:fetchTooltipContent(this,false,0)"
@@ -4326,35 +4321,35 @@
                                               </div>
                                             </div>
                                           </div>
-                                          <div class="tutiondiv">
+                                          <div className="tutiondiv">
                                             <b>Yearly Tuition Fee:</b> £ 19800
                                           </div>
-                                          <div class="applicationdiv">
+                                          <div className="applicationdiv">
                                             <b>Application Fee:</b> No
                                             application fee
                                           </div>
                                         </div>
                                       </div>
-                                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
-                                        <div class="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
+                                      <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
+                                        <div className="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
                                           <a
-                                            class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
+                                            className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
                                             target="_blank"
                                             href="/SearchProgram/CourseDetail?uid=MTI3OTU4"
                                           >
-                                            <i class="fa fa-list g-pos-rel margin-right-5">
+                                            <i className="fa fa-list g-pos-rel margin-right-5">
                                               &nbsp;
                                             </i>
                                             View Details
                                           </a>
                                         </div>
-                                        <div class="switch search_result_second_box_shortlist ipad-lever">
+                                        <div className="switch search_result_second_box_shortlist ipad-lever">
                                           <label>
                                             Shortlist
                                             <input
                                               id="shortlist_uni_953"
                                               type="checkbox"
-                                              class="shortlist"
+                                              className="shortlist"
                                               data-cid="127958"
                                               data-unid="953"
                                               onclick="SearchProgram.AddToExportList('127958',$(this), true)"
@@ -4364,18 +4359,18 @@
                                             Compare
                                             <input
                                               type="checkbox"
-                                              class="compare"
+                                              className="compare"
                                               data-cid="127958"
                                               onclick="SearchProgram.AddToCompareList('127958',$(this))"
                                             />
                                           </label>
                                           <span id="127958"></span>
                                         </div>
-                                        <div class="modalCourseCorrectionsRequestLink">
+                                        <div className="modalCourseCorrectionsRequestLink">
                                           <div style={{ float: "right" }}>
                                             <a
                                               style={{ cursor: "pointer" }}
-                                              class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
+                                              className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
                                               target="_blank"
                                               onclick="CourseCorrectionRequest(127958)"
                                             >
@@ -4385,14 +4380,14 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="row margindiv">
-                                      <div class="col-sm-12">
-                                        <div class="rankingdiv">
-                                          <div class="rankborder">
+                                    <div className="row margindiv">
+                                      <div className="col-sm-12">
+                                        <div className="rankingdiv">
+                                          <div className="rankborder">
                                             <span>2</span> in Webometrics United
                                             Kingdom National Ranking
                                           </div>
-                                          <div class="rankborder">
+                                          <div className="rankborder">
                                             <span>46</span> in Webometrics World
                                             Ranking
                                           </div>
@@ -4400,11 +4395,11 @@
                                       </div>
                                     </div>
                                   </article>
-                                  <article class="crbox">
-                                    <div class="row">
-                                      <article class="crbox program_results_127959">
-                                        <div class="row d-flex">
-                                          <div class="col-lg-8 col-md-8 col-sm-8 courseDetails">
+                                  <article className="crbox">
+                                    <div className="row">
+                                      <article className="crbox program_results_127959">
+                                        <div className="row d-flex">
+                                          <div className="col-lg-8 col-md-8 col-sm-8 courseDetails">
                                             <div
                                               style={{
                                                 float: "left",
@@ -4412,11 +4407,11 @@
                                               }}
                                             >
                                               <h3
-                                                class="h4 margin-bottom-10 student-eligibility-h3"
+                                                className="h4 margin-bottom-10 student-eligibility-h3"
                                                 style={{ width: "100%" }}
                                               >
                                                 <a
-                                                  class="u-link-v5 text-black font-size16 font-bold"
+                                                  className="u-link-v5 text-black font-size16 font-bold"
                                                   style={{
                                                     textDecoration:
                                                       "none !important",
@@ -4430,44 +4425,44 @@
                                                 </a>
                                               </h3>
                                             </div>
-                                            <div class="font-size13 clearfix">
+                                            <div className="font-size13 clearfix">
                                               <div
-                                                class="universityProgram 127959"
+                                                className="universityProgram 127959"
                                                 data-unicount="953_false"
                                               >
                                                 <b>University:</b> (STUDY GROUP)
                                                 University of Leeds, Leeds
                                               </div>
-                                              <div class="search_result_items countrydiv">
+                                              <div className="search_result_items countrydiv">
                                                 <b>Country:</b> United Kingdom
                                               </div>
-                                              <div class="search_result_items durationdiv">
+                                              <div className="search_result_items durationdiv">
                                                 <b>Duration:</b> 12 Month(s)
                                               </div>
-                                              <div class="divintake">
-                                                <div class="intakeIconDiv">
+                                              <div className="divintake">
+                                                <div className="intakeIconDiv">
                                                   <span>
                                                     <b>Intakes:</b>
                                                   </span>
                                                 </div>
-                                                <div class="openCloseIntakeWrapper">
-                                                  <div class="openIntakeDiv">
-                                                    <div class="open-width-span">
-                                                      <span class="label label-success custom-label label-success-bg">
+                                                <div className="openCloseIntakeWrapper">
+                                                  <div className="openIntakeDiv">
+                                                    <div className="open-width-span">
+                                                      <span className="label label-success custom-label label-success-bg">
                                                         Open
                                                       </span>
                                                     </div>
-                                                    <span class="intakeCard 127959">
+                                                    <span className="intakeCard 127959">
                                                       Sep
                                                     </span>
                                                   </div>
-                                                  <div class="closedIntakeDiv">
-                                                    <div class="closed-width-span">
-                                                      <span class="label label-danger custom-label label-danger-bg">
+                                                  <div className="closedIntakeDiv">
+                                                    <div className="closed-width-span">
+                                                      <span className="label label-danger custom-label label-danger-bg">
                                                         Closed
                                                       </span>
                                                     </div>
-                                                    <span class="intakeCard 127959 closed-intake">
+                                                    <span className="intakeCard 127959 closed-intake">
                                                       Jan
                                                     </span>
                                                     <div
@@ -4475,24 +4470,24 @@
                                                         verticalAlign:
                                                           "inherit",
                                                       }}
-                                                      class="tooltip"
+                                                      className="tooltip"
                                                       id="intake_tooltip_127959"
                                                       data-id="127959"
                                                       data-intake="Jan"
                                                     >
-                                                      <div class="right closedIntakeRight">
-                                                        <div class="text-content"></div>
+                                                      <div className="right closedIntakeRight">
+                                                        <div className="text-content"></div>
                                                         <div
-                                                          class="loader"
+                                                          className="loader"
                                                           style={{
                                                             display: "none",
                                                           }}
                                                         ></div>
                                                       </div>
-                                                      <span class="intakeCard 127959 closed-intake">
+                                                      <span className="intakeCard 127959 closed-intake">
                                                         <img
                                                           src="/images/Icon/infoicon.svg"
-                                                          class="infoiconimg"
+                                                          className="infoiconimg"
                                                           onmouseover="javascript:fetchTooltipContent(this,true,0)"
                                                           ontouchstart="javascript:fetchTooltipContent(this,true,0)"
                                                           onmouseout="javascript:fetchTooltipContent(this,false,0)"
@@ -4504,36 +4499,36 @@
                                                   </div>
                                                 </div>
                                               </div>
-                                              <div class="tutiondiv">
+                                              <div className="tutiondiv">
                                                 <b>Yearly Tuition Fee:</b> £
                                                 19800
                                               </div>
-                                              <div class="applicationdiv">
+                                              <div className="applicationdiv">
                                                 <b>Application Fee:</b> No
                                                 application fee
                                               </div>
                                             </div>
                                           </div>
-                                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
-                                            <div class="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
+                                          <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
+                                            <div className="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
                                               <a
-                                                class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
+                                                className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
                                                 target="_blank"
                                                 href="/SearchProgram/CourseDetail?uid=MTI3OTU5"
                                               >
-                                                <i class="fa fa-list g-pos-rel margin-right-5">
+                                                <i className="fa fa-list g-pos-rel margin-right-5">
                                                   &nbsp;
                                                 </i>
                                                 View Details
                                               </a>
                                             </div>
-                                            <div class="switch search_result_second_box_shortlist ipad-lever">
+                                            <div className="switch search_result_second_box_shortlist ipad-lever">
                                               <label>
                                                 Shortlist
                                                 <input
                                                   id="shortlist_uni_953"
                                                   type="checkbox"
-                                                  class="shortlist"
+                                                  className="shortlist"
                                                   data-cid="127959"
                                                   data-unid="953"
                                                   onclick="SearchProgram.AddToExportList('127959',$(this), true)"
@@ -4543,18 +4538,18 @@
                                                 Compare
                                                 <input
                                                   type="checkbox"
-                                                  class="compare"
+                                                  className="compare"
                                                   data-cid="127959"
                                                   onclick="SearchProgram.AddToCompareList('127959',$(this))"
                                                 />
                                               </label>
                                               <span id="127959"></span>
                                             </div>
-                                            <div class="modalCourseCorrectionsRequestLink">
+                                            <div className="modalCourseCorrectionsRequestLink">
                                               <div style={{ float: "right" }}>
                                                 <a
                                                   style={{ cursor: "pointer" }}
-                                                  class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
+                                                  className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
                                                   target="_blank"
                                                   onclick="CourseCorrectionRequest(127959)"
                                                 >
@@ -4564,14 +4559,14 @@
                                             </div>
                                           </div>
                                         </div>
-                                        <div class="row margindiv">
-                                          <div class="col-sm-12">
-                                            <div class="rankingdiv">
-                                              <div class="rankborder">
+                                        <div className="row margindiv">
+                                          <div className="col-sm-12">
+                                            <div className="rankingdiv">
+                                              <div className="rankborder">
                                                 <span>2</span> in Webometrics
                                                 United Kingdom National Ranking
                                               </div>
-                                              <div class="rankborder">
+                                              <div className="rankborder">
                                                 <span>46</span> in Webometrics
                                                 World Ranking
                                               </div>
@@ -4579,11 +4574,11 @@
                                           </div>
                                         </div>
                                       </article>
-                                      <article class="crbox">
-                                        <div class="row">
-                                          <article class="crbox program_results_127960">
-                                            <div class="row d-flex">
-                                              <div class="col-lg-8 col-md-8 col-sm-8 courseDetails">
+                                      <article className="crbox">
+                                        <div className="row">
+                                          <article className="crbox program_results_127960">
+                                            <div className="row d-flex">
+                                              <div className="col-lg-8 col-md-8 col-sm-8 courseDetails">
                                                 <div
                                                   style={{
                                                     float: "left",
@@ -4591,11 +4586,11 @@
                                                   }}
                                                 >
                                                   <h3
-                                                    class="h4 margin-bottom-10 student-eligibility-h3"
+                                                    className="h4 margin-bottom-10 student-eligibility-h3"
                                                     style={{ width: "100%" }}
                                                   >
                                                     <a
-                                                      class="u-link-v5 text-black font-size16 font-bold"
+                                                      className="u-link-v5 text-black font-size16 font-bold"
                                                       style={{
                                                         textDecoration:
                                                           "none !important",
@@ -4609,46 +4604,46 @@
                                                     </a>
                                                   </h3>
                                                 </div>
-                                                <div class="font-size13 clearfix">
+                                                <div className="font-size13 clearfix">
                                                   <div
-                                                    class="universityProgram 127960"
+                                                    className="universityProgram 127960"
                                                     data-unicount="953_false"
                                                   >
                                                     <b>University:</b> (STUDY
                                                     GROUP) University of Leeds,
                                                     Leeds
                                                   </div>
-                                                  <div class="search_result_items countrydiv">
+                                                  <div className="search_result_items countrydiv">
                                                     <b>Country:</b> United
                                                     Kingdom
                                                   </div>
-                                                  <div class="search_result_items durationdiv">
+                                                  <div className="search_result_items durationdiv">
                                                     <b>Duration:</b> 12 Month(s)
                                                   </div>
-                                                  <div class="divintake">
-                                                    <div class="intakeIconDiv">
+                                                  <div className="divintake">
+                                                    <div className="intakeIconDiv">
                                                       <span>
                                                         <b>Intakes:</b>
                                                       </span>
                                                     </div>
-                                                    <div class="openCloseIntakeWrapper">
-                                                      <div class="openIntakeDiv">
-                                                        <div class="open-width-span">
-                                                          <span class="label label-success custom-label label-success-bg">
+                                                    <div className="openCloseIntakeWrapper">
+                                                      <div className="openIntakeDiv">
+                                                        <div className="open-width-span">
+                                                          <span className="label label-success custom-label label-success-bg">
                                                             Open
                                                           </span>
                                                         </div>
-                                                        <span class="intakeCard 127960">
+                                                        <span className="intakeCard 127960">
                                                           Sep
                                                         </span>
                                                       </div>
-                                                      <div class="closedIntakeDiv">
-                                                        <div class="closed-width-span">
-                                                          <span class="label label-danger custom-label label-danger-bg">
+                                                      <div className="closedIntakeDiv">
+                                                        <div className="closed-width-span">
+                                                          <span className="label label-danger custom-label label-danger-bg">
                                                             Closed
                                                           </span>
                                                         </div>
-                                                        <span class="intakeCard 127960 closed-intake">
+                                                        <span className="intakeCard 127960 closed-intake">
                                                           Jan
                                                         </span>
                                                         <div
@@ -4656,24 +4651,24 @@
                                                             verticalAlign:
                                                               "inherit",
                                                           }}
-                                                          class="tooltip"
+                                                          className="tooltip"
                                                           id="intake_tooltip_127960"
                                                           data-id="127960"
                                                           data-intake="Jan"
                                                         >
-                                                          <div class="right closedIntakeRight">
-                                                            <div class="text-content"></div>
+                                                          <div className="right closedIntakeRight">
+                                                            <div className="text-content"></div>
                                                             <div
-                                                              class="loader"
+                                                              className="loader"
                                                               style={{
                                                                 display: "none",
                                                               }}
                                                             ></div>
                                                           </div>
-                                                          <span class="intakeCard 127960 closed-intake">
+                                                          <span className="intakeCard 127960 closed-intake">
                                                             <img
                                                               src="/images/Icon/infoicon.svg"
-                                                              class="infoiconimg"
+                                                              className="infoiconimg"
                                                               onmouseover="javascript:fetchTooltipContent(this,true,0)"
                                                               ontouchstart="javascript:fetchTooltipContent(this,true,0)"
                                                               onmouseout="javascript:fetchTooltipContent(this,false,0)"
@@ -4685,36 +4680,36 @@
                                                       </div>
                                                     </div>
                                                   </div>
-                                                  <div class="tutiondiv">
+                                                  <div className="tutiondiv">
                                                     <b>Yearly Tuition Fee:</b> £
                                                     19800
                                                   </div>
-                                                  <div class="applicationdiv">
+                                                  <div className="applicationdiv">
                                                     <b>Application Fee:</b> No
                                                     application fee
                                                   </div>
                                                 </div>
                                               </div>
-                                              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
-                                                <div class="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
+                                              <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
+                                                <div className="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
                                                   <a
-                                                    class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
+                                                    className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
                                                     target="_blank"
                                                     href="/SearchProgram/CourseDetail?uid=MTI3OTYw"
                                                   >
-                                                    <i class="fa fa-list g-pos-rel margin-right-5">
+                                                    <i className="fa fa-list g-pos-rel margin-right-5">
                                                       &nbsp;
                                                     </i>
                                                     View Details
                                                   </a>
                                                 </div>
-                                                <div class="switch search_result_second_box_shortlist ipad-lever">
+                                                <div className="switch search_result_second_box_shortlist ipad-lever">
                                                   <label>
                                                     Shortlist
                                                     <input
                                                       id="shortlist_uni_953"
                                                       type="checkbox"
-                                                      class="shortlist"
+                                                      className="shortlist"
                                                       data-cid="127960"
                                                       data-unid="953"
                                                       onclick="SearchProgram.AddToExportList('127960',$(this), true)"
@@ -4726,14 +4721,14 @@
                                                     Compare
                                                     <input
                                                       type="checkbox"
-                                                      class="compare"
+                                                      className="compare"
                                                       data-cid="127960"
                                                       onclick="SearchProgram.AddToCompareList('127960',$(this))"
                                                     />
                                                   </label>
                                                   <span id="127960"></span>
                                                 </div>
-                                                <div class="modalCourseCorrectionsRequestLink">
+                                                <div className="modalCourseCorrectionsRequestLink">
                                                   <div
                                                     style={{ float: "right" }}
                                                   >
@@ -4741,7 +4736,7 @@
                                                       style={{
                                                         cursor: "pointer",
                                                       }}
-                                                      class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
+                                                      className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
                                                       target="_blank"
                                                       onclick="CourseCorrectionRequest(127960)"
                                                     >
@@ -4752,15 +4747,15 @@
                                                 </div>
                                               </div>
                                             </div>
-                                            <div class="row margindiv">
-                                              <div class="col-sm-12">
-                                                <div class="rankingdiv">
-                                                  <div class="rankborder">
+                                            <div className="row margindiv">
+                                              <div className="col-sm-12">
+                                                <div className="rankingdiv">
+                                                  <div className="rankborder">
                                                     <span>2</span> in
                                                     Webometrics United Kingdom
                                                     National Ranking
                                                   </div>
-                                                  <div class="rankborder">
+                                                  <div className="rankborder">
                                                     <span>46</span> in
                                                     Webometrics World Ranking
                                                   </div>
@@ -4768,11 +4763,11 @@
                                               </div>
                                             </div>
                                           </article>
-                                          <article class="crbox">
-                                            <div class="row">
-                                              <article class="crbox program_results_127961">
-                                                <div class="row d-flex">
-                                                  <div class="col-lg-8 col-md-8 col-sm-8 courseDetails">
+                                          <article className="crbox">
+                                            <div className="row">
+                                              <article className="crbox program_results_127961">
+                                                <div className="row d-flex">
+                                                  <div className="col-lg-8 col-md-8 col-sm-8 courseDetails">
                                                     <div
                                                       style={{
                                                         float: "left",
@@ -4780,13 +4775,13 @@
                                                       }}
                                                     >
                                                       <h3
-                                                        class="h4 margin-bottom-10 student-eligibility-h3"
+                                                        className="h4 margin-bottom-10 student-eligibility-h3"
                                                         style={{
                                                           width: "100%",
                                                         }}
                                                       >
                                                         <a
-                                                          class="u-link-v5 text-black font-size16 font-bold"
+                                                          className="u-link-v5 text-black font-size16 font-bold"
                                                           style={{
                                                             textDecoration:
                                                               "none !important",
@@ -4801,47 +4796,47 @@
                                                         </a>
                                                       </h3>
                                                     </div>
-                                                    <div class="font-size13 clearfix">
+                                                    <div className="font-size13 clearfix">
                                                       <div
-                                                        class="universityProgram 127961"
+                                                        className="universityProgram 127961"
                                                         data-unicount="953_false"
                                                       >
                                                         <b>University:</b>{" "}
                                                         (STUDY GROUP) University
                                                         of Leeds, Leeds
                                                       </div>
-                                                      <div class="search_result_items countrydiv">
+                                                      <div className="search_result_items countrydiv">
                                                         <b>Country:</b> United
                                                         Kingdom
                                                       </div>
-                                                      <div class="search_result_items durationdiv">
+                                                      <div className="search_result_items durationdiv">
                                                         <b>Duration:</b> 12
                                                         Month(s)
                                                       </div>
-                                                      <div class="divintake">
-                                                        <div class="intakeIconDiv">
+                                                      <div className="divintake">
+                                                        <div className="intakeIconDiv">
                                                           <span>
                                                             <b>Intakes:</b>
                                                           </span>
                                                         </div>
-                                                        <div class="openCloseIntakeWrapper">
-                                                          <div class="openIntakeDiv">
-                                                            <div class="open-width-span">
-                                                              <span class="label label-success custom-label label-success-bg">
+                                                        <div className="openCloseIntakeWrapper">
+                                                          <div className="openIntakeDiv">
+                                                            <div className="open-width-span">
+                                                              <span className="label label-success custom-label label-success-bg">
                                                                 Open
                                                               </span>
                                                             </div>
-                                                            <span class="intakeCard 127961">
+                                                            <span className="intakeCard 127961">
                                                               Sep
                                                             </span>
                                                           </div>
-                                                          <div class="closedIntakeDiv">
-                                                            <div class="closed-width-span">
-                                                              <span class="label label-danger custom-label label-danger-bg">
+                                                          <div className="closedIntakeDiv">
+                                                            <div className="closed-width-span">
+                                                              <span className="label label-danger custom-label label-danger-bg">
                                                                 Closed
                                                               </span>
                                                             </div>
-                                                            <span class="intakeCard 127961 closed-intake">
+                                                            <span className="intakeCard 127961 closed-intake">
                                                               Jan
                                                             </span>
                                                             <div
@@ -4849,25 +4844,25 @@
                                                                 verticalAlign:
                                                                   "inherit",
                                                               }}
-                                                              class="tooltip"
+                                                              className="tooltip"
                                                               id="intake_tooltip_127961"
                                                               data-id="127961"
                                                               data-intake="Jan"
                                                             >
-                                                              <div class="right closedIntakeRight">
-                                                                <div class="text-content"></div>
+                                                              <div className="right closedIntakeRight">
+                                                                <div className="text-content"></div>
                                                                 <div
-                                                                  class="loader"
+                                                                  className="loader"
                                                                   style={{
                                                                     display:
                                                                       "none",
                                                                   }}
                                                                 ></div>
                                                               </div>
-                                                              <span class="intakeCard 127961 closed-intake">
+                                                              <span className="intakeCard 127961 closed-intake">
                                                                 <img
                                                                   src="/images/Icon/infoicon.svg"
-                                                                  class="infoiconimg"
+                                                                  className="infoiconimg"
                                                                   onmouseover="javascript:fetchTooltipContent(this,true,0)"
                                                                   ontouchstart="javascript:fetchTooltipContent(this,true,0)"
                                                                   onmouseout="javascript:fetchTooltipContent(this,false,0)"
@@ -4879,38 +4874,38 @@
                                                           </div>
                                                         </div>
                                                       </div>
-                                                      <div class="tutiondiv">
+                                                      <div className="tutiondiv">
                                                         <b>
                                                           Yearly Tuition Fee:
                                                         </b>{" "}
                                                         £ 19800
                                                       </div>
-                                                      <div class="applicationdiv">
+                                                      <div className="applicationdiv">
                                                         <b>Application Fee:</b>{" "}
                                                         No application fee
                                                       </div>
                                                     </div>
                                                   </div>
-                                                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
-                                                    <div class="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
+                                                  <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 search_result_second_box mt-8 p-l-r-3 courseDetails">
+                                                    <div className="col-md-5 col-sm-12 col-xs-5 p-l-r-3-7 viewDeails">
                                                       <a
-                                                        class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
+                                                        className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details"
                                                         target="_blank"
                                                         href="/SearchProgram/CourseDetail?uid=MTI3OTYx"
                                                       >
-                                                        <i class="fa fa-list g-pos-rel margin-right-5">
+                                                        <i className="fa fa-list g-pos-rel margin-right-5">
                                                           &nbsp;
                                                         </i>
                                                         View Details
                                                       </a>
                                                     </div>
-                                                    <div class="switch search_result_second_box_shortlist ipad-lever">
+                                                    <div className="switch search_result_second_box_shortlist ipad-lever">
                                                       <label>
                                                         Shortlist
                                                         <input
                                                           id="shortlist_uni_953"
                                                           type="checkbox"
-                                                          class="shortlist"
+                                                          className="shortlist"
                                                           data-cid="127961"
                                                           data-unid="953"
                                                           onclick="SearchProgram.AddToExportList('127961',$(this), true)"
@@ -4924,14 +4919,14 @@
                                                         Compare
                                                         <input
                                                           type="checkbox"
-                                                          class="compare"
+                                                          className="compare"
                                                           data-cid="127961"
                                                           onclick="SearchProgram.AddToCompareList('127961',$(this))"
                                                         />
                                                       </label>
                                                       <span id="127961"></span>
                                                     </div>
-                                                    <div class="modalCourseCorrectionsRequestLink">
+                                                    <div className="modalCourseCorrectionsRequestLink">
                                                       <div
                                                         style={{
                                                           float: "right",
@@ -4941,7 +4936,7 @@
                                                           style={{
                                                             cursor: "pointer",
                                                           }}
-                                                          class="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
+                                                          className="u-link-v5 g-color-gray-dark-v5 ipad-float-view search_result_second_box_view_details modalCourseCorrectionsRequestLinkUnderline"
                                                           target="_blank"
                                                           onclick="CourseCorrectionRequest(127961)"
                                                         >
@@ -4952,15 +4947,15 @@
                                                     </div>
                                                   </div>
                                                 </div>
-                                                <div class="row margindiv">
-                                                  <div class="col-sm-12">
-                                                    <div class="rankingdiv">
-                                                      <div class="rankborder">
+                                                <div className="row margindiv">
+                                                  <div className="col-sm-12">
+                                                    <div className="rankingdiv">
+                                                      <div className="rankborder">
                                                         <span>2</span> in
                                                         Webometrics United
                                                         Kingdom National Ranking
                                                       </div>
-                                                      <div class="rankborder">
+                                                      <div className="rankborder">
                                                         <span>46</span> in
                                                         Webometrics World
                                                         Ranking
@@ -4970,60 +4965,60 @@
                                                 </div>
                                               </article>
                                               <nav
-                                                class="margin-bottom-50"
+                                                className="margin-bottom-50"
                                                 aria-label="Page Navigation"
                                               >
-                                                <ul class="list-inline">
-                                                  <li class="list-inline-item">
+                                                <ul className="list-inline">
+                                                  <li className="list-inline-item">
                                                     <a
-                                                      class="u-pagination-v1__item u-pagination-v1-5 rounded g-pa-4-13"
+                                                      className="u-pagination-v1__item u-pagination-v1-5 rounded g-pa-4-13"
                                                       href="javascript:void(0)"
                                                       aria-label="First"
                                                       onclick="SearchProgram.PaginateSearch(1)"
                                                     >
-                                                      <span class="sr-only">
+                                                      <span className="sr-only">
                                                         First
                                                       </span>
                                                     </a>
                                                   </li>
-                                                  <li class="list-inline-item">
+                                                  <li className="list-inline-item">
                                                     <a
-                                                      class="u-pagination-v1__item u-pagination-v1-5 rounded g-pa-4-13"
+                                                      className="u-pagination-v1__item u-pagination-v1-5 rounded g-pa-4-13"
                                                       href="javascript:void(0)"
                                                       aria-label="Previous"
                                                       onclick="SearchProgram.PaginateSearch(1)"
                                                     >
-                                                      <span class="sr-only">
+                                                      <span className="sr-only">
                                                         Previous
                                                       </span>
                                                     </a>
                                                   </li>
-                                                  <li class="list-inline-item">
+                                                  <li className="list-inline-item">
                                                     <a
-                                                      class="u-pagination-v1__item u-pagination-v1-5 rounded g-pa-4-13"
+                                                      className="u-pagination-v1__item u-pagination-v1-5 rounded g-pa-4-13"
                                                       href="javascript:void(0)"
                                                       aria-label="Next"
                                                       onclick="SearchProgram.PaginateSearch(2)"
                                                     >
-                                                      <span class="sr-only">
+                                                      <span className="sr-only">
                                                         Next
                                                       </span>
                                                     </a>
                                                   </li>
-                                                  <li class="list-inline-item">
+                                                  <li className="list-inline-item">
                                                     <a
-                                                      class="u-pagination-v1__item u-pagination-v1-5 rounded g-pa-4-13"
+                                                      className="u-pagination-v1__item u-pagination-v1-5 rounded g-pa-4-13"
                                                       href="javascript:void(0)"
                                                       aria-label="Last"
                                                       onclick="SearchProgram.PaginateSearch(3838)"
                                                     >
-                                                      <span class="sr-only">
+                                                      <span className="sr-only">
                                                         Last
                                                       </span>
                                                     </a>
                                                   </li>
-                                                  <li class="list-inline-item pull-right">
-                                                    <span class="u-pagination-v1__item-info">
+                                                  <li className="list-inline-item pull-right">
+                                                    <span className="u-pagination-v1__item-info">
                                                       Page 1 of 3838
                                                     </span>
                                                   </li>
@@ -5031,7 +5026,7 @@
                                               </nav>
                                               <button
                                                 type="button"
-                                                class="btn btn-info btn-lg hidden"
+                                                className="btn btn-info btn-lg hidden"
                                                 data-toggle="modal"
                                                 data-target="#ShortlistedCourses"
                                                 id="ShortlistedCoursesBtn"
@@ -5040,7 +5035,7 @@
                                               </button>
                                               <div
                                                 id="ShortlistedCourses"
-                                                class="modal fade"
+                                                className="modal fade"
                                                 role="dialog"
                                               ></div>
                                             </div>
@@ -5064,29 +5059,29 @@
         </div>
       </article>
     </div>
-    <div class="courses-compaire">
-      <div class="">
-        <div class="col-lg-3 col-md-6 col-sm-8 col-xs-12 col-lg-offset-4 col-md-offset-3 col-sm-offset-4 divMainCompare divMainCompareWeb hidden-xs hidden-sm hidecompareDiv show-lg show-md">
+    <div className="courses-compaire">
+      <div className="">
+        <div className="col-lg-3 col-md-6 col-sm-8 col-xs-12 col-lg-offset-4 col-md-offset-3 col-sm-offset-4 divMainCompare divMainCompareWeb hidden-xs hidden-sm hidecompareDiv show-lg show-md">
           <div>
-            <div class="margin-top-30">
-              <div class="panel panel-default courses-comp">
-                <div class="panel-body" style={{ border: "2px solid #ddd" }}>
+            <div className="margin-top-30">
+              <div className="panel panel-default courses-comp">
+                <div className="panel-body" style={{ border: "2px solid #ddd" }}>
                   <div>
                     <strong
                       style={{ fontWeight: "bold", fontSize: "16px" }}
-                      class="spnTotalCourses"
+                      className="spnTotalCourses"
                     >
                       2
                     </strong>{" "}
                     <span
-                      class="divMainCompareSpan"
+                      className="divMainCompareSpan"
                       style={{ fontWeight: "bold" }}
                     >
                       added to compare
                     </span>{" "}
                     <button
                       type="button"
-                      class="btn btn-primary btn-sm pull-right"
+                      className="btn btn-primary btn-sm pull-right"
                       style={{
                         fontSize: "15px",
                         padding: "0 9px 0 9px",

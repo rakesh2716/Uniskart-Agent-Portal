@@ -3,9 +3,9 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { loginUser } from '../../../Components/redux/Auth/Action';
+// import { loginUser } from '../../../Components/redux/Auth/Action';
 import { setLocalStorage } from '../../../Utils/Helpers';
-
+import {loginUser} from "../../../redux/Auth/Action"
 const SignIn = () => {
   const navigate = useNavigate();
 const dispatch = useDispatch()

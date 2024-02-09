@@ -1,28 +1,28 @@
-import * as actionTypes from './Search_type';
+import * as actionTypes from '../_types';
 const initialState = {
-  searchData: '',
+  user: '',
   loading: false,
   error: null,
 };
 
-const searchDataReducer = (state = initialState, action) => {
+const loginReducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.SEARCH_PROGRAM_REQUEST:
+    case actionTypes.LOGIN_REQUEST:
       return {
         ...state,
         loading: true,
         error: null,
       };
 
-    case actionTypes.SEARCH_PROGRAM_SUCCESS:
+    case actionTypes.LOGIN_SUCCESS:
       return {
         ...state,
-        searchData: action.payload,
+        user: action.payload,
         loading: false,
         error: null,
       };
 
-    case actionTypes.SEARCH_PROGRAM_FAILED:
+    case actionTypes.LOGIN_FAILED:
       return {
         ...state,
         loading: false,
@@ -34,4 +34,4 @@ const searchDataReducer = (state = initialState, action) => {
   }
 };
 
-export default searchDataReducer;
+export default loginReducer;

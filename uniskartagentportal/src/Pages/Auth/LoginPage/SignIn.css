@@ -277,7 +277,7 @@ input[type='email']:invalid {
 .nav-tabs>li {
     float: left;
     margin-bottom: -1px;
-    width: 50%;
+    /* width: 50%; */
     text-align: center;
     color: #000000;
 }
