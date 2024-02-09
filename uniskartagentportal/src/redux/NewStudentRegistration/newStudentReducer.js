@@ -1,4 +1,4 @@
-import * as actionTypes from '../_types';
+import {NEW_STUDENT_REQUEST,NEW_STUDENT_SUCCESS,NEW_STUDENT_FAILED,GET_ALL_STUDENT_REQUEST,GET_ALL_STUDENT_SUCCESS} from '../_types';
 const initialState = {
   newStudentRes: {},
   loading: false,
@@ -7,14 +7,15 @@ const initialState = {
 
 const NewStudentReducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.NEW_STUDENT_REQUEST:
+    case NEW_STUDENT_REQUEST:
       return {
         ...state,
         loading: true,
         error: null,
       };
 
-    case actionTypes.NEW_STUDENT_SUCCESS:
+    case NEW_STUDENT_SUCCESS:
+      alert("ddd")
       return {
         ...state,
         newStudentRes: action.payload,
@@ -22,12 +23,26 @@ const NewStudentReducer = (state = initialState, action) => {
         error: null,
       };
 
-    case actionTypes.NEW_STUDENT_FAILED:
+    case NEW_STUDENT_FAILED:
       return {
         ...state,
         loading: false,
         error: action.payload,
       };
+      case GET_ALL_STUDENT_REQUEST:
+    
+        return {
+          ...state,
+          loading: true,
+          error: null,
+        };
+        case GET_ALL_STUDENT_SUCCESS:
+          return {
+            ...state,
+            newStudentRes: action.payload,
+            loading: false,
+            error: null,
+          };
 
     default:
       return state;

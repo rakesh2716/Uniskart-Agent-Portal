@@ -7,6 +7,8 @@ import SearchProgram from './Pages/SearchProgram/Index';
 import Result from './Components/Result';
 import { Unauthenticated, PrivateRoutes } from './ProtectedRoutes';
 import Student_Register_form from './Pages/Student_Register_form';
+import Testing from './Components/StudentTable';
+import StudentTable from './Components/StudentTable';
 
 
 function App() {
@@ -23,7 +25,8 @@ function App() {
           <Route exact path="/search-program" element={<SearchProgram />} />
           <Route exact path="/result" element={<Result />} />
           <Route exact path="/student-form/:id" element={<Student_Register_form />} />
-          <Route exact path="*" element={<Navigate to="/" />} />
+          <Route path="*" element={<Navigate to="/" />} />
+          <Route exact path="/student-applications" element={<StudentTable />} />
         </Route>
       </Routes >
     </div>

@@ -31,7 +31,7 @@
                   data-id="eli_student"
                   title="Select..."
                 >
-                  <span className="filter-option pull-left">Select...</span>&nbsp;
+                  <span className="filter-option pull-left">Select...</span>
                 </button>
                 <div className="dropdown-menu open">
                   <div className="bs-searchbox">
@@ -93,7 +93,7 @@
                   data-id="eli_nationality"
                   title="Select..."
                 >
-                  <span className="filter-option pull-left">Select...</span>&nbsp;
+                  <span className="filter-option pull-left">Select...</span>
                 </button>
                 <div className="dropdown-menu open">
                   <div className="bs-searchbox">
@@ -1615,7 +1615,7 @@
                   data-id="eli_stateOfResident"
                   title="Select..."
                 >
-                  <span className="filter-option pull-left">Select...</span>&nbsp;
+                  <span className="filter-option pull-left">Select...</span>
                 </button>
                 <div className="dropdown-menu open">
                   <div className="bs-searchbox">
@@ -1664,7 +1664,7 @@
                   data-id="eli_levelofstudy"
                   title="Select..."
                 >
-                  <span className="filter-option pull-left">Select...</span>&nbsp;
+                  <span className="filter-option pull-left">Select...</span>
                 </button>
                 <div className="dropdown-menu open">
                   <div className="bs-searchbox">
@@ -1983,7 +1983,7 @@
                   data-id="eli_Test"
                   title="Select..."
                 >
-                  <span className="filter-option pull-left">Select...</span>&nbsp;
+                  <span className="filter-option pull-left">Select...</span>
                 </button>
                 <div className="dropdown-menu open">
                   <div className="bs-searchbox">
@@ -2322,7 +2322,7 @@
                   data-id="eli_other_Test"
                   title="Select..."
                 >
-                  <span className="filter-option pull-left">Select...</span>&nbsp;
+                  <span className="filter-option pull-left">Select...</span>
                 </button>
                 <div className="dropdown-menu open">
                   <div className="bs-searchbox">
@@ -2500,14 +2500,9 @@
               type="text"
               className="form-control search-university"
               placeholder="Search university..."
-            />{" "}
+            />
             <span className="search-university-close">
-              <img
-                src="/images/Icon/closed.svg"
-                width="18"
-                height="18"
-                alt="closed"
-              />
+           
             </span>
           </div>
           <ul
@@ -3164,7 +3159,7 @@
               title="Ranking"
               tabindex="-1"
             >
-              <span className="filter-option pull-left">Ranking</span>&nbsp;
+              <span className="filter-option pull-left">Ranking</span>
             </button>
             <div className="dropdown-menu open">
               <ul className="dropdown-menu inner" role="menu">

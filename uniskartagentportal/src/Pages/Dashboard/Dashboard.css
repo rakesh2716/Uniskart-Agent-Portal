@@ -7607,7 +7607,7 @@ svg path {
             background-color: var(--btColor);
             border: 1px solid var(--btColor);
             border-radius: 4px;
-            padding: 2px 25px 2px;
+            /* padding: 2px 25px 2px; */
             font-size: 14px;
             margin: 17px 0px 0 0;
             text-transform: capitalize;
@@ -7770,6 +7770,7 @@ svg path {
     .MSL-Searchform .select::after {
         right: 18px;
         border-color: #090000 transparent transparent transparent;
+        display: none;
     }
 
     .MSL-Searchform .btn-primary {
@@ -7777,7 +7778,7 @@ svg path {
         background-color: var(--btColor);
         border: 1px solid var(--btColor);
         border-radius: 4px;
-        padding: 1px 12px;
+        /* padding: 1px 12px; */
         width: 100%;
         font-size: 16px;
         margin: 0px 0px 0 0;
@@ -9090,7 +9091,6 @@ svg path {
 
     .PIbox .form-control, .PIbox .text-box {
         background-color: #ffffff !important;
-        border: 1px solid #c9c9c9 !important;
         outline: none !important;
         height: 40px !important;
         width: 100% !important;
@@ -9663,7 +9663,7 @@ svg path {
         background-color: var(--btColor);
         border: 1px solid var(--btColor);
         border-radius: 4px;
-        padding: 2px 12px;
+        /* padding: 2px 12px; */
         width: 226px;
         font-size: 16px;
         margin: 17px 0px 0 0;
@@ -9838,7 +9838,6 @@ svg path {
             background-color: var(--btColor);
             border: 1px solid var(--btColor);
             border-radius: 4px;
-            padding: 2px 12px;
             width: 200px;
             font-size: 16px;
             margin: 17px 0px 0 0;
@@ -9855,7 +9854,6 @@ svg path {
         background-color: var(--btColor);
         border: 1px solid var(--btColor);
         border-radius: 4px;
-        padding: 1px 12px;
         width: 100%;
         font-size: 16px;
         margin: 28px 0px 0 0;
@@ -35984,4 +35982,12 @@ svg path {
     /* border:2px solid red!important; */
     margin: 8px 0;
 }
-/* .modal-content  */
+.requiretxx{
+    color:"red!important"
+}
+#btnSearchData{
+    padding: 8px 0!important;
+}
+.SF-Date .rs-input-group{
+    padding: 3px 0;
+}

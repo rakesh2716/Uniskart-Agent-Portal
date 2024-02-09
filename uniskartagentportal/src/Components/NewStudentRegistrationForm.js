@@ -4,6 +4,9 @@ import 'react-phone-input-2/lib/style.css'
 import { useDispatch } from "react-redux"
 import { newStudentRegister } from '../redux/NewStudentRegistration/Action'
 import { useNavigate } from 'react-router-dom';
+import { getUserInfo } from '../Utils/Helpers'
+
+
 const SummeryInfo = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -12,7 +15,8 @@ const SummeryInfo = () => {
         middleName: "",
         lastName: "",
         email: "",
-        phoneNo: ""
+        phoneNo: "",
+        createdBy:getUserInfo().name,
     })
     const [isAlreadyExist, setIsAlreadyExist] = useState("")
     const [error, setError] = useState(false)
@@ -40,9 +44,9 @@ const SummeryInfo = () => {
         if (!!firstName && !!lastName && !!email && !!phoneNo && isValidEmail(email) && phoneNo.length - 2 === 10) {
             const res = await dispatch(newStudentRegister(registerStudentObj))
             if (!!Object.keys(res).length) {
-                if (res.response.status === 400) {
+                if (res?.response?.status === 400) {
                     setIsAlreadyExist(res.response.data.error)
-                } else {
+                } else if(res._id) {
                     navigate(`/student-form/${res._id}`);
                     document.body.classList.remove('modal-open');
                     const modalBackdrops = document.getElementsByClassName('modal-backdrop');
@@ -69,12 +73,12 @@ const SummeryInfo = () => {
                     </div>
                     <div className="col-sm-6">
                         <div className="btndiv">
-                            <a className="btn btn-success" href="" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">+ Register a new student</a>
+                            <a className="btn btn-success" href="" data-toggle="modal" data-target="#registerModal" data-whatever="@getbootstrap">+ Register a new student</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div className="modal fade" id="registerModal" tabIndex="-1" role="dialog" aria-labelledby="registerModalLabel">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
