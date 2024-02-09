@@ -133,7 +133,7 @@ const SearchProgram = () => {
         icon: "error",
         title: "Oops...",
         text: !getSearchData.courses.length ? "Please enter course" : !getSearchData.intakeMonth.length ? "Please enter any Intake" : !getSearchData?.intakeYear?.length && "Please enter any Year" ,
-        // footer: '<a href="#">Why do I have this issue?</a>'
+        
       });
     }
   };

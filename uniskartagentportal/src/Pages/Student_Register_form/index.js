@@ -1,14 +1,80 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Navbar from "../../Components/Navbar"
 import StudentPersonalFields from "../../Components/StudentPersonalFields"
 // import StudentApplicationFields from './StudentApplicationFields'
 import StudentApplicationFields from "../../Components/StudentApplicationFields"
 import "../Dashboard/Dashboard.css"
+import { getSingleStudentData, updateStudentInfo } from '../../redux/NewStudentRegistration/Action'
+import {useParams } from "react-router-dom"
+import { useDispatch } from "react-redux";
 const Student_Register_form = () => {
+	const [studentName,setStudentName] = useState("")
+	const [changeStudentInfo,setChangeStudentInfo] = useState({
+		name:"",
+		email:'',
+        phoneNo:""
+	})
+	const [nameHideShow,setNameHideShow] = useState("")
+	const [emailHideShow,setEmailHideShow] = useState("")
+	const [phoneHideShow,setphoneHideShow] = useState("")
+	const [finalUpdatedObject,setFinalUpdatedObject] = useState({})
+
+	const dispatch = useDispatch();
+	let {id} = useParams();
+	const [activeTab, setActiveTab] = useState("profile")
+	const [getStudentSavedData,setGetStudentSavedData] = useState({})
 
 
-	const [activeTab,setActiveTab] = useState("profile")
+	const getStudentSavedInfoById = async() =>{
+		try {
+			const res = await dispatch(getSingleStudentData(id));
+			const resssss = await updateStudentInfo(id,changeStudentInfo)
+			if(Object.keys(res)?.length){
+				setGetStudentSavedData(res)
+				setChangeStudentInfo({
+					name:res.middleName.length ? res.firstName+" "+res.middleName +" "+ res.lastName : res.firstName+" "+ res.lastName,
+					email:res.email,
+					phoneNo:res.phoneNo
+				})
+				let name = res.middleName.length ? res.firstName+" "+res.middleName +" "+ res.lastName : res.firstName+" "+ res.lastName
+				setStudentName(name)
+
+			
+			}
+		} catch (error) {
+			console.log(error,"errorerrorerrorerrorerrorerror");
+		}
+		
+	  }
+	  const updateStudentInfoData = async () => {
+		nameHideShow.length && setNameHideShow("")
+		emailHideShow.length && setEmailHideShow("")
+		try {
+			// if(changeStudentInfo.name && changeStudentInfo.email){
+			// 	if(changeStudentInfo.name != studentName || changeStudentInfo.email !=getStudentSavedData?.email){
+					const res = await updateStudentInfo(id,changeStudentInfo)
+					console.log(res,"resresresresresres");
+			// 	}
+			// }
+		} catch (error) {
+		  console.error('Error updating email:', error);
+		}
+	  };
+	  const handleUpdateStudentInfo = (e) =>{
+		const { value, name } = e.target;
+		setChangeStudentInfo((prev) => {
+			return {
+			  ...prev,
+			  [name]: value,
+			};
+		  });
+		  
+	  }
+	  useEffect(()=>{
+		getStudentSavedInfoById()
+	  },[])
+	
 	return (
 		<>
 			<Navbar />
@@ -17,13 +83,13 @@ const Student_Register_form = () => {
 				<div className="MS-main-tabs">
 					<div className="tabbable boxed parentTabs p-4">
 						<ul className="nav maintabs nav-tabs">
-							<li className={activeTab==="profile" && "active"} id="profileSection" onClick={()=>setActiveTab("profile")}>
+							<li className={activeTab === "profile" && "active"} id="profileSection" onClick={() => setActiveTab("profile")}>
 								<a href="#Profiletab" className="nav-link">Profile</a>
 							</li>
-							<li id="application " className={activeTab==="application" && "active"} onClick={()=>setActiveTab("application")}>
+							<li id="application " className={activeTab === "application" && "active"} onClick={() => setActiveTab("application")}>
 								<a href="#Applicationtab" className="nav-link">Applications</a>
 							</li>
-							<li className={activeTab==="docsView" && "active"} id="docsView" onClick={()=>setActiveTab("docsView")}>
+							<li className={activeTab === "docsView" && "active"} id="docsView" onClick={() => setActiveTab("docsView")}>
 								<a href="#docsViewTab" className="nav-link">Documents</a>
 							</li>
 							<li id="paymentView" style={{ display: 'none' }}>
@@ -32,41 +98,41 @@ const Student_Register_form = () => {
 						</ul>
 						<div className="welcomeUser">
 							<h1>Welcome to the application of
-								<span className="camelCasing studentNameValue" id="studentNameVal">Rakesh</span>
+								{" "}<span className="camelCasing studentNameValue" id="studentNameVal">{getStudentSavedData?.firstName+" "+getStudentSavedData?.lastName }</span>
 							</h1>
 							<div className="row">
 								<div className="col-lg-3 col-md-3 col-sm-6 studentDetail">
 									<label>Name</label>
-									<div className="namefld">
-										<span id="dispName" className="camelCasing">Rakesh Thapa</span>
-										<div className="editname">
+									<div className={`namefld ${nameHideShow ==="" ? "show" :"hide"}`}>
+										<span id="dispName" className="camelCasing ">{getStudentSavedData?.firstName+" "+getStudentSavedData?.lastName}</span>
+										<div className={`editname`} onClick={()=>setNameHideShow("name")}>
 											<a >
 												<img src="/assets/images/edit-icon.svg" alt="" />
 											</a>
 										</div>
 									</div>
-									<div className="hide" id="editName">
-										<input className="form-control camelCasing text-box single-line" id="EditNameVal" name="name" onblur="saveVal('name',this.value)" type="text" value="" />
+									<div className={nameHideShow ==="name" ? "show":"hide"} id="editName">
+										<input className="form-control camelCasing text-box single-line" id="EditNameVal" name="name" onBlur={updateStudentInfoData} type="text" value={changeStudentInfo.name} onChange={handleUpdateStudentInfo}/>
 									</div>
 								</div>
 								<div className="col-lg-3 col-md-3 col-sm-6 studentDetail">
 									<label>Email</label>
-									<div className="namefld">
-										<span className="emailSmall" id="dispEmail">rakeshthapa@gmail.com</span>
-										<div className="editname">
+									<div className={`namefld ${emailHideShow ==="" ? "show" :"hide"}`}>
+										<span className="emailSmall" id="dispEmail">{getStudentSavedData?.email}</span>
+										<div className="editname" onClick={()=>setEmailHideShow("email")}>
 											<a >
 												<img src="/assets/images/edit-icon.svg" alt="" />
 											</a>
 										</div>
 									</div>
-									<div className="hide" id="editEmail">
-										<input className="form-control text-box single-line" id="EditEmailVal" name="email" onblur="saveVal('email',this.value)" type="text" value="" />
+									<div className={emailHideShow ==="email" ? "show":"hide"} id="editEmail">
+										<input className="form-control text-box single-line" id="EditEmailVal" name="email" onBlur={updateStudentInfoData} type="text "value={changeStudentInfo.email}  onChange={handleUpdateStudentInfo}/>
 									</div>
 								</div>
 								<div className="col-lg-3 col-md-3 col-sm-6 cust-col2 studentDetaiMargin">
 									<label>Phone</label>
 									<div className="namefld">
-										<span id="dispMob" className="StudentmobileNumber">+919814555685</span>
+										<span id="dispMob" className="StudentmobileNumber">{getStudentSavedData?.phoneNo}</span>
 										<div className="editname">
 											<a >
 												<img src="/assets/images/edit-icon.svg" alt="" />
@@ -102,12 +168,12 @@ const Student_Register_form = () => {
 							</div>
 						</div>
 						<div className="tab-content">
-							
-                         {activeTab==="profile" && <StudentPersonalFields />}  
-                         {activeTab==="application" && <StudentApplicationFields />}  
-                         {/* {activeTab==="profile" && <StudentPersonalFields />}   */}
+
+							{activeTab === "profile" && <StudentPersonalFields id={id} res={getStudentSavedData}/>}
+							{activeTab === "application" && <StudentApplicationFields />}
+							{/* {activeTab==="profile" && <StudentPersonalFields />}   */}
 							<div id="docsViewTab" className="tab-pane fade">
-								
+
 							</div>
 							<div id="paymentViewTab" className="tab-pane fade"></div>
 						</div>
