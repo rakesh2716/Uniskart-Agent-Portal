@@ -173,7 +173,7 @@ const AcademyQualification = ({ getPersonalInfo, setGetPersonalInfo, activeTab, 
   };
 
   useEffect(() => {
-    if (getPersonalInfo && getPersonalInfo.grade10t && getPersonalInfo.grade12th) {
+    if (getPersonalInfo && getPersonalInfo.grade10th && getPersonalInfo.grade12th) {
       setQualificationData({ ...qualificationData, grade10th: getPersonalInfo.grade10th, grade12th: getPersonalInfo.grade12th })
       if (getPersonalInfo?.countryOfEducation && getPersonalInfo?.highLevelEducation) {
         setCountryOfEducation(getPersonalInfo?.countryOfEducation)
