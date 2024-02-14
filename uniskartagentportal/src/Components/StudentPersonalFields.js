@@ -11,9 +11,14 @@ import {
 import Swal from "sweetalert2";
 import AcademyQualification from "./AcademyQualification";
 import WorkExp from "./WorkExp";
+import StudentTests from "./StudentTests";
+import { formatDate } from "../Utils/Helpers";
+
 
 const StudentPersonalFields = ({ id, res }) => {
   const dispatch = useDispatch();
+  const [activeTab, setActiveTab] = useState(0)
+  const [isSameAddress,setIsSaveAddress] = useState(false)
   const [getPersonalInfo, setGetPersonalInfo] = useState({
     _id: id,
     dob: "",
@@ -80,7 +85,7 @@ const StudentPersonalFields = ({ id, res }) => {
       : setCountryState(states);
   };
   const handlePersonalInfo = (e, isPhoneField) => {
-    if (!!isPhoneField?.name.length) {
+    if (!!isPhoneField?.name?.length) {
       setGetPersonalInfo({ ...getPersonalInfo, EmergencyContactsPhone: e });
     } else {
       const { value, name } = e.target;
@@ -120,7 +125,8 @@ const StudentPersonalFields = ({ id, res }) => {
     return false;
   };
 
-  const handlePersonalInfoSubmit = async () => {
+  const handlePersonalInfoSubmit = async (e) => {
+    e.preventDefault()
     const {
       isApplicanTACitizenOfMoreThanOneCountry,
       otherNationality,
@@ -149,12 +155,11 @@ const StudentPersonalFields = ({ id, res }) => {
         !medicalCondition?.length) ||
       (HasApplicantVisaRefusalForAnyCountry == "true" &&
         !refusalVisaType?.length &&
-        !refusalVisaCountryName.length) ||
+        !refusalVisaCountryName?.length) ||
       (HasApplicantEverBeenConvictedOfACriminalOffence == "true" &&
         !criminalOffenceType.length)
     ) {
       setError(true);
-      alert("fail");
     } else {
       Swal.fire({
         title: "Are you sure?",
@@ -169,13 +174,7 @@ const StudentPersonalFields = ({ id, res }) => {
           try {
             const res = await dispatch(studentInfo(getPersonalInfo));
             if (res.message) {
-              Swal.fire({
-                title: "Saved",
-                icon: "success",
-                confirmButtonText: "Done",
-              }).then(function () {
-
-              });
+              setActiveTab(1)
             }
           } catch (error) {
             console.log(error);
@@ -189,6 +188,7 @@ const StudentPersonalFields = ({ id, res }) => {
 
   const handleAddress = (e) => {
     if (e.target.checked) {
+      setIsSaveAddress(e.target.checked)
       setGetPersonalInfo({
         ...getPersonalInfo,
         secodeAddress1: getPersonalInfo.address1,
@@ -200,6 +200,7 @@ const StudentPersonalFields = ({ id, res }) => {
       });
       setSecondSelectedCountry(getPersonalInfo.country);
     } else {
+      setIsSaveAddress(e.target.checked)
       setGetPersonalInfo({
         ...getPersonalInfo,
         secodeAddress1: "",
@@ -238,7 +239,6 @@ const StudentPersonalFields = ({ id, res }) => {
           try {
             const state = await getAllStates(res.country);
             setCountryState([...state]);
-            // setGetPersonalInfo({...getPersonalInfo,state:state})
           } catch (error) {
             console.error("Error fetching states:", error);
           }
@@ -257,72 +257,79 @@ const StudentPersonalFields = ({ id, res }) => {
 
     fetchData();
   }, [res]);
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, "0");
-    const day = String(date.getDate()).padStart(2, "0");
-    return `${year}-${month}-${day}`;
-  };
 
 
   return (
     <div className="tab-pane fade active in" id="Profiletab">
       <div className="MS-tabs">
         <ul className="nav nav-tabs" role="tablist">
-          <li role="presentation" className="active">
+          <li role="presentation" className={activeTab === 0 ? "active" : ""}>
             <a
               href="#PersonalInformation"
               aria-controls="personalinformation"
               role="tab"
               data-toggle="tab"
-              aria-expanded="true"
+              aria-expanded={activeTab === 0 ? "true" : "false"}
+              onClick={() => setActiveTab(0)}
             >
               Personal Information
               <span className="detail-incomplete" id="profile">
                 {getPersonalInfo.gender ? "Completed" : "Incomplete"}
+               
               </span>
             </a>
           </li>
-          <li id="QualificationSection">
+          <li
+            id="QualificationSection"
+            className={activeTab === 1 ? "active" : ""}
+          >
             <a
               href="#AcademicQualification"
               aria-controls="academicqualification"
               role="tab"
               data-toggle="tab"
-              aria-expanded="false"
+              aria-expanded={activeTab === 1 ? "true" : "false"}
+              onClick={() => setActiveTab(1)}
             >
               Academic Qualification
               <span className="detail-incomplete" id="academic">
-                Incomplete
+                {getPersonalInfo?.countryOfEducation
+                  ? "Completed"
+                  : "Incomplete"}
               </span>
             </a>
           </li>
-          <li id="WorkExperienceSection">
+          <li
+            id="WorkExperienceSection"
+            className={activeTab === 2 ? "active" : ""}
+          >
             <a
               href="#WorkExperience"
               aria-controls="workexperience"
               role="tab"
               data-toggle="tab"
-              aria-expanded="false"
+              aria-expanded={activeTab === 2 ? "true" : "false"}
+              onClick={() => setActiveTab(2)}
             >
               Work Experience
               <span className="detail-incomplete" id="workExp">
-                Optional
+              {getPersonalInfo.nameofTheOrganisationAndAddress ? "Completed" : "Optional"}
+                
               </span>
             </a>
           </li>
-          <li id="testSection">
+          <li id="testSection" className={activeTab === 3 ? "active" : ""}>
             <a
               href="#Tests"
               aria-controls="tests"
               role="tab"
               data-toggle="tab"
-              aria-expanded="false"
+              aria-expanded={activeTab === 3 ? "true" : "false"}
+              onClick={() => setActiveTab(3)}
             >
               Tests
               <span className="detail-incomplete" id="testsStatus">
-                Incomplete
+              {!!getPersonalInfo?.studentTests?.length ? "Completed" : "Incomplete"}
               </span>
             </a>
           </li>
@@ -330,11 +337,15 @@ const StudentPersonalFields = ({ id, res }) => {
         <div className="tab-content">
           <div
             role="tabpanel"
-            className="tab-pane active"
+            className={`tab-pane ${activeTab === 0 ? "active" : ""}`}
             id="PersonalInformation"
           >
             <h3 className="title">Personal Information</h3>
-            <form id="formPersonalDetailsAll" novalidate="novalidate">
+            <form
+              id="formPersonalDetailsAll"
+              novalidate="novalidate"
+              onSubmit={handlePersonalInfoSubmit}
+            >
               <div className="editbutton"></div>
               <input
                 name="Id"
@@ -835,6 +846,7 @@ const StudentPersonalFields = ({ id, res }) => {
                           type="text"
                           value={getPersonalInfo.secodeAddress1}
                           onChange={handlePersonalInfo}
+                          disabled={isSameAddress}
                         />
                       </div>
                     </div>
@@ -868,6 +880,7 @@ const StudentPersonalFields = ({ id, res }) => {
                           type="text"
                           value={getPersonalInfo.secodeAddress2}
                           onChange={handlePersonalInfo}
+                          disabled={isSameAddress}
                         />
                       </div>
                     </div>
@@ -896,6 +909,7 @@ const StudentPersonalFields = ({ id, res }) => {
                             onChange={(e) =>
                               handleCountries(e, "secodeCountry")
                             }
+                            disabled={isSameAddress}
                           >
                             <option value="" disabled selected hidden>
                               Select Country
@@ -950,11 +964,18 @@ const StudentPersonalFields = ({ id, res }) => {
                             aria-invalid="false"
                             value={getPersonalInfo.secondeState}
                             onChange={handlePersonalInfo}
+                            disabled={isSameAddress}
                           >
                             <option value="" disabled selected hidden>
                               Select State
                             </option>
-                            {!!secondAddressState?.length &&
+                            {isSameAddress && (
+                              <option value="" disabled selected hidden>
+                                {getPersonalInfo.secondeState}
+                              </option>
+                            )}
+                            {!isSameAddress &&
+                              !!secondAddressState?.length &&
                               secondAddressState.map((state) => {
                                 return (
                                   <option value={state.name}>
@@ -1001,6 +1022,7 @@ const StudentPersonalFields = ({ id, res }) => {
                           type="text"
                           value={getPersonalInfo.secondeCity}
                           onChange={handlePersonalInfo}
+                          disabled={isSameAddress}
                         />
                       </div>
                     </div>
@@ -1037,6 +1059,7 @@ const StudentPersonalFields = ({ id, res }) => {
                           type="text"
                           value={getPersonalInfo.secodePinCode}
                           onChange={handlePersonalInfo}
+                          disabled={isSameAddress}
                         />
                       </div>
                       <span
@@ -2209,17 +2232,13 @@ const StudentPersonalFields = ({ id, res }) => {
                   </div>
                   <div className="row">
                     <div className="col-sm-12">
-                      <div className="submit-btn text-center tabsnextprevbtn">
+                      <div className="submit-btn text-right tabsnextprevbtn">
                         <div className="relativepo">
                           <button
-                            className="btn btn-info"
-                            type="button"
-                            onClick={handlePersonalInfoSubmit}
+                            className="btn btn-primary"
+                            id="btn-test-submit"
                           >
-                            Save
-                          </button>
-                          <button className="btn btn-primary" type="button">
-                            Submit
+                            Save and continue
                           </button>
                         </div>
                       </div>
@@ -2264,996 +2283,24 @@ const StudentPersonalFields = ({ id, res }) => {
           <AcademyQualification
             setGetPersonalInfo={setGetPersonalInfo}
             getPersonalInfo={getPersonalInfo}
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+            id={id}
           />
 
           <WorkExp
             setGetPersonalInfo={setGetPersonalInfo}
             getPersonalInfo={getPersonalInfo}
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+            id={id}
           />
-          <div role="tabpanel" className="tab-pane" id="Tests">
-            <h2 className="title">Tests</h2>
-            <div className="editbutton">
-              <button className="editbtn" id="testEdit" type="button">
-                Edit
-              </button>
-            </div>
-            <div id="tests">
-              <div className="PIbox TestsEdit">
-                <form id="test-form" novalidate="novalidate">
-                  <div
-                    style={{
-                      textAlign: "justify",
-                      display: "none",
-                      margin: "20px 20px 20px 13px",
-                    }}
-                    id="divInforMsgTest"
-                  >
-                    The associated tests will be displayed once your desired
-                    programs are shortlisted in the ‘Shortlisted Programs’ Tab.
-                  </div>
-                  <div className="test-partial">
-                    <div className="row">
-                      <div className="col-sm-12">
-                        <label className="checkbox-inline test">
-                          <input
-                            type="checkbox"
-                            className="test-check"
-                            id="chkGre"
-                            style={{ opacity: "initial" }}
-                          />
-                          <span className="label-text">GRE</span>
-                          <span className="addtest">
-                            <span id="greExpandSign">+</span> Add Test
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div className="test-data" style={{ display: "block" }}>
-                      <div className="row">
-                        <div className="col-sm-6">
-                          <div className="pibox_student_register">
-                            <label>Overall Score</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <input
-                                type="text"
-                                name="greOverallScore"
-                                id="greOverallScore"
-                                className="form-control overall-score integer"
-                                maxlength="3"
-                                placeholder="Overall Score"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-6">
-                          <div className="pibox_student_register">
-                            <label>Date of Examination</label>
-                            <div className="dvalue">
-                              <input
-                                type="text"
-                                className="form-control examination-date"
-                                id="GREid"
-                                data-year="5"
-                                placeholder="Dt. of Examination"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-sm-4">
-                          <div className="pibox_student_register">
-                            <label>Quantitative</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">Q:</span>
-                              <input
-                                type="text"
-                                name="greQuantitative"
-                                id="greQuantitative"
-                                className="form-control quantitative integer input_text_with_icon_text"
-                                maxlength="3"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-4">
-                          <div className="pibox_student_register">
-                            <label>Verbal</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">V:</span>
-                              <input
-                                type="text"
-                                name="greVerbal"
-                                id="greVerbal"
-                                className="form-control verbal integer input_text_with_icon_text"
-                                o
-                                maxlength="5"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-4">
-                          <div className="pibox_student_register">
-                            <label>Analytical Writing</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">AW:</span>
-                              <input
-                                type="text"
-                                name="greAW"
-                                id="greAW"
-                                className="form-control analytical-writing input-integer input_text_with_icon_text"
-                                maxlength="3"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="test-partial">
-                    <div className="row">
-                      <div className="col-sm-12">
-                        <label className="checkbox-inline test">
-                          <input
-                            type="checkbox"
-                            className="test-check"
-                            id="chkGmat"
-                            style={{ opacity: "initial" }}
-                          />
-                          <span className="label-text">GMAT</span>
-                          <span className="addtest">
-                            <span id="gmatExpandSign" />+
-                          </span>{" "}
-                          Add Test
-                        </label>
-                      </div>
-                    </div>
-                    <div className="test-data" style={{ display: "none" }}>
-                      <div className="row">
-                        <div className="col-sm-6">
-                          <div className="pibox_student_register">
-                            <label>Overall Score</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <input
-                                type="text"
-                                name="gmatOverallScore"
-                                id="gmatOverallScore"
-                                className="form-control overall-score integer"
-                                placeholder="Overall Score"
-                                maxlength="3"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-6">
-                          <div className="pibox_student_register">
-                            <label>Date of Examination</label>
-                            <div className="dvalue">
-                              <input
-                                type="text"
-                                className="form-control examination-date"
-                                id="GMATid"
-                                data-year="5"
-                                placeholder="Dt. of Examination"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-sm-3">
-                          <div className="pibox_student_register">
-                            <label>Quantitative</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">Q:</span>
-                              <input
-                                type="text"
-                                name="gmatQuantitative"
-                                id="gmatQuantitative"
-                                className="form-control quantitative integer input_text_with_icon_text"
-                                maxlength="3"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-3">
-                          <div className="pibox_student_register">
-                            <label>Verbal</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">V:</span>
-                              <input
-                                type="text"
-                                name="gmatVerbal"
-                                id="gmatVerbal"
-                                className="form-control verbal integer input_text_with_icon_text"
-                                maxlength="3"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-3">
-                          <div className="pibox_student_register">
-                            <label>Analytical Writing</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">AW:</span>
-                              <input
-                                type="text"
-                                name="gmatAW"
-                                id="gmatAW"
-                                className="form-control analytical-writing input-integer input_text_with_icon_text"
-                                maxlength="3"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-3">
-                          <div className="pibox_student_register">
-                            <label>Integrated Reasoning</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">IR:</span>
-                              <input
-                                type="text"
-                                name="gmatIR"
-                                id="gmatIR"
-                                className="form-control interesting-reasoning integer input_text_with_icon_text"
-                                maxlength="1"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="test-partial">
-                    <div className="row">
-                      <div className="col-sm-12">
-                        <label className="test">
-                          <input
-                            type="checkbox"
-                            className="test-check"
-                            id="chkToefl"
-                            style={{ opacity: "initial" }}
-                          />
-                          <span className="label-text">TOEFL</span>
-                          <span className="addtest">
-                            <span id="toeflExpandSign">+</span> Add Test
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div className="test-data" style={{ display: "none" }}>
-                      <div className="row">
-                        <div className="col-sm-6">
-                          <div className="">
-                            <label>Overall Score</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <input
-                                type="text"
-                                name="toeflOverallScore"
-                                id="toeflOverallScore"
-                                className="form-control overall-score integer"
-                                placeholder="Overall Score"
-                                maxlength="3"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-6">
-                          <div className="pibox_student_register">
-                            <label>Date of Examination</label>
-                            <div className="dvalue">
-                              <input
-                                type="text"
-                                className="form-control examination-date"
-                                id="TOEFLid"
-                                data-year="2"
-                                placeholder="Dt. of Examination"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-sm-3">
-                          <div className="pibox_student_register">
-                            <label>Reading</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">R:</span>
-                              <input
-                                type="text"
-                                name="toeflReading"
-                                className="form-control reading integer input_text_with_icon_text"
-                                maxlength="2"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-3">
-                          <div className="pibox_student_register">
-                            <label>Listening</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">L:</span>
-                              <input
-                                type="text"
-                                name="toeflListening"
-                                className="form-control listening integer input_text_with_icon_text"
-                                maxlength="2"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-3">
-                          <div className="pibox_student_register">
-                            <label>Speaking</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">S:</span>
-                              <input
-                                type="text"
-                                name="toeflSpeaking"
-                                className="form-control speaking integer input_text_with_icon_text"
-                                maxlength="2"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-3">
-                          <div className="pibox_student_register">
-                            <label>Writing</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">W:</span>
-                              <input
-                                type="text"
-                                name="toeflWriting"
-                                className="form-control writing integer input_text_with_icon_text"
-                                maxlength="2"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="test-partial">
-                    <div className="row">
-                      <div className="col-sm-12">
-                        <label className="checkbox-inline test">
-                          <input
-                            type="checkbox"
-                            className="test-check"
-                            id="chkIelts"
-                            style={{ opacity: "initial" }}
-                          />
-                          <span className="label-text" />
-                          IELTS
-                          <span className="addtest">
-                            <span id="ieltsExpandSign">+</span> Add Test
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div className="test-data" style={{ display: "none" }}>
-                      <div className="ieltsnotUKAUS">
-                        <div className="row">
-                          <div className="col-sm-6">
-                            <label>Yet to Receive?</label>
-                            <div className="row">
-                              <div className="col-sm-4">
-                                <div className="radiobtn">
-                                  <input
-                                    id="chkytrNo"
-                                    className="toggle toggle-left"
-                                    name="ieltsChkYetToReceived"
-                                    value="true"
-                                    type="radio"
-                                    checked=""
-                                  />
-                                  <label for="chkytrNo" className="btn">
-                                    No
-                                  </label>
-                                  <input
-                                    id="chkytrYes"
-                                    className="toggle toggle-right"
-                                    name="ieltsChkYetToReceived"
-                                    value="false"
-                                    type="radio"
-                                  />
-                                  <label for="chkytrYes" className="btn">
-                                    Yes
-                                  </label>
-                                </div>
-                              </div>
-                              <div className="col-sm-8">
-                                <div className="">
-                                  <input
-                                    id="txtResultDate"
-                                    name="resultdate"
-                                    className="form-control"
-                                    placeholder="Enter Test Result Date"
-                                    type="text"
-                                    disabled=""
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="col-sm-6">
-                            <div className="pibox_student_register">
-                              <label>TRF No</label>
-                              <div className="dvalue">
-                                <span className="input_icon_with ">T:</span>
-                                <input
-                                  type="text"
-                                  className="form-control trfno input_text_with_icon_text"
-                                  placeholder="TRF No."
-                                  maxlength="18"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="row">
-                          <div className="col-sm-6">
-                            <label>IELTS Waiver</label>
-                            <div className="row">
-                              <div className="col-sm-4">
-                                <div className="radiobtn">
-                                  <input
-                                    id="WaiverchkNo"
-                                    className="toggle toggle-left"
-                                    name="ieltsWaiverChk"
-                                    value="true"
-                                    type="radio"
-                                    checked=""
-                                  />
-                                  <label for="WaiverchkNo" className="btn">
-                                    No
-                                  </label>
-                                  <input
-                                    id="WaiverchkYes"
-                                    className="toggle toggle-right"
-                                    name="ieltsWaiverChk"
-                                    value="false"
-                                    type="radio"
-                                  />
-                                  <label for="WaiverchkYes" className="btn">
-                                    Yes
-                                  </label>
-                                </div>
-                              </div>
-                              <div className="col-sm-8">
-                                <div className="pibox_student_register">
-                                  <input
-                                    id="ieltsWaiverEnglishMarks"
-                                    name="ieltsEnglish12"
-                                    className="form-control"
-                                    placeholder="Enter English 12 Marks"
-                                    type="text"
-                                    disabled="disabled"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="col-sm-6">
-                            <div className="">
-                              <label>Date of Examination</label>
-                              <div className="dvalue">
-                                <input
-                                  type="text"
-                                  name="ieltsDateOfExamination"
-                                  className="form-control examination-date"
-                                  id="IELTSid"
-                                  data-year="2"
-                                  placeholder="Dt. of Examination"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="row">
-                          <div className="col-sm-3">
-                            <div className="">
-                              <label>Listening</label>
-                              <span className="requiretxx">*</span>
-                              <div className="dvalue">
-                                <span className="input_icon_with ">L:</span>
-                                <input
-                                  type="text"
-                                  name="ieltsListening"
-                                  className="form-control listening input_text_with_icon_text"
-                                  maxlength="3"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div className="col-sm-3">
-                            <div className="pibox_student_register">
-                              <label>Reading</label>
-                              <span className="requiretxx">*</span>
-                              <div className="dvalue">
-                                <span className="input_icon_with ">R:</span>
-                                <input
-                                  type="text"
-                                  name="ieltsReading"
-                                  className="form-control reading input_text_with_icon_text"
-                                  maxlength="3"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div className="col-sm-3">
-                            <div className="pibox_student_register">
-                              <label>Writing</label>
-                              <span className="requiretxx">*</span>
-                              <div className="dvalue">
-                                <span className="input_icon_with ">W:</span>
-                                <input
-                                  type="text"
-                                  name="ieltsWriting"
-                                  className="form-control writing input_text_with_icon_text"
-                                  maxlength="3"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div className="col-sm-3">
-                            <div className="pibox_student_register">
-                              <label>Speaking</label>
-                              <span className="requiretxx">*</span>
-                              <div className="dvalue">
-                                <span className="input_icon_with ">S:</span>
-                                <input
-                                  type="text"
-                                  name="ieltsSpeaking"
-                                  className="form-control speaking input_text_with_icon_text"
-                                  maxlength="3"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="row">
-                          <div className="col-sm-6">
-                            <div className="pibox_student_register">
-                              <label>Overall Score</label>
-                              <span className="requiretxx">*</span>
-                              <div className="dvalue">
-                                <input
-                                  type="text"
-                                  name="ieltsOverallScore"
-                                  className="form-control overall-score"
-                                  placeholder="Overall Score"
-                                  maxlength="3"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div className="col-sm-6"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="test-partial">
-                    <div className="row">
-                      <div className="col-sm-12">
-                        <label className="checkbox-inline test">
-                          <input
-                            type="checkbox"
-                            className="test-check"
-                            id="chkPte"
-                            style={{ opacity: "initial" }}
-                          />
-                          <span className="label-text">PTE</span>
-                          <span className="addtest">
-                            <span id="pteExpandSign">+</span> Add Test
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div className="test-data" style={{ display: "none" }}>
-                      <div className="row">
-                        <div className="col-sm-6">
-                          <div className="pibox_student_register">
-                            <label>Overall Score</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <input
-                                type="text"
-                                name="pteOverallScore"
-                                className="form-control overall-score integer"
-                                placeholder="Overall Score"
-                                maxlength="2"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-6">
-                          <div className="pibox_student_register">
-                            <label>Date of Examination</label>
-                            <div className="dvalue">
-                              <input
-                                type="text"
-                                className="form-control examination-date"
-                                id="PTEid"
-                                data-year="2"
-                                placeholder="Dt. of Examination"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-sm-3">
-                          <div className="pibox_student_register">
-                            <label>Reading</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">R:</span>
-                              <input
-                                type="text"
-                                name="pteReading"
-                                className="form-control reading integer input_text_with_icon_text"
-                                maxlength="2"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-3">
-                          <div className="pibox_student_register">
-                            <label>Listening</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">L:</span>
-                              <input
-                                type="text"
-                                name="pteListening"
-                                className="form-control listening integer input_text_with_icon_text"
-                                maxlength="2"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-3">
-                          <div className="pibox_student_register">
-                            <label>Speaking</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">S:</span>
-                              <input
-                                type="text"
-                                name="pteSpeaking"
-                                className="form-control speaking integer input_text_with_icon_text"
-                                maxlength="2"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-3">
-                          <div className="pibox_student_register">
-                            <label>Writing</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">W:</span>
-                              <input
-                                type="text"
-                                name="pteWriting"
-                                className="form-control writing integer input_text_with_icon_text"
-                                maxlength="2"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="test-partial">
-                    <div className="row">
-                      <div className="col-sm-12">
-                        <label className="checkbox-inline test">
-                          <input
-                            type="checkbox"
-                            className="test-check"
-                            id="chkdet"
-                            style={{ opacity: "initial" }}
-                          />
-                          <span className="label-text">DET</span>
-                          <span className="addtest">
-                            <span id="detExpandSign">+</span> Add Test
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div className="test-data" style={{ display: "none" }}>
-                      <div className="row">
-                        <div className="col-sm-6">
-                          <div className="pibox_student_register">
-                            <label>Overall Score</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <input
-                                type="text"
-                                name="detOverallScore"
-                                className="form-control overall-score integer"
-                                placeholder="Overall Score"
-                                maxlength="3"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-6">
-                          <div className="pibox_student_register">
-                            <label>Date of Examination</label>
-                            <div className="dvalue">
-                              <input
-                                type="text"
-                                className="form-control examination-date"
-                                id="DETid"
-                                data-year="2"
-                                placeholder="Date of Examination"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="test-partial">
-                    <div className="row">
-                      <div className="col-sm-12">
-                        <label className="checkbox-inline test">
-                          <input
-                            type="checkbox"
-                            className="test-check"
-                            id="chkSat"
-                            style={{ opacity: "initial" }}
-                          />
-                          <span className="label-text">SAT</span>
-                          <span className="addtest">
-                            <span id="satExpandSign">+</span> Add Test
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                    <div className="test-data" style={{ display: "none" }}>
-                      <div className="row">
-                        <div className="col-sm-6">
-                          <div className="pibox_student_register">
-                            <label>Overall Score</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <input
-                                type="text"
-                                name="satOverallScore"
-                                className="form-control overall-score integer"
-                                placeholder="Overall Score"
-                                maxlength="4"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-6">
-                          <div className="pibox_student_register">
-                            <label>Date of Examination</label>
-                            <div className="dvalue">
-                              <input
-                                type="text"
-                                className="form-control examination-date"
-                                id="SATid"
-                                data-year="5"
-                                placeholder="Dt. of Examination"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-sm-4">
-                          <div className="">
-                            <label>Reading &amp; Writing</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">RW:</span>
-                              <input
-                                type="text"
-                                name="satReadingWriting"
-                                className="form-control readingandwriting integer input_text_with_icon_text"
-                                maxlength="3"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-4">
-                          <div className="">
-                            <label>Math</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">M:</span>
-                              <input
-                                type="text"
-                                name="satMath"
-                                className="form-control math integer input_text_with_icon_text"
-                                maxlength="3"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-4">
-                          <div className="">
-                            <label>Essay</label>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">E:</span>
-                              <input
-                                type="text"
-                                className="form-control essay integer input_text_with_icon_text"
-                                maxlength="1"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="test-partial">
-                    <div className="row">
-                      <div className="col-sm-12">
-                        <label className="checkbox-inline test">
-                          <input
-                            type="checkbox"
-                            className="test-check"
-                            id="chkAct"
-                            style={{ opacity: "initial" }}
-                          />
-                          <span className="label-text">ACT</span>
-                          <span className="addtest">
-                            <span id="actExpandSign" />+
-                          </span>{" "}
-                          Add Test
-                        </label>
-                      </div>
-                    </div>
-                    <div className="test-data" style={{ display: "none" }}>
-                      <div className="row">
-                        <div className="col-sm-6">
-                          <div className="">
-                            <label>Overall Score</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <input
-                                type="text"
-                                name="actOverallScore"
-                                className="form-control overall-score integer"
-                                placeholder="Overall Score"
-                                maxlength="2"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-6">
-                          <div className="">
-                            <label>Date of Examination</label>
-                            <div className="dvalue">
-                              <input
-                                type="text"
-                                className="form-control examination-date"
-                                id="ACTid"
-                                data-year="5"
-                                placeholder="Dt. of Examination"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-sm-3">
-                          <div className="">
-                            <label>Math</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">M:</span>
-                              <input
-                                type="text"
-                                name="actMath"
-                                className="form-control math integer input_text_with_icon_text"
-                                maxlength="2"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-3">
-                          <div className="">
-                            <label>Reading</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">R:</span>
-                              <input
-                                type="text"
-                                name="actReading"
-                                className="form-control reading integer input_text_with_icon_text"
-                                maxlength="2"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-3">
-                          <div className="">
-                            <label>Science</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">S:</span>
-                              <input
-                                type="text"
-                                name="actScience"
-                                className="form-control science integer input_text_with_icon_text"
-                                maxlength="2"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-3">
-                          <div className="">
-                            <label>English</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">E:</span>
-                              <input
-                                type="text"
-                                name="actEnglish"
-                                className="form-control english integer input_text_with_icon_text"
-                                maxlength="2"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-sm-6">
-                          <div className="">
-                            <label>Writing</label>
-                            <span className="requiretxx">*</span>
-                            <div className="dvalue">
-                              <span className="input_icon_with ">W:</span>
-                              <input
-                                type="text"
-                                name="actWriting"
-                                className="form-control writing integer input_text_with_icon_text"
-                                maxlength="2"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-6"></div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div className="row">
-                <div className="col-sm-12">
-                  <div className="submit-btn text-right tabsnextprevbtn">
-                    <div className="relativepo">
-                      <button className="btn btn-primary" id="btn-test-submit">
-                        Save and continue
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <StudentTests
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+            id={id}
+            getPersonalInfo={getPersonalInfo}
+          />
         </div>
       </div>
     </div>

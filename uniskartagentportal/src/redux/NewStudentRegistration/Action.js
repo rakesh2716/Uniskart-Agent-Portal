@@ -172,12 +172,12 @@ const updateStudentInfoFailed = (error) => ({
 
 
 export const updateStudentInfo = (id,obj) => async dispatch => {
-  alert("hid")
 try {
   dispatch(updateStudentInfoReq());
   const headers = {
       'Content-Type': 'application/json',
     };
+    
   const response = await axios.patch(URLs.updateStudentinfo(id),obj,{headers}) 
   const student = response.data;
   dispatch(updateStudentInfoSuccess(student));

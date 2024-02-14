@@ -1,12 +1,14 @@
 import React, { useState ,useEffect} from 'react'
 import Swal from "sweetalert2";
 import { useDispatch, useSelector } from "react-redux";
-import { studentInfo } from '../redux/NewStudentRegistration/Action';
-const WorkExp = ({ getPersonalInfo, setGetPersonalInfo }) => {
+import { getSingleStudentData, studentInfo } from '../redux/NewStudentRegistration/Action';
+const WorkExp = ({ getPersonalInfo, setGetPersonalInfo ,activeTab,setActiveTab,id}) => {
   const dispatch = useDispatch();
   const [showWorkExp, setShowWorkExp] = useState(false);
   const [isClicked,setIsClicked] = useState(false)
+  
 const [workExpData,setWorkExp] = useState({
+  _id:id,
     nameofTheOrganisationAndAddress:"",
     position:"",
     jobProfile:"",
@@ -36,13 +38,13 @@ const saveWorkExp = () =>{
     iAmCurrentlyWorkingHere
   } = workExpData;
   if (
-    !!nameofTheOrganisationAndAddress.length &&
-    !!position.length &&
-    !!jobProfile.length &&
-    !!workingFrom.length &&
-    !!modeOfSalary.length &&
-    !!workingUpto.length &&
-    !!iAmCurrentlyWorkingHere.length
+    !!nameofTheOrganisationAndAddress?.length &&
+    !!position?.length &&
+    !!jobProfile?.length &&
+    !!workingFrom?.length &&
+    !!modeOfSalary?.length &&
+    !!workingUpto?.length &&
+    !!iAmCurrentlyWorkingHere?.length
   ) {
     Swal.fire({
       title: "Are you sure?",
@@ -54,8 +56,11 @@ const saveWorkExp = () =>{
       dangerMode: true,
     }).then(async function (result) {
       if (result.isConfirmed) {
-          setGetPersonalInfo({...getPersonalInfo,...workExpData})
-          setIsClicked(true)
+        const res = await dispatch(studentInfo(workExpData));
+        if (res.message) {
+          const singleDataRes = await dispatch(getSingleStudentData(id));
+          setActiveTab(3)
+        }
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire("Cancelled", " :)", "error");
       }
@@ -73,25 +78,41 @@ const xyz = async()=>{
             title: "Saved",
             icon: "success",
             confirmButtonText: "Done",
-          }).then(function () {});
+          }).then(function () {
+            setActiveTab(3)
+          });
         }
       } catch (error) {
         console.log(error);
       }
 }
-useEffect(()=>{
-if(!!getPersonalInfo?.nameofTheOrganisationAndAddress?.length && isClicked){
-    xyz()
-    setIsClicked(false)
-}
 
-},[getPersonalInfo])
-useEffect(()=>{
-  setWorkExp({...getPersonalInfo,...workExpData})
-},[])
+useEffect(() => {
+  if (getPersonalInfo && getPersonalInfo?.position?.length) {
+    const { nameofTheOrganisationAndAddress,
+    position,
+    jobProfile,
+    workingFrom,
+    workingUpto,
+    modeOfSalary,
+    iAmCurrentlyWorkingHere} = getPersonalInfo
+
+    setWorkExp({
+      nameofTheOrganisationAndAddress,
+      position,
+      jobProfile,
+      workingFrom,
+      workingUpto,
+      modeOfSalary,
+      iAmCurrentlyWorkingHere,
+      _id:id})
+  }
+ 
+}, [getPersonalInfo])
+
 
   return (
-    <div role="tabpanel" className="tab-pane" id="WorkExperience">
+    <div role="tabpanel" className={`tab-pane ${activeTab === 2 ? 'active' : ''}`} id="WorkExperience">
       <h2 className="title">Work Experience</h2>
       <div id="divWorkExperienceInformation">
         <div id="divWorkInformationFormNext"></div>
@@ -391,7 +412,7 @@ useEffect(()=>{
               type="button"
               className="btn btn-info btn-continue"
               id="btnWorkContinue"
-            >
+              onClick={()=>setActiveTab(3)} >
               Continue
             </button>
           </div>

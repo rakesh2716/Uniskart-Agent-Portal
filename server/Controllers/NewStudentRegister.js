@@ -2,14 +2,12 @@ import StudentRegistration from "../modals/studentRegister.js";
 
 export const registerStudent = async (req, res) => {
   try {
-    const { firstName, middleName, lastName, email, phoneNo, createdBy } =
+    const { name, email, phoneNo, createdBy } =
       req.body;
 
 
     const newStudent = new StudentRegistration({
-      firstName,
-      middleName,
-      lastName,
+      name,
       email,
       phoneNo,
       createdBy,
@@ -54,9 +52,7 @@ export const registerStudent = async (req, res) => {
       }
       const responseData = allStudents.map(student => ({
         _id: student._id,
-        firstName: student.firstName,
-        middleName: student.middleName,
-        lastName: student.lastName,
+        name: student.name,
         email: student.email,
         phoneNo: student.phoneNo,
         createdAt: student.createdAt,
@@ -90,7 +86,7 @@ export const registerStudent = async (req, res) => {
   export const StudentInfoSave = async (req, res) => {
     try {
       const {
-        _id, 
+        _id,
         dob,
         gender,
         maritalStatus,
@@ -132,27 +128,21 @@ export const registerStudent = async (req, res) => {
         EmergencyContactsPhone,
         EmergencyContactsRelationWithApplicant,
         position,
+        nameofTheOrganisationAndAddress,
         jobProfile,
         workingFrom,
         workingUpto,
         modeOfSalary,
         iAmCurrentlyWorkingHere,
+        grade12th,
+        grade10th,
+        postgraduate,
+        undergraduate,
+        highLevelEducation,
         countryOfEducation,
-        highestLevelOfEducation,
-        levelOfStudy,
-        nameOfTheInstitution,
-        countryOfStudy,
-        stateOfStudy,
-        cityOfStudy,
-        degreeAwarded,
-        Backlogs,
-        gradingSystem,
-        Score,
-        primaryLanguageOfInstruction,
-        startDate,
-        endDate,
+        studentTests,
       } = req.body;
-  
+
       if (!_id) {
         return res.status(400).json({ error: "Missing _id parameter" });
       }
@@ -162,7 +152,7 @@ export const registerStudent = async (req, res) => {
       if (!existingStudent) {
         return res.status(404).json({ error: "Student not found" });
       }
-  
+
       existingStudent.dob = dob || existingStudent.dob;
       existingStudent.gender = gender || existingStudent.gender;
       existingStudent.maritalStatus = maritalStatus || existingStudent.maritalStatus;
@@ -204,28 +194,22 @@ export const registerStudent = async (req, res) => {
       existingStudent.EmergencyContactsPhone = EmergencyContactsPhone || existingStudent.EmergencyContactsPhone;
       existingStudent.EmergencyContactsRelationWithApplicant = EmergencyContactsRelationWithApplicant || existingStudent.EmergencyContactsRelationWithApplicant;
       existingStudent.position = position || existingStudent.position;
+      existingStudent.nameofTheOrganisationAndAddress = nameofTheOrganisationAndAddress || existingStudent.nameofTheOrganisationAndAddress;
       existingStudent.jobProfile = jobProfile || existingStudent.jobProfile;
       existingStudent.workingFrom = workingFrom || existingStudent.workingFrom;
       existingStudent.workingUpto = workingUpto || existingStudent.workingUpto;
       existingStudent.modeOfSalary = modeOfSalary || existingStudent.modeOfSalary;
       existingStudent.iAmCurrentlyWorkingHere = iAmCurrentlyWorkingHere || existingStudent.iAmCurrentlyWorkingHere;
-      existingStudent.countryOfEducation = countryOfEducation || existingStudent.countryOfEducation;
-      existingStudent.highestLevelOfEducation = highestLevelOfEducation || existingStudent.highestLevelOfEducation;
-      existingStudent.levelOfStudy = levelOfStudy || existingStudent.levelOfStudy;
-      existingStudent.nameOfTheInstitution = nameOfTheInstitution || existingStudent.nameOfTheInstitution;
-      existingStudent.countryOfStudy = countryOfStudy || existingStudent.countryOfStudy;
-      existingStudent.stateOfStudy = stateOfStudy || existingStudent.stateOfStudy;
-      existingStudent.cityOfStudy = cityOfStudy || existingStudent.cityOfStudy;
-      existingStudent.degreeAwarded = degreeAwarded || existingStudent.degreeAwarded;
-      existingStudent.Backlogs = Backlogs || existingStudent.Backlogs;
-      existingStudent.gradingSystem = gradingSystem || existingStudent.gradingSystem;
-      existingStudent.Score = Score || existingStudent.Score;
-      existingStudent.primaryLanguageOfInstruction = primaryLanguageOfInstruction || existingStudent.primaryLanguageOfInstruction;
-      existingStudent.startDate = startDate || existingStudent.startDate;
-      existingStudent.endDate = endDate || existingStudent.endDate;
-     
-      await existingStudent.save();
 
+      existingStudent.grade12th = grade12th || existingStudent.grade12th;
+      existingStudent.grade10th = grade10th || existingStudent.grade10th;
+      existingStudent.postgraduate = postgraduate || existingStudent.postgraduate;
+      existingStudent.undergraduate = undergraduate || existingStudent.undergraduate;
+      existingStudent.highLevelEducation = highLevelEducation || existingStudent.highLevelEducation;
+      existingStudent.countryOfEducation = countryOfEducation || existingStudent.countryOfEducation;
+      existingStudent.studentTests =
+        studentTests || existingStudent.studentTests;
+      await existingStudent.save();
       return res.status(200).json({ message: "Student data saved successfully" });
     } catch (err) {
       console.error(err);
@@ -238,9 +222,11 @@ export const registerStudent = async (req, res) => {
  export const updateStudentInfo = async (req, res) => {
     try {
       const { id } = req.params;
-      const { email, phoneNo } = req.body;
+      const { name ,email, phoneNo } = req.body;
       const student = await StudentRegistration.findById(id);
-  
+      if (name) {
+        student.name = name;
+      }
       if (email) {
         student.email = email;
       }

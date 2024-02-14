@@ -15,7 +15,6 @@ const NewStudentReducer = (state = initialState, action) => {
       };
 
     case NEW_STUDENT_SUCCESS:
-      alert("ddd")
       return {
         ...state,
         newStudentRes: action.payload,

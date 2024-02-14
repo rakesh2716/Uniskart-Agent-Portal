@@ -8920,7 +8920,7 @@ svg path {
             border-radius: 4px !important;
             font-size: 13px !important;
             font-weight: 400;
-            color: #ffffff;
+            color: #ffffff!important;
         }
 
         .MSWrap .welcomeUser h1 {
@@ -9091,6 +9091,7 @@ svg path {
 
     .PIbox .form-control, .PIbox .text-box {
         background-color: #ffffff !important;
+        border: 1px solid #c9c9c9 !important;
         outline: none !important;
         height: 40px !important;
         width: 100% !important;
@@ -9289,7 +9290,6 @@ svg path {
         background-color: var(--btColor) !important;
         border: 1px solid var(--btColor) !important;
         border-radius: 4px;
-        padding: 2px 12px;
         width: 226px;
         font-size: 16px;
         margin: 0px 0px 18px 0;
@@ -9341,7 +9341,6 @@ svg path {
         background-color: var(--btColor) !important;
         border: 1px solid var(--btColor) !important;
         border-radius: 4px;
-        padding: 2px 12px;
         width: 260px;
         font-size: 16px;
         margin: 0px 0px 10px 0;
@@ -10158,7 +10157,6 @@ svg path {
             background-color: var(--btColor) !important;
             border: 1px solid var(--btColor) !important;
             border-radius: 4px;
-            padding: 2px 12px;
             width: 280px;
             font-size: 16px;
             margin: 10px 30px 10px 0;
@@ -24247,7 +24245,7 @@ input[type=range]::-moz-range-thumb {
         .mobile-toggle {
             display: block;
             padding: 13px 9px;
-            margin: 19px 23px 22px;
+            margin: 0px 23px 22px;
         }
 
         .navbar-header {
@@ -24508,7 +24506,7 @@ input[type=range]::-moz-range-thumb {
         .mobile-toggle {
             display: block;
             padding: 13px 9px;
-            margin: 19px 20px 22px;
+            margin: 0px 20px 22px;
         }
 
         .navbar-header {
@@ -31462,16 +31460,14 @@ input[type=range]::-moz-range-thumb {
         position: relative;
     }
 
-        .api-loader-div .content {
+        /* .api-loader-div .content {
             width: 100%;
-            /* height: 95%; */
             background-color: #dddddd8a;
-            /* background-image: url("../images/newLoader.svg"); */
             background-position: center;
             background-repeat: no-repeat;
             position: absolute;
             z-index: 999;
-        }
+        } */
 
         .api-loader-div .contentTxt {
             width: 100%;
@@ -31645,16 +31641,16 @@ input[type=range]::-moz-range-thumb {
             margin: 0 !important;
         }
 
-        .api-loader-div .content {
+        /* .api-loader-div .content {
             width: 100%;
             height: 100%;
             background-color: #dddddd8a;
-            /* background-image: url(../images/newLoader.svg); */
+            
             background-position: center;
             background-repeat: no-repeat;
             position: absolute;
             z-index: 999;
-        }
+        } */
 
         .staff .calendar-one {
             width: 100% !important;
@@ -31684,18 +31680,17 @@ input[type=range]::-moz-range-thumb {
             width: 100%;
         }
 
-        .api-loader-div .content {
+        /* .api-loader-div .content {
             width: 100%;
             height: 98.3%;
             background-color: #dddddd8a;
-            /* background-image: url(../images/newLoader.svg); */
+           
             background-position: center;
             background-repeat: no-repeat;
             position: absolute;
-            /* top: 20%; */
-            /* left: 43%; */
+        
             z-index: 999;
-        }
+        } */
 
         .col-sm-12 {
             margin: 0;
@@ -35990,4 +35985,13 @@ svg path {
 }
 .SF-Date .rs-input-group{
     padding: 3px 0;
+}
+.TestsEdit .test-partial{
+  padding-bottom: 20px;
+}
+.student_register{
+    margin-bottom: 10px;
+}
+.rs-picker-toggle-wrapper{
+  width: 100%!important;
 }
