@@ -6,75 +6,97 @@ import StudentPersonalFields from "../../Components/StudentPersonalFields"
 import StudentApplicationFields from "../../Components/StudentApplicationFields"
 import "../Dashboard/Dashboard.css"
 import { getSingleStudentData, updateStudentInfo } from '../../redux/NewStudentRegistration/Action'
-import {useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { useDispatch } from "react-redux";
+import Swal from 'sweetalert2'
 const Student_Register_form = () => {
-	const [studentName,setStudentName] = useState("")
-	const [changeStudentInfo,setChangeStudentInfo] = useState({
-		name:"",
-		email:'',
-        phoneNo:""
-	})
-	const [nameHideShow,setNameHideShow] = useState("")
-	const [emailHideShow,setEmailHideShow] = useState("")
-	const [phoneHideShow,setphoneHideShow] = useState("")
-	const [finalUpdatedObject,setFinalUpdatedObject] = useState({})
-
 	const dispatch = useDispatch();
-	let {id} = useParams();
+	const [changeStudentInfo, setChangeStudentInfo] = useState({
+		name: "",
+		email: '',
+		phoneNo: ""
+	})
+	const [nameHideShow, setNameHideShow] = useState("")
+	const [emailHideShow, setEmailHideShow] = useState("")
+	const [phoneHideShow, setphoneHideShow] = useState("")
+	const [finalUpdatedObject, setFinalUpdatedObject] = useState({})
+
+
+	let { id } = useParams();
 	const [activeTab, setActiveTab] = useState("profile")
-	const [getStudentSavedData,setGetStudentSavedData] = useState({})
+	const [getStudentSavedData, setGetStudentSavedData] = useState({})
 
 
-	const getStudentSavedInfoById = async() =>{
+	const getStudentSavedInfoById = async () => {
 		try {
 			const res = await dispatch(getSingleStudentData(id));
-			const resssss = await updateStudentInfo(id,changeStudentInfo)
-			if(Object.keys(res)?.length){
+			if (Object.keys(res)?.length) {
 				setGetStudentSavedData(res)
 				setChangeStudentInfo({
-					name:res.middleName.length ? res.firstName+" "+res.middleName +" "+ res.lastName : res.firstName+" "+ res.lastName,
-					email:res.email,
-					phoneNo:res.phoneNo
+					name: res.name,
+					email: res.email,
+					phoneNo: res.phoneNo
 				})
-				let name = res.middleName.length ? res.firstName+" "+res.middleName +" "+ res.lastName : res.firstName+" "+ res.lastName
-				setStudentName(name)
 
-			
 			}
 		} catch (error) {
-			console.log(error,"errorerrorerrorerrorerrorerror");
+			console.log(error, "errorerrorerrorerrorerrorerror");
 		}
-		
-	  }
-	  const updateStudentInfoData = async () => {
-		nameHideShow.length && setNameHideShow("")
-		emailHideShow.length && setEmailHideShow("")
+
+	}
+	const isValidEmail = (email) => {
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		return emailRegex.test(email);
+	};
+	const updateStudentInfoData = async () => {
 		try {
-			// if(changeStudentInfo.name && changeStudentInfo.email){
-			// 	if(changeStudentInfo.name != studentName || changeStudentInfo.email !=getStudentSavedData?.email){
-					const res = await updateStudentInfo(id,changeStudentInfo)
-					console.log(res,"resresresresresres");
-			// 	}
-			// }
+			if (!!changeStudentInfo.name && !!changeStudentInfo.email && !!changeStudentInfo.phoneNo && changeStudentInfo.phoneNo.toString().length===10 && isValidEmail(changeStudentInfo.email)) {
+				if (changeStudentInfo.name != getStudentSavedData.name || changeStudentInfo.email != getStudentSavedData?.email ||  changeStudentInfo.phoneNo != getStudentSavedData?.phoneNo) {
+					const res = await dispatch(updateStudentInfo(id, changeStudentInfo))
+					if (res.message) {
+						const singleDataRes = await dispatch(getSingleStudentData(id));
+						setChangeStudentInfo({
+							name: singleDataRes.name,
+							email: singleDataRes.email,
+							phoneNo: singleDataRes.phoneNo
+
+						})
+						setGetStudentSavedData({ ...getSingleStudentData, name: singleDataRes.name })
+						setNameHideShow("")
+						setEmailHideShow("")
+						setphoneHideShow("")
+					}
+
+				} else {
+					setNameHideShow("")
+					setEmailHideShow("")
+					setphoneHideShow("")
+				}
+			} else {
+				Swal.fire({
+					icon: "error",
+					title: "Oops...",
+					text: "something went wrong"
+				});
+			}
 		} catch (error) {
-		  console.error('Error updating email:', error);
+			console.error('Error updating email:', error);
 		}
-	  };
-	  const handleUpdateStudentInfo = (e) =>{
+	};
+	const handleUpdateStudentInfo = (e) => {
 		const { value, name } = e.target;
 		setChangeStudentInfo((prev) => {
 			return {
-			  ...prev,
-			  [name]: value,
+				...prev,
+				[name]: value,
 			};
-		  });
-		  
-	  }
-	  useEffect(()=>{
+		});
+
+	}
+	useEffect(() => {
 		getStudentSavedInfoById()
-	  },[])
-	
+	}, [])
+
 	return (
 		<>
 			<Navbar />
@@ -98,48 +120,50 @@ const Student_Register_form = () => {
 						</ul>
 						<div className="welcomeUser">
 							<h1>Welcome to the application of
-								{" "}<span className="camelCasing studentNameValue" id="studentNameVal">{getStudentSavedData?.firstName+" "+getStudentSavedData?.lastName }</span>
+								{" "}<span className="camelCasing studentNameValue" id="studentNameVal">{getStudentSavedData?.name}</span>
 							</h1>
 							<div className="row">
 								<div className="col-lg-3 col-md-3 col-sm-6 studentDetail">
 									<label>Name</label>
-									<div className={`namefld ${nameHideShow ==="" ? "show" :"hide"}`}>
-										<span id="dispName" className="camelCasing ">{getStudentSavedData?.firstName+" "+getStudentSavedData?.lastName}</span>
-										<div className={`editname`} onClick={()=>setNameHideShow("name")}>
+									<div className={`namefld ${nameHideShow === "" ? "show" : "hide"}`}>
+										<span id="dispName" className="camelCasing ">{changeStudentInfo?.name}</span>
+										<div className={`editname`} onClick={() => setNameHideShow("name")}>
 											<a >
 												<img src="/assets/images/edit-icon.svg" alt="" />
 											</a>
 										</div>
 									</div>
-									<div className={nameHideShow ==="name" ? "show":"hide"} id="editName">
-										<input className="form-control camelCasing text-box single-line" id="EditNameVal" name="name" onBlur={updateStudentInfoData} type="text" value={changeStudentInfo.name} onChange={handleUpdateStudentInfo}/>
+									<div className={nameHideShow === "name" ? "show" : "hide"} id="editName">
+										<input className="form-control camelCasing text-box single-line" id="EditNameVal" name="name" onBlur={updateStudentInfoData} type="text" value={changeStudentInfo.name} onChange={handleUpdateStudentInfo} />
 									</div>
 								</div>
 								<div className="col-lg-3 col-md-3 col-sm-6 studentDetail">
 									<label>Email</label>
-									<div className={`namefld ${emailHideShow ==="" ? "show" :"hide"}`}>
-										<span className="emailSmall" id="dispEmail">{getStudentSavedData?.email}</span>
-										<div className="editname" onClick={()=>setEmailHideShow("email")}>
+									<div className={`namefld ${emailHideShow === "" ? "show" : "hide"}`}>
+										<span className="emailSmall" id="dispEmail">{changeStudentInfo?.email}</span>
+										<div className="editname" onClick={() => setEmailHideShow("email")}>
 											<a >
 												<img src="/assets/images/edit-icon.svg" alt="" />
 											</a>
 										</div>
 									</div>
-									<div className={emailHideShow ==="email" ? "show":"hide"} id="editEmail">
-										<input className="form-control text-box single-line" id="EditEmailVal" name="email" onBlur={updateStudentInfoData} type="text "value={changeStudentInfo.email}  onChange={handleUpdateStudentInfo}/>
+									<div className={emailHideShow === "email" ? "show" : "hide"} id="editEmail">
+										<input className="form-control text-box single-line" id="EditEmailVal" name="email" onBlur={updateStudentInfoData} type="text " value={changeStudentInfo.email} onChange={handleUpdateStudentInfo} />
 									</div>
 								</div>
 								<div className="col-lg-3 col-md-3 col-sm-6 cust-col2 studentDetaiMargin">
 									<label>Phone</label>
-									<div className="namefld">
-										<span id="dispMob" className="StudentmobileNumber">{getStudentSavedData?.phoneNo}</span>
-										<div className="editname">
+									<div className={`namefld ${phoneHideShow == "" ? "show" : "hide"}`}>
+										<span id="dispMob" className="StudentmobileNumber">{changeStudentInfo?.phoneNo}</span>
+										<div className="editname" onClick={() => setphoneHideShow("phoneno")}>
 											<a >
 												<img src="/assets/images/edit-icon.svg" alt="" />
 											</a>
 										</div>
 									</div>
-
+									<div className={phoneHideShow === "phoneno" ? "show" : "hide"} id="editName">
+										<input type="number" className="form-control camelCasing text-box single-line" id="EditNameVal" name="phoneNo" onBlur={updateStudentInfoData}  value={changeStudentInfo.phoneNo} onChange={handleUpdateStudentInfo} />
+									</div>
 								</div>
 								<div className="col-lg-3 col-md-3 col-sm-6 cust-colLink studentDetaiMargin">
 									<label>Student Url Link</label>
@@ -169,7 +193,7 @@ const Student_Register_form = () => {
 						</div>
 						<div className="tab-content">
 
-							{activeTab === "profile" && <StudentPersonalFields id={id} res={getStudentSavedData}/>}
+							{activeTab === "profile" && <StudentPersonalFields id={id} res={getStudentSavedData} />}
 							{activeTab === "application" && <StudentApplicationFields />}
 							{/* {activeTab==="profile" && <StudentPersonalFields />}   */}
 							<div id="docsViewTab" className="tab-pane fade">

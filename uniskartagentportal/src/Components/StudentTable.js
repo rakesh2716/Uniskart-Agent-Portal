@@ -257,9 +257,9 @@ const StudentTable = () => {
 												{item.phoneNo}
 											</td>
 											<td className="kc-team">
-												{item.createdBy}
+												{getUserInfo().name}
 											</td>
-											<td>{item.createdBy}</td>
+											<td>{getUserInfo().name}</td>
 											<td className="status-incomplete">
 												App. Incomplete
 											</td>

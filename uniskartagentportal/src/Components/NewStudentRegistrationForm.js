@@ -40,8 +40,12 @@ const SummeryInfo = () => {
         return emailRegex.test(email);
     };
     const handleSubmitRegister = async () => {
-        const { firstName, lastName, email, phoneNo } = registerStudentObj
+        const { firstName, lastName, email, phoneNo ,middleName} = registerStudentObj
         if (!!firstName && !!lastName && !!email && !!phoneNo && isValidEmail(email) && phoneNo.length - 2 === 10) {
+            const registerStudentObj = {
+                name:middleName ? firstName+" "+ middleName +" "+ lastName :firstName +" "+ lastName,
+                email,phoneNo
+            }
             const res = await dispatch(newStudentRegister(registerStudentObj))
             if (!!Object.keys(res).length) {
                 if (res?.response?.status === 400) {
