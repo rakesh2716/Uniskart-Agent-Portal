@@ -54,6 +54,7 @@ const studentResSchema = new mongoose.Schema(
     iAmCurrentlyWorkingHere: { type: String },
     postGraduateStates:{ type: String },
     countryOfEducation:{ type: String },
+    highLevelEducation:{ type: String },
       postgraduate: {
         levelOfStudy: { type: String },
         nameOfTheInstitution: { type: String },
